@@ -47,6 +47,19 @@ Results do not automatically enter the Review Desk queue.
 build_review.py verifies recorded reports and frozen fingerprints.
 It does not rerun OCR.
 
+## Automated checks
+
+GitHub Actions builds the Docker environments, runs unit tests, verifies
+recorded benchmark fingerprints, checks browser JavaScript syntax, and checks
+that English and Thai language packs are installed. Language availability
+checks do not measure OCR accuracy.
+
+## Documentation
+
+This README describes the consolidated application. Versioned update guides
+record earlier development stages; their historical test counts, installation
+paths and statements about missing features may no longer apply.
+
 ## Limitations
 
 Benchmark images are synthetic. Results do not establish accuracy on real
