@@ -1,4 +1,4 @@
-"""Local upload demo: printed English OCR with synthetic-contract field suggestions."""
+"""Local upload demo: printed English/Thai OCR with synthetic-contract field suggestions."""
 import argparse,hashlib,io,json,secrets,shutil,subprocess,tempfile,warnings,time,threading
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
@@ -115,7 +115,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--port',type=int,default=8766)
     p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');a=p.parse_args()
     server=ThreadingHTTPServer((a.host,a.port),handler(secrets.token_urlsafe(32),a.port))
-    print(f'Image reader: http://127.0.0.1:{a.port} (PNG/JPG/BMP; English printed text)',flush=True)
+    print(f'Image reader: http://127.0.0.1:{a.port} (PNG/JPG/BMP; English/Thai according to installed language packs)',flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:server.server_close()
