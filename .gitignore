@@ -1,9 +1,20 @@
 .venv*/
 __pycache__/
-*.pyc
+*.py[cod]
 .env
-challenge_data/
-review/
 .env.*
+!.env.example
 *.pem
 .DS_Store
+
+# Private review state, exports and uploads
+review_state/
+review_analysis/
+review_check/
+*.sqlite3*
+*.db
+ocr-review-decision*.json
+image-ocr-result*.json
+uploads/
+
+# Synthetic challenge_data/ and static review/ evidence are tracked.

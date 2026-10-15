@@ -1,0 +1,37 @@
+name: OCR checks
+
+on:
+  push:
+    branches: [main, feature/ocr-review-image-reader]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ocr-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build English OCR environment
+        run: docker build -t insurance-document-orc:pilot .
+      - name: Run unit tests
+        run: docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python -m unittest discover -s tests -v
+      - name: Verify recorded benchmark fingerprints
+        run: docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python build_review.py
+      - name: Check browser JavaScript syntax
+        run: |
+          node --check review_ui.js
+          node --check image_reader.js
+      - name: Build Thai OCR environment
+        run: docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
+      - name: Verify English and Thai language packs
+        run: |
+          docker run --rm -v "$PWD:/work" insurance-ocr-reader:thai python -c "from image_reader import available_languages; languages=available_languages(); print(languages); assert {'eng', 'tha'} <= set(languages)"

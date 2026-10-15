@@ -1,0 +1,114 @@
+[
+  {
+    "split": "dev",
+    "method": "raw",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.2867132867132867,
+    "field_match": {
+      "document_id": 0.3,
+      "date": 0.5,
+      "amount": 0.375
+    },
+    "document_match": 0.25
+  },
+  {
+    "split": "dev",
+    "method": "grayscale_threshold",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.33793706293706294,
+    "field_match": {
+      "document_id": 0.25,
+      "date": 0.45,
+      "amount": 0.325
+    },
+    "document_match": 0.25
+  },
+  {
+    "split": "dev",
+    "method": "raw_validated",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.2867132867132867,
+    "field_match": {
+      "document_id": 0.55,
+      "date": 0.5,
+      "amount": 0.375
+    },
+    "document_match": 0.35
+  },
+  {
+    "split": "dev",
+    "method": "enhanced",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.02604895104895105,
+    "field_match": {
+      "document_id": 0.775,
+      "date": 0.8,
+      "amount": 0.75
+    },
+    "document_match": 0.75
+  },
+  {
+    "split": "test",
+    "method": "raw",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.2744755244755245,
+    "field_match": {
+      "document_id": 0.25,
+      "date": 0.5,
+      "amount": 0.35
+    },
+    "document_match": 0.25
+  },
+  {
+    "split": "test",
+    "method": "grayscale_threshold",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.334965034965035,
+    "field_match": {
+      "document_id": 0.25,
+      "date": 0.45,
+      "amount": 0.3
+    },
+    "document_match": 0.25
+  },
+  {
+    "split": "test",
+    "method": "raw_validated",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.2744755244755245,
+    "field_match": {
+      "document_id": 0.45,
+      "date": 0.5,
+      "amount": 0.35
+    },
+    "document_match": 0.3
+  },
+  {
+    "split": "test",
+    "method": "enhanced",
+    "condition": "all",
+    "images": 40,
+    "originals": 10,
+    "normalized_cer": 0.021153846153846155,
+    "field_match": {
+      "document_id": 0.75,
+      "date": 0.775,
+      "amount": 0.75
+    },
+    "document_match": 0.75
+  }
+]
