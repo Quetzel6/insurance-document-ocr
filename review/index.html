@@ -1,0 +1,1100 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Synthetic OCR evidence review</title><style>body{font:16px system-ui;color:#173045;max-width:1100px;margin:auto;padding:28px;background:#f5f7fa}h1,h2{color:#173045}table{border-collapse:collapse;width:100%;background:white;margin:16px 0}td,th{padding:10px;border-bottom:1px solid #ccd4dd;text-align:left}pre{white-space:pre-wrap;background:#edf1f5;padding:15px}details{background:white;padding:15px;margin:12px 0;border:1px solid #ccd4dd;border-radius:8px}img{max-width:100%;height:auto}input{padding:10px;width:90%}.bad{color:#a52727}.good{color:#206841}</style><h1>Synthetic Insurance Document OCR</h1><p>Personal portfolio benchmark. English synthetic images; no real claims or customer data. Selected method: enhanced, chosen on dev before test.</p><p>40 variants per evaluation split from 10 originals in two layouts. Variants are correlated. This is not real-world insurance accuracy. Blur/low-resolution failures remain. Schema-valid output may still be wrong.</p><h2>DEV measured results</h2><table><tr><th>Method</th><th>Images / originals</th><th>Normalized CER</th><th>All 3 fields correct</th></tr><tr><td>raw</td><td>40 / 10</td><td>28.67%</td><td>25.00%</td></tr><tr><td>grayscale_threshold</td><td>40 / 10</td><td>33.79%</td><td>25.00%</td></tr><tr><td>raw_validated</td><td>40 / 10</td><td>28.67%</td><td>35.00%</td></tr><tr><td>enhanced</td><td>40 / 10</td><td>2.60%</td><td>75.00%</td></tr></table><h2>TEST measured results</h2><table><tr><th>Method</th><th>Images / originals</th><th>Normalized CER</th><th>All 3 fields correct</th></tr><tr><td>raw</td><td>40 / 10</td><td>27.45%</td><td>25.00%</td></tr><tr><td>grayscale_threshold</td><td>40 / 10</td><td>33.50%</td><td>25.00%</td></tr><tr><td>raw_validated</td><td>40 / 10</td><td>27.45%</td><td>30.00%</td></tr><tr><td>enhanced</td><td>40 / 10</td><td>2.12%</td><td>75.00%</td></tr></table><h2>Test error inspection</h2><p>Results below are evaluated against known synthetic labels. Correctness labels are for evaluation, not a production confidence gate.</p><input id="q" placeholder="Filter: blur_lowres, skew, raw, enhanced, document ID"><div id="cases"><details data-search="t4-0-clean raw"><summary class="good">PASS | t4-0-clean | raw</summary><img loading="lazy" src="t4-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-0-clean grayscale_threshold"><summary class="good">PASS | t4-0-clean | grayscale_threshold</summary><img loading="lazy" src="t4-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-0-clean raw_validated"><summary class="good">PASS | t4-0-clean | raw_validated</summary><img loading="lazy" src="t4-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-0-clean enhanced"><summary class="good">PASS | t4-0-clean | enhanced</summary><img loading="lazy" src="t4-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-0-blur_lowres raw"><summary class="bad">ERROR | t4-0-blur_lowres | raw</summary><img loading="lazy" src="t4-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Document ID SYN-407642
+
+Amount 54567 45
+
+Date 2026-09-10
+
+Sernce Synthetic reper estimate
+Currency THB
+</pre></details><details data-search="t4-0-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t4-0-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t4-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SvesTeee Vic GVORCE MOT A REAL CLAM
+OCorwnert © SvN-687642
+
+derma 34387 43
+
+Oate 2076-60-16
+
+Gerace Syrthetc reper eumate
+Cmvency TH
+</pre></details><details data-search="t4-0-blur_lowres raw_validated"><summary class="bad">ERROR | t4-0-blur_lowres | raw_validated</summary><img loading="lazy" src="t4-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Document ID SYN-407642
+
+Amount 54567 45
+
+Date 2026-09-10
+
+Sernce Synthetic reper estimate
+Currency THB
+</pre></details><details data-search="t4-0-blur_lowres enhanced"><summary class="bad">ERROR | t4-0-blur_lowres | enhanced</summary><img loading="lazy" src="t4-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID SYN-407642
+
+Amourt 54567 45
+
+Date 2026-09-10
+
+Servce Synthetic repex estimate
+Currency THB
+</pre></details><details data-search="t4-0-skew raw"><summary class="bad">ERROR | t4-0-skew | raw</summary><img loading="lazy" src="t4-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Document \D: sYN-407642
+Amount: 5 4587.45
+Date: 2026-09-10
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-0-skew grayscale_threshold"><summary class="bad">ERROR | t4-0-skew | grayscale_threshold</summary><img loading="lazy" src="t4-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+pocument 1D: 6YN-407642
+Amount: 5 4587-49
+Date: 2026-09-10
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-0-skew raw_validated"><summary class="bad">ERROR | t4-0-skew | raw_validated</summary><img loading="lazy" src="t4-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Document \D: sYN-407642
+Amount: 5 4587.45
+Date: 2026-09-10
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-0-skew enhanced"><summary class="good">PASS | t4-0-skew | enhanced</summary><img loading="lazy" src="t4-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-0-shadow raw"><summary class="bad">ERROR | t4-0-shadow | raw</summary><img loading="lazy" src="t4-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2
+</pre></details><details data-search="t4-0-shadow grayscale_threshold"><summary class="bad">ERROR | t4-0-shadow | grayscale_threshold</summary><img loading="lazy" src="t4-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t4-0-shadow raw_validated"><summary class="bad">ERROR | t4-0-shadow | raw_validated</summary><img loading="lazy" src="t4-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>54587.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2
+</pre></details><details data-search="t4-0-shadow enhanced"><summary class="good">PASS | t4-0-shadow | enhanced</summary><img loading="lazy" src="t4-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-407642</td><td>SYN-407642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>54587.45</td><td>54587.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-407642
+
+Amount: 54587.45
+
+Date: 2026-09-10
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-1-clean raw"><summary class="good">PASS | t4-1-clean | raw</summary><img loading="lazy" src="t4-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-1-clean grayscale_threshold"><summary class="good">PASS | t4-1-clean | grayscale_threshold</summary><img loading="lazy" src="t4-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-1-clean raw_validated"><summary class="good">PASS | t4-1-clean | raw_validated</summary><img loading="lazy" src="t4-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-1-clean enhanced"><summary class="good">PASS | t4-1-clean | enhanced</summary><img loading="lazy" src="t4-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-1-blur_lowres raw"><summary class="bad">ERROR | t4-1-blur_lowres | raw</summary><img loading="lazy" src="t4-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Amount. 10425.45
+
+Date 20260911
+
+Sermce Synthetic repay estimate
+Document IO SYN-417642
+
+Currency THB
+</pre></details><details data-search="t4-1-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t4-1-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t4-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SvesTeee Vic GVORCE MOT A REAL CLAM
+hermarh 10623 43
+
+Gute 2026-00-11
+
+Serace Synthetic repew ecimate
+Oocwnert © Sve-41 7642
+
+Cmvency TH
+</pre></details><details data-search="t4-1-blur_lowres raw_validated"><summary class="bad">ERROR | t4-1-blur_lowres | raw_validated</summary><img loading="lazy" src="t4-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Amount. 10425.45
+
+Date 20260911
+
+Sermce Synthetic repay estimate
+Document IO SYN-417642
+
+Currency THB
+</pre></details><details data-search="t4-1-blur_lowres enhanced"><summary class="bad">ERROR | t4-1-blur_lowres | enhanced</summary><img loading="lazy" src="t4-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount 10425 45
+
+Date 20260911
+
+Serwce Synthetic reper estirnate
+Document 1D SYN-417642
+
+Currency THB
+</pre></details><details data-search="t4-1-skew raw"><summary class="bad">ERROR | t4-1-skew | raw</summary><img loading="lazy" src="t4-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Amount: 10425.45
+Date: 2026-09-11
+Service: synthetic repair estimate
+Document \D: SYN-417 642
+currency: THB
+</pre></details><details data-search="t4-1-skew grayscale_threshold"><summary class="bad">ERROR | t4-1-skew | grayscale_threshold</summary><img loading="lazy" src="t4-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Amount: 10425.45
+Date: 2026-09-11
+Service: synthetic repair estimate
+pocument 1D: SYN-4L7 642
+currency: THB
+</pre></details><details data-search="t4-1-skew raw_validated"><summary class="good">PASS | t4-1-skew | raw_validated</summary><img loading="lazy" src="t4-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Amount: 10425.45
+Date: 2026-09-11
+Service: synthetic repair estimate
+Document \D: SYN-417 642
+currency: THB
+</pre></details><details data-search="t4-1-skew enhanced"><summary class="good">PASS | t4-1-skew | enhanced</summary><img loading="lazy" src="t4-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-1-shadow raw"><summary class="bad">ERROR | t4-1-shadow | raw</summary><img loading="lazy" src="t4-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>=
+</pre></details><details data-search="t4-1-shadow grayscale_threshold"><summary class="bad">ERROR | t4-1-shadow | grayscale_threshold</summary><img loading="lazy" src="t4-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t4-1-shadow raw_validated"><summary class="bad">ERROR | t4-1-shadow | raw_validated</summary><img loading="lazy" src="t4-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>10425.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>=
+</pre></details><details data-search="t4-1-shadow enhanced"><summary class="good">PASS | t4-1-shadow | enhanced</summary><img loading="lazy" src="t4-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-417642</td><td>SYN-417642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>10425.45</td><td>10425.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 10425.45
+
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Document ID: SYN-417642
+
+Currency: THB
+</pre></details><details data-search="t4-2-clean raw"><summary class="good">PASS | t4-2-clean | raw</summary><img loading="lazy" src="t4-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-2-clean grayscale_threshold"><summary class="good">PASS | t4-2-clean | grayscale_threshold</summary><img loading="lazy" src="t4-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-2-clean raw_validated"><summary class="good">PASS | t4-2-clean | raw_validated</summary><img loading="lazy" src="t4-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-2-clean enhanced"><summary class="good">PASS | t4-2-clean | enhanced</summary><img loading="lazy" src="t4-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-2-blur_lowres raw"><summary class="bad">ERROR | t4-2-blur_lowres | raw</summary><img loading="lazy" src="t4-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Sernce Synthetic reper estimate
+Date 2026-09-12
+Document ID SYN-427642
+
+Currency THB
+
+Amourt 16540 45
+</pre></details><details data-search="t4-2-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t4-2-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t4-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SVISTIEETIC GEVOICE . NOT A REAL CLame
+Serace Syethetc repaew eutimate
+Gate 2026-60-12
+Corwment © Sv-42 7642
+Cavey NS
+
+herman 16940 45
+</pre></details><details data-search="t4-2-blur_lowres raw_validated"><summary class="bad">ERROR | t4-2-blur_lowres | raw_validated</summary><img loading="lazy" src="t4-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Sernce Synthetic reper estimate
+Date 2026-09-12
+Document ID SYN-427642
+
+Currency THB
+
+Amourt 16540 45
+</pre></details><details data-search="t4-2-blur_lowres enhanced"><summary class="bad">ERROR | t4-2-blur_lowres | enhanced</summary><img loading="lazy" src="t4-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Servce Synthetic reper estimate
+Date 20260912
+Document ID SYN-427642
+Currency THB
+
+Amount 716540 45
+</pre></details><details data-search="t4-2-skew raw"><summary class="bad">ERROR | t4-2-skew | raw</summary><img loading="lazy" src="t4-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Date: 2026-09-12
+pocument \D: SYN-427642
+currency: THB
+Amount: 76540.45
+</pre></details><details data-search="t4-2-skew grayscale_threshold"><summary class="bad">ERROR | t4-2-skew | grayscale_threshold</summary><img loading="lazy" src="t4-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Date: 2026-09-12
+pocument \D: GYN-427642
+currency: THB
+Amount: 76540.45
+</pre></details><details data-search="t4-2-skew raw_validated"><summary class="bad">ERROR | t4-2-skew | raw_validated</summary><img loading="lazy" src="t4-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Date: 2026-09-12
+pocument \D: SYN-427642
+currency: THB
+Amount: 76540.45
+</pre></details><details data-search="t4-2-skew enhanced"><summary class="good">PASS | t4-2-skew | enhanced</summary><img loading="lazy" src="t4-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-2-shadow raw"><summary class="bad">ERROR | t4-2-shadow | raw</summary><img loading="lazy" src="t4-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>E
+</pre></details><details data-search="t4-2-shadow grayscale_threshold"><summary class="bad">ERROR | t4-2-shadow | grayscale_threshold</summary><img loading="lazy" src="t4-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t4-2-shadow raw_validated"><summary class="bad">ERROR | t4-2-shadow | raw_validated</summary><img loading="lazy" src="t4-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>76540.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>E
+</pre></details><details data-search="t4-2-shadow enhanced"><summary class="good">PASS | t4-2-shadow | enhanced</summary><img loading="lazy" src="t4-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-427642</td><td>SYN-427642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>76540.45</td><td>76540.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+
+Date: 2026-09-12
+
+Document ID: SYN-427642
+
+Currency: THB
+
+Amount: 76540.45
+</pre></details><details data-search="t4-3-clean raw"><summary class="good">PASS | t4-3-clean | raw</summary><img loading="lazy" src="t4-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-3-clean grayscale_threshold"><summary class="good">PASS | t4-3-clean | grayscale_threshold</summary><img loading="lazy" src="t4-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-3-clean raw_validated"><summary class="good">PASS | t4-3-clean | raw_validated</summary><img loading="lazy" src="t4-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-3-clean enhanced"><summary class="good">PASS | t4-3-clean | enhanced</summary><img loading="lazy" src="t4-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-3-blur_lowres raw"><summary class="bad">ERROR | t4-3-blur_lowres | raw</summary><img loading="lazy" src="t4-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Servce Synthetic reper estimate
+Document ID SYN-437642
+
+Amount 80697 45
+
+Date 20260913
+
+Currency THB
+</pre></details><details data-search="t4-3-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t4-3-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t4-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SVISTIEETIC GEVOICE . NOT A REAL CLame
+Serace Syethetc repaew eutimate
+Cocwnent © SvN-4637642
+
+asa 08607 43
+
+Cate 2626-60-13
+
+Cmvency TH
+</pre></details><details data-search="t4-3-blur_lowres raw_validated"><summary class="bad">ERROR | t4-3-blur_lowres | raw_validated</summary><img loading="lazy" src="t4-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Servce Synthetic reper estimate
+Document ID SYN-437642
+
+Amount 80697 45
+
+Date 20260913
+
+Currency THB
+</pre></details><details data-search="t4-3-blur_lowres enhanced"><summary class="bad">ERROR | t4-3-blur_lowres | enhanced</summary><img loading="lazy" src="t4-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Serwce Synthetic reper estimate
+Document ID SYN-437642
+
+Amourt 60697 45
+
+Date 2026.09-13
+
+Currency THB
+</pre></details><details data-search="t4-3-skew raw"><summary class="bad">ERROR | t4-3-skew | raw</summary><img loading="lazy" src="t4-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+pocument \D: SYN-437642
+Amount: g0697-45
+Date: 2026-09-13
+currency: THB
+</pre></details><details data-search="t4-3-skew grayscale_threshold"><summary class="bad">ERROR | t4-3-skew | grayscale_threshold</summary><img loading="lazy" src="t4-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+pocument 1D: SYN-437642
+Amount: g0697-49
+pate: 2026-09-13
+currency: THB
+</pre></details><details data-search="t4-3-skew raw_validated"><summary class="bad">ERROR | t4-3-skew | raw_validated</summary><img loading="lazy" src="t4-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+pocument \D: SYN-437642
+Amount: g0697-45
+Date: 2026-09-13
+currency: THB
+</pre></details><details data-search="t4-3-skew enhanced"><summary class="good">PASS | t4-3-skew | enhanced</summary><img loading="lazy" src="t4-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-3-shadow raw"><summary class="bad">ERROR | t4-3-shadow | raw</summary><img loading="lazy" src="t4-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>E
+</pre></details><details data-search="t4-3-shadow grayscale_threshold"><summary class="bad">ERROR | t4-3-shadow | grayscale_threshold</summary><img loading="lazy" src="t4-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t4-3-shadow raw_validated"><summary class="bad">ERROR | t4-3-shadow | raw_validated</summary><img loading="lazy" src="t4-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>80697.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>E
+</pre></details><details data-search="t4-3-shadow enhanced"><summary class="good">PASS | t4-3-shadow | enhanced</summary><img loading="lazy" src="t4-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-437642</td><td>SYN-437642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>80697.45</td><td>80697.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-437642
+
+Amount: 80697.45
+
+Date: 2026-09-13
+
+Currency: THB
+</pre></details><details data-search="t4-4-clean raw"><summary class="good">PASS | t4-4-clean | raw</summary><img loading="lazy" src="t4-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-4-clean grayscale_threshold"><summary class="good">PASS | t4-4-clean | grayscale_threshold</summary><img loading="lazy" src="t4-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-4-clean raw_validated"><summary class="good">PASS | t4-4-clean | raw_validated</summary><img loading="lazy" src="t4-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-4-clean enhanced"><summary class="good">PASS | t4-4-clean | enhanced</summary><img loading="lazy" src="t4-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-4-blur_lowres raw"><summary class="bad">ERROR | t4-4-blur_lowres | raw</summary><img loading="lazy" src="t4-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Document ID SYN-447642
+
+Amount: 12552 45
+
+Date 2026-09-14
+
+Sermce Synthetic repast estimate
+Currency THE
+</pre></details><details data-search="t4-4-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t4-4-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t4-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SvesTeee Vic GVORCE MOT A REAL CLAM
+Corwnert © SvU-46 7642
+
+derma 17932 43
+
+Oate 2076-60-14
+
+Gerace Syrthetc reper eumate
+Cmvency TH
+</pre></details><details data-search="t4-4-blur_lowres raw_validated"><summary class="bad">ERROR | t4-4-blur_lowres | raw_validated</summary><img loading="lazy" src="t4-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE NOT A REAL CLAIM
+Document ID SYN-447642
+
+Amount: 12552 45
+
+Date 2026-09-14
+
+Sermce Synthetic repast estimate
+Currency THE
+</pre></details><details data-search="t4-4-blur_lowres enhanced"><summary class="bad">ERROR | t4-4-blur_lowres | enhanced</summary><img loading="lazy" src="t4-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document 1D SYN-447642
+
+Amourt: 12552 45
+
+Date 20260914
+
+Service Synthetic repex estimate
+Currency THB
+</pre></details><details data-search="t4-4-skew raw"><summary class="bad">ERROR | t4-4-skew | raw</summary><img loading="lazy" src="t4-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Document \D: SYN-447642
+Amount: 42552-45
+Date: 2026-09-14
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-4-skew grayscale_threshold"><summary class="bad">ERROR | t4-4-skew | grayscale_threshold</summary><img loading="lazy" src="t4-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>42552.45</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+pocument 1D: 6YN-447642
+Amount: 42552.45
+Date: 2026-09-14
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-4-skew raw_validated"><summary class="bad">ERROR | t4-4-skew | raw_validated</summary><img loading="lazy" src="t4-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC \NVOICE - NOTA REAL CLAIM
+Document \D: SYN-447642
+Amount: 42552-45
+Date: 2026-09-14
+Service: synthetic repair estimate
+currency: THB
+</pre></details><details data-search="t4-4-skew enhanced"><summary class="good">PASS | t4-4-skew | enhanced</summary><img loading="lazy" src="t4-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t4-4-shadow raw"><summary class="bad">ERROR | t4-4-shadow | raw</summary><img loading="lazy" src="t4-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2
+</pre></details><details data-search="t4-4-shadow grayscale_threshold"><summary class="bad">ERROR | t4-4-shadow | grayscale_threshold</summary><img loading="lazy" src="t4-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t4-4-shadow raw_validated"><summary class="bad">ERROR | t4-4-shadow | raw_validated</summary><img loading="lazy" src="t4-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>12552.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2
+</pre></details><details data-search="t4-4-shadow enhanced"><summary class="good">PASS | t4-4-shadow | enhanced</summary><img loading="lazy" src="t4-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-447642</td><td>SYN-447642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>12552.45</td><td>12552.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Document ID: SYN-447642
+
+Amount: 12552.45
+
+Date: 2026-09-14
+
+Service: Synthetic repair estimate
+Currency: THB
+</pre></details><details data-search="t5-0-clean raw"><summary class="good">PASS | t5-0-clean | raw</summary><img loading="lazy" src="t5-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-0-clean grayscale_threshold"><summary class="good">PASS | t5-0-clean | grayscale_threshold</summary><img loading="lazy" src="t5-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-0-clean raw_validated"><summary class="good">PASS | t5-0-clean | raw_validated</summary><img loading="lazy" src="t5-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-0-clean enhanced"><summary class="good">PASS | t5-0-clean | enhanced</summary><img loading="lazy" src="t5-0-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-0-blur_lowres raw"><summary class="bad">ERROR | t5-0-blur_lowres | raw</summary><img loading="lazy" src="t5-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service Synthetc reper estmate
+Document IO: SYN-507642
+
+Currency THS
+
+Date 2026-09-10
+
+Amount: 4157145
+</pre></details><details data-search="t5-0-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t5-0-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t5-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC BIVOICE NOT A REAL CL Am
+Sernce Syrtheec reper esbmete
+Decumert IO SYN-507642
+
+Currency Te
+
+Oeste: 2626-08 10
+
+Agno: 41871 45
+</pre></details><details data-search="t5-0-blur_lowres raw_validated"><summary class="bad">ERROR | t5-0-blur_lowres | raw_validated</summary><img loading="lazy" src="t5-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service Synthetc reper estmate
+Document IO: SYN-507642
+
+Currency THS
+
+Date 2026-09-10
+
+Amount: 4157145
+</pre></details><details data-search="t5-0-blur_lowres enhanced"><summary class="bad">ERROR | t5-0-blur_lowres | enhanced</summary><img loading="lazy" src="t5-0-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service Synthetc repair estmate
+Document IO: SYN. 507642
+
+Currency THS
+
+Date 2026.09-10
+
+Amount: 4157145
+</pre></details><details data-search="t5-0-skew raw"><summary class="bad">ERROR | t5-0-skew | raw</summary><img loading="lazy" src="t5-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Document \D: SYN-507642
+Currency: THB
+Date: 2026-09-10
+Amount: 4571-45
+</pre></details><details data-search="t5-0-skew grayscale_threshold"><summary class="bad">ERROR | t5-0-skew | grayscale_threshold</summary><img loading="lazy" src="t5-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: synthetic repair estimate
+pocument \D: SYN-507642
+currency: THB
+Date: 2026-09-10
+Amount: 4571-45
+</pre></details><details data-search="t5-0-skew raw_validated"><summary class="bad">ERROR | t5-0-skew | raw_validated</summary><img loading="lazy" src="t5-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Document \D: SYN-507642
+Currency: THB
+Date: 2026-09-10
+Amount: 4571-45
+</pre></details><details data-search="t5-0-skew enhanced"><summary class="good">PASS | t5-0-skew | enhanced</summary><img loading="lazy" src="t5-0-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-0-shadow raw"><summary class="bad">ERROR | t5-0-shadow | raw</summary><img loading="lazy" src="t5-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-0-shadow grayscale_threshold"><summary class="bad">ERROR | t5-0-shadow | grayscale_threshold</summary><img loading="lazy" src="t5-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t5-0-shadow raw_validated"><summary class="bad">ERROR | t5-0-shadow | raw_validated</summary><img loading="lazy" src="t5-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-10</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>41571.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-0-shadow enhanced"><summary class="good">PASS | t5-0-shadow | enhanced</summary><img loading="lazy" src="t5-0-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-507642</td><td>SYN-507642</td><td>True</td></tr><tr><td>date</td><td>2026-09-10</td><td>2026-09-10</td><td>True</td></tr><tr><td>amount</td><td>41571.45</td><td>41571.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Document ID: SYN-507642
+
+Currency: THB
+
+Date: 2026-09-10
+
+Amount: 41571.45
+</pre></details><details data-search="t5-1-clean raw"><summary class="good">PASS | t5-1-clean | raw</summary><img loading="lazy" src="t5-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-1-clean grayscale_threshold"><summary class="good">PASS | t5-1-clean | grayscale_threshold</summary><img loading="lazy" src="t5-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-1-clean raw_validated"><summary class="good">PASS | t5-1-clean | raw_validated</summary><img loading="lazy" src="t5-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-1-clean enhanced"><summary class="good">PASS | t5-1-clean | enhanced</summary><img loading="lazy" src="t5-1-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-1-blur_lowres raw"><summary class="bad">ERROR | t5-1-blur_lowres | raw</summary><img loading="lazy" src="t5-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>79622.45</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE . NOT A REAL CLAIM
+Date 20260911
+
+Service Synthetc reper estmate
+Amount: 79622.45
+
+Currency. THE
+Document ID: SYN-$17642
+</pre></details><details data-search="t5-1-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t5-1-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t5-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC BIVOICE NOT A REAL CL Am
+Oete 2026-09 11
+
+Service. Syrtheec reper esbmate
+Aenart:: 79622 .4$
+
+Currency THB
+Document 1D SVM $1 7642
+</pre></details><details data-search="t5-1-blur_lowres raw_validated"><summary class="bad">ERROR | t5-1-blur_lowres | raw_validated</summary><img loading="lazy" src="t5-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>79622.45</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE . NOT A REAL CLAIM
+Date 20260911
+
+Service Synthetc reper estmate
+Amount: 79622.45
+
+Currency. THE
+Document ID: SYN-$17642
+</pre></details><details data-search="t5-1-blur_lowres enhanced"><summary class="bad">ERROR | t5-1-blur_lowres | enhanced</summary><img loading="lazy" src="t5-1-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>79622.45</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Oate 2026-09-11
+
+Service Synthetc reper estmete
+Amount: 79622.45
+
+Currency TH8
+
+Document IO: SYN-$17642
+</pre></details><details data-search="t5-1-skew raw"><summary class="bad">ERROR | t5-1-skew | raw</summary><img loading="lazy" src="t5-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-41</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Date: 2026-09-41
+Service: synthetic repair estimate
+Amount: 79822.45
+Currency: THB
+Document \D: SYN-517642
+</pre></details><details data-search="t5-1-skew grayscale_threshold"><summary class="bad">ERROR | t5-1-skew | grayscale_threshold</summary><img loading="lazy" src="t5-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>9822.45</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+Service: synthetic repair estimate
+Amount: 9822.45
+currency: THB
+Document 1D: SYN-517642
+</pre></details><details data-search="t5-1-skew raw_validated"><summary class="bad">ERROR | t5-1-skew | raw_validated</summary><img loading="lazy" src="t5-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Date: 2026-09-41
+Service: synthetic repair estimate
+Amount: 79822.45
+Currency: THB
+Document \D: SYN-517642
+</pre></details><details data-search="t5-1-skew enhanced"><summary class="good">PASS | t5-1-skew | enhanced</summary><img loading="lazy" src="t5-1-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-1-shadow raw"><summary class="bad">ERROR | t5-1-shadow | raw</summary><img loading="lazy" src="t5-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-1-shadow grayscale_threshold"><summary class="bad">ERROR | t5-1-shadow | grayscale_threshold</summary><img loading="lazy" src="t5-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t5-1-shadow raw_validated"><summary class="bad">ERROR | t5-1-shadow | raw_validated</summary><img loading="lazy" src="t5-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-11</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>79822.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-1-shadow enhanced"><summary class="good">PASS | t5-1-shadow | enhanced</summary><img loading="lazy" src="t5-1-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-517642</td><td>SYN-517642</td><td>True</td></tr><tr><td>date</td><td>2026-09-11</td><td>2026-09-11</td><td>True</td></tr><tr><td>amount</td><td>79822.45</td><td>79822.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-11
+
+Service: Synthetic repair estimate
+Amount: 79822.45
+
+Currency: THB
+
+Document ID: SYN-517642
+</pre></details><details data-search="t5-2-clean raw"><summary class="good">PASS | t5-2-clean | raw</summary><img loading="lazy" src="t5-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-clean grayscale_threshold"><summary class="good">PASS | t5-2-clean | grayscale_threshold</summary><img loading="lazy" src="t5-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-clean raw_validated"><summary class="good">PASS | t5-2-clean | raw_validated</summary><img loading="lazy" src="t5-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-clean enhanced"><summary class="good">PASS | t5-2-clean | enhanced</summary><img loading="lazy" src="t5-2-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-blur_lowres raw"><summary class="bad">ERROR | t5-2-blur_lowres | raw</summary><img loading="lazy" src="t5-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE . NOT A REAL CLAIM
+Service Synthetc reper estmate
+Currency. THE
+
+Document IO SYN-527642
+
+Amount: 4474145
+
+Date 2026.09 12
+</pre></details><details data-search="t5-2-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t5-2-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t5-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC BIVOICE NOT A REAL CL Am
+Sernce Syrtheec reper esbmete
+Currency THB
+Oecumenrt ID SVM 527642
+
+Aevaurt, 44741 45
+
+Oete 2026-08 12
+</pre></details><details data-search="t5-2-blur_lowres raw_validated"><summary class="bad">ERROR | t5-2-blur_lowres | raw_validated</summary><img loading="lazy" src="t5-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE . NOT A REAL CLAIM
+Service Synthetc reper estmate
+Currency. THE
+
+Document IO SYN-527642
+
+Amount: 4474145
+
+Date 2026.09 12
+</pre></details><details data-search="t5-2-blur_lowres enhanced"><summary class="bad">ERROR | t5-2-blur_lowres | enhanced</summary><img loading="lazy" src="t5-2-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service Synthetc reper estimate
+Currency TH8
+
+Document IO: SYN-527642
+
+Amount: 4474145
+
+Oate 2026-09-12
+</pre></details><details data-search="t5-2-skew raw"><summary class="bad">ERROR | t5-2-skew | raw</summary><img loading="lazy" src="t5-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Currency: THB
+Document \D: SYN-527642
+Amount: 44741.45
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-skew grayscale_threshold"><summary class="bad">ERROR | t5-2-skew | grayscale_threshold</summary><img loading="lazy" src="t5-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: synthetic repair estimate
+currency: THB
+Document \D: SYN-527642
+Amount: 4ATA1.45
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-skew raw_validated"><summary class="good">PASS | t5-2-skew | raw_validated</summary><img loading="lazy" src="t5-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Service: synthetic repair estimate
+Currency: THB
+Document \D: SYN-527642
+Amount: 44741.45
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-skew enhanced"><summary class="good">PASS | t5-2-skew | enhanced</summary><img loading="lazy" src="t5-2-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-2-shadow raw"><summary class="bad">ERROR | t5-2-shadow | raw</summary><img loading="lazy" src="t5-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>= :
+</pre></details><details data-search="t5-2-shadow grayscale_threshold"><summary class="bad">ERROR | t5-2-shadow | grayscale_threshold</summary><img loading="lazy" src="t5-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t5-2-shadow raw_validated"><summary class="bad">ERROR | t5-2-shadow | raw_validated</summary><img loading="lazy" src="t5-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-12</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>44741.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>= :
+</pre></details><details data-search="t5-2-shadow enhanced"><summary class="good">PASS | t5-2-shadow | enhanced</summary><img loading="lazy" src="t5-2-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-527642</td><td>SYN-527642</td><td>True</td></tr><tr><td>date</td><td>2026-09-12</td><td>2026-09-12</td><td>True</td></tr><tr><td>amount</td><td>44741.45</td><td>44741.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Service: Synthetic repair estimate
+Currency: THB
+
+Document ID: SYN-527642
+
+Amount: 44741.45
+
+Date: 2026-09-12
+</pre></details><details data-search="t5-3-clean raw"><summary class="good">PASS | t5-3-clean | raw</summary><img loading="lazy" src="t5-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-3-clean grayscale_threshold"><summary class="good">PASS | t5-3-clean | grayscale_threshold</summary><img loading="lazy" src="t5-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-3-clean raw_validated"><summary class="good">PASS | t5-3-clean | raw_validated</summary><img loading="lazy" src="t5-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-3-clean enhanced"><summary class="good">PASS | t5-3-clean | enhanced</summary><img loading="lazy" src="t5-3-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-3-blur_lowres raw"><summary class="bad">ERROR | t5-3-blur_lowres | raw</summary><img loading="lazy" src="t5-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount 62296 45
+
+Currency. THE
+
+Service Synthetc repair estimate
+Date 2026-09-13
+Document IO SYN 537642
+</pre></details><details data-search="t5-3-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t5-3-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t5-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC BIVOICE NOT A REAL CL Am
+Aenart:: 62296. 45
+
+Currency THB
+
+Sernce Syrtheec reper esbmete
+
+Oeste: 2626-08-13
+
+Document ID Sv $37642
+</pre></details><details data-search="t5-3-blur_lowres raw_validated"><summary class="bad">ERROR | t5-3-blur_lowres | raw_validated</summary><img loading="lazy" src="t5-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount 62296 45
+
+Currency. THE
+
+Service Synthetc repair estimate
+Date 2026-09-13
+Document IO SYN 537642
+</pre></details><details data-search="t5-3-blur_lowres enhanced"><summary class="bad">ERROR | t5-3-blur_lowres | enhanced</summary><img loading="lazy" src="t5-3-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 6229645
+
+Currency TH8
+
+Service Synthetc repair estmate
+Date: 2026-09-13
+
+Document IO SYN 537642
+</pre></details><details data-search="t5-3-skew raw"><summary class="bad">ERROR | t5-3-skew | raw</summary><img loading="lazy" src="t5-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Amount: 62296-45
+Currency: THB
+Service: synthetic repair estimate
+Date: 2026-09-13
+Document \D: SYN-537642
+</pre></details><details data-search="t5-3-skew grayscale_threshold"><summary class="bad">ERROR | t5-3-skew | grayscale_threshold</summary><img loading="lazy" src="t5-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-43</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.49</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.49
+currency: THB
+Service: synthetic repair estimate
+Date: 2026-09-43
+Document 1D: SYN-537642
+</pre></details><details data-search="t5-3-skew raw_validated"><summary class="bad">ERROR | t5-3-skew | raw_validated</summary><img loading="lazy" src="t5-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Amount: 62296-45
+Currency: THB
+Service: synthetic repair estimate
+Date: 2026-09-13
+Document \D: SYN-537642
+</pre></details><details data-search="t5-3-skew enhanced"><summary class="good">PASS | t5-3-skew | enhanced</summary><img loading="lazy" src="t5-3-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-3-shadow raw"><summary class="bad">ERROR | t5-3-shadow | raw</summary><img loading="lazy" src="t5-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>4 :
+</pre></details><details data-search="t5-3-shadow grayscale_threshold"><summary class="bad">ERROR | t5-3-shadow | grayscale_threshold</summary><img loading="lazy" src="t5-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t5-3-shadow raw_validated"><summary class="bad">ERROR | t5-3-shadow | raw_validated</summary><img loading="lazy" src="t5-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-13</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>62296.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>4 :
+</pre></details><details data-search="t5-3-shadow enhanced"><summary class="good">PASS | t5-3-shadow | enhanced</summary><img loading="lazy" src="t5-3-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-537642</td><td>SYN-537642</td><td>True</td></tr><tr><td>date</td><td>2026-09-13</td><td>2026-09-13</td><td>True</td></tr><tr><td>amount</td><td>62296.45</td><td>62296.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Amount: 62296.45
+
+Currency: THB
+
+Service: Synthetic repair estimate
+
+Date: 2026-09-13
+
+Document ID: SYN-537642
+</pre></details><details data-search="t5-4-clean raw"><summary class="good">PASS | t5-4-clean | raw</summary><img loading="lazy" src="t5-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details><details data-search="t5-4-clean grayscale_threshold"><summary class="good">PASS | t5-4-clean | grayscale_threshold</summary><img loading="lazy" src="t5-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details><details data-search="t5-4-clean raw_validated"><summary class="good">PASS | t5-4-clean | raw_validated</summary><img loading="lazy" src="t5-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details><details data-search="t5-4-clean enhanced"><summary class="good">PASS | t5-4-clean | enhanced</summary><img loading="lazy" src="t5-4-clean.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details><details data-search="t5-4-blur_lowres raw"><summary class="bad">ERROR | t5-4-blur_lowres | raw</summary><img loading="lazy" src="t5-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+Document ID: SYN 547642
+
+Service Synthetc repair estimate
+Currency. THE
+
+Amount 42493 45
+</pre></details><details data-search="t5-4-blur_lowres grayscale_threshold"><summary class="bad">ERROR | t5-4-blur_lowres | grayscale_threshold</summary><img loading="lazy" src="t5-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC BIVOICE NOT A REAL CL Am
+Oete 2026-08 14
+
+Decumert IO SYN 547642
+
+Sernce Syrtheec reper esbmete
+Currency THB
+
+Aanart:: 42603. 45
+</pre></details><details data-search="t5-4-blur_lowres raw_validated"><summary class="bad">ERROR | t5-4-blur_lowres | raw_validated</summary><img loading="lazy" src="t5-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+Document ID: SYN 547642
+
+Service Synthetc repair estimate
+Currency. THE
+
+Amount 42493 45
+</pre></details><details data-search="t5-4-blur_lowres enhanced"><summary class="bad">ERROR | t5-4-blur_lowres | enhanced</summary><img loading="lazy" src="t5-4-blur_lowres.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Oete 20260914
+
+Document IO: SYN-547642
+
+Service Synthetc reper estmate
+Currency TH8
+
+Amount: 42493 45
+</pre></details><details data-search="t5-4-skew raw"><summary class="bad">ERROR | t5-4-skew | raw</summary><img loading="lazy" src="t5-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Date: 2026-09-14
+Document \D: SYN-547642
+Service: synthetic repair estimate
+Currency: THB
+Amount: 42493-45
+</pre></details><details data-search="t5-4-skew grayscale_threshold"><summary class="bad">ERROR | t5-4-skew | grayscale_threshold</summary><img loading="lazy" src="t5-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+pocument \D: SYN-547642
+Service: synthetic repair estimate
+currency: THB
+Amount: 42493-45
+</pre></details><details data-search="t5-4-skew raw_validated"><summary class="bad">ERROR | t5-4-skew | raw_validated</summary><img loading="lazy" src="t5-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOTA REAL CLAIM
+Date: 2026-09-14
+Document \D: SYN-547642
+Service: synthetic repair estimate
+Currency: THB
+Amount: 42493-45
+</pre></details><details data-search="t5-4-skew enhanced"><summary class="good">PASS | t5-4-skew | enhanced</summary><img loading="lazy" src="t5-4-skew.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details><details data-search="t5-4-shadow raw"><summary class="bad">ERROR | t5-4-shadow | raw</summary><img loading="lazy" src="t5-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-4-shadow grayscale_threshold"><summary class="bad">ERROR | t5-4-shadow | grayscale_threshold</summary><img loading="lazy" src="t5-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre></pre></details><details data-search="t5-4-shadow raw_validated"><summary class="bad">ERROR | t5-4-shadow | raw_validated</summary><img loading="lazy" src="t5-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>None</td><td>False</td></tr><tr><td>date</td><td>2026-09-14</td><td>None</td><td>False</td></tr><tr><td>amount</td><td>42493.45</td><td>None</td><td>False</td></tr></table><h3>OCR output</h3><pre>2 :
+</pre></details><details data-search="t5-4-shadow enhanced"><summary class="good">PASS | t5-4-shadow | enhanced</summary><img loading="lazy" src="t5-4-shadow.bmp.png" alt="Synthetic source document"><table><tr><th>Field</th><th>Expected</th><th>Predicted</th><th>Match</th></tr><tr><td>document_id</td><td>SYN-547642</td><td>SYN-547642</td><td>True</td></tr><tr><td>date</td><td>2026-09-14</td><td>2026-09-14</td><td>True</td></tr><tr><td>amount</td><td>42493.45</td><td>42493.45</td><td>True</td></tr></table><h3>OCR output</h3><pre>SYNTHETIC INVOICE - NOT A REAL CLAIM
+Date: 2026-09-14
+
+Document ID: SYN-547642
+
+Service: Synthetic repair estimate
+Currency: THB
+
+Amount: 42493.45
+</pre></details></div><h2>Protocol and limits</h2><p>Normalized CER lowercases and collapses whitespace. Exact document match means all three extracted fields equal labels. ID spacing normalization and date/amount validation are contract-specific; no digit guessing. No model fine-tuning, Thai OCR, handwriting or damage detection is implemented. Timings are excluded because recorded timing boundaries differ across methods.</p><p>Frozen code/manifest fingerprints verified against both reports. Environment files are archived as user-recorded metadata; freeze does not bind dependency versions.</p><script>document.getElementById("q").addEventListener("input",e=>{const q=e.target.value.toLowerCase();document.querySelectorAll("details").forEach(x=>x.hidden=!x.dataset.search.toLowerCase().includes(q))})</script></html>

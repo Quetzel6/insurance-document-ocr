@@ -7,3 +7,32 @@ review/
 .env.*
 *.pem
 .DS_Store
+
+
+# Local environments
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv*/
+.env
+.env.*
+!.env.example
+
+# Private review state and exports
+review_state/
+review_analysis/
+review_check/
+*.sqlite3*
+*.db
+ocr-review-decision*.json
+image-ocr-result*.json
+
+# Local uploads
+uploads/
+
+
+# Include synthetic benchmark and static review evidence
+!/challenge_data/
+!/challenge_data/**
+!/review/
+!/review/**

@@ -1,0 +1,4 @@
+FROM insurance-document-orc:pilot
+RUN apt-get update && apt-get install -y --no-install-recommends tesseract-ocr-tha && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
+CMD ["python", "image_reader.py", "--host", "0.0.0.0"]

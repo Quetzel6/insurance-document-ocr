@@ -1,0 +1,8 @@
+{
+  "enhanced_output/dev_report.json": "748ebed904150a5ad36d87c1b1a7228fbb1c27ab35a9e39672449f5faa55a2dd",
+  "enhanced_output/test_report.json": "3940d6fbff15f2b9cbf4c21cb3fcb3dcfc7b909239082d9146629d58de123a59",
+  "enhanced_output/frozen.json": "98646bd162893e674410b6fa8298d70457d434b020784f4d8b8cd17d0d94fcd1",
+  "docker-image-id.txt": "not provided",
+  "tesseract-version.txt": "not provided",
+  "pillow-version.txt": "not provided"
+}
