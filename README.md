@@ -15,11 +15,17 @@ Local OCR prototype using Python, Tesseract and Pillow.
 
 Requires Python and Docker. Run from the repository directory:
 
-    python3 -m pip install -r requirements.txt
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
     docker build -t insurance-document-orc:pilot .
     docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
 
 ## Review Desk
+
+In each new terminal, activate the project environment first:
+
+    source .venv/bin/activate
 
     python3 review_app.py
 
@@ -38,6 +44,23 @@ Open http://127.0.0.1:8766
 
 Images are processed temporarily. Download results to retain them.
 Results do not automatically enter the Review Desk queue.
+
+## Review uploaded images
+
+In Document mode, click Download review package after reading OCR. The
+package includes the source image and OCR output; keep it private.
+
+Start the separate uploaded-image queue (activate .venv in this terminal):
+
+    source .venv/bin/activate
+    python3 review_app.py --uploads --port 8767
+
+Open http://127.0.0.1:8767 and import ocr-review-package.json. Compare the
+image, correct both text and fields, approve/reject, and export decisions.
+The database is review_state/uploads.sqlite3; it persists images and history.
+Reset archives decisions and makes the existing images pending again; it
+does not delete stored images. General/sparse text is not supported by this
+structured review queue. See UPLOAD_REVIEW_GUIDE.md.
 
 ## Verification
 
@@ -72,3 +95,4 @@ PDF, handwriting and structured table reconstruction are not supported.
 
 Keep private review databases, exports and uploads outside version control.
 See the included guides for workflow details.
+
