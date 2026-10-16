@@ -35,7 +35,7 @@ the user's Mac/Docker environment. Reproductions may differ across versions.
 The frozen project.py, challenge.py, enhanced.py, manifest and recorded
 enhanced test report are checked before and after the run and not changed.
 No test images/labels are evaluated. Normalized CER lowercases/collapses
-whitespace; it does not count punctuation or case in the original way.
+whitespace; other character differences, including punctuation, remain.
 
 ## Limits and next experiment
 
