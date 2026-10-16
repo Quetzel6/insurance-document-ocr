@@ -6,7 +6,7 @@ document.querySelector('main').prepend(consistencyNotice);
 const $=id=>document.getElementById(id);
 let cases=[],token='',runId='',current=null,dirty=false;
 let suggestion=null,suggestionRevision=0;
-let wordSuggestion=null;
+let wordSuggestion=null,formatSuggestion=null;
 const fields=['document_id','date','amount'];
 const status=c=>c.decision?c.decision.status:'pending';
 function renderQueue(){
@@ -79,6 +79,7 @@ $('import_file').onchange=async()=>{
 
 
 function clearSuggestions(){
+ clearFormatSuggestions();
  clearWordSuggestions();
  suggestion=null;suggestionRevision++;
  $('apply_fields').disabled=true;$('preview_fields').disabled=!current||current.review_mode==='text';
@@ -156,4 +157,55 @@ $('apply_words').onclick=()=>{
  $('corrected_text').value=proposal.after;dirty=true;$('text_confirmed').checked=false;
  clearSuggestions();renderDiff();
  $('word_status').textContent='ใช้ข้อความที่เสนอแล้ว — ตัวเลขคงเดิม ตรวจภาพและยืนยันก่อนอนุมัติ ยังไม่ได้บันทึก';
+};
+
+
+// Review assistance only: format existing digits using explicitly supplied field values.
+function proposeFormats(text,values){
+ const changes=[],skipped=[];
+ const lines=text.split('\n');
+ const specs=[
+  {key:'date',label:/^\s*Date\b/i,whole:/^(\s*Date)\s*:?\s*([0-9]{4}-?[0-9]{2}-?[0-9]{2})\s*$/i,
+   canonical:/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/},
+  {key:'amount',label:/^\s*(?:Amount|Amourt|Arnrourt|Ammourt)\b/i,
+   whole:/^(\s*(?:Amount|Amourt|Arnrourt|Ammourt))\s*:?\s*([0-9]{1,12}(?:\.[0-9]{2}|[ \t]+[0-9]{2}))\s*$/i,
+   canonical:/^[0-9]{1,12}\.[0-9]{2}$/}
+ ];
+ for(const spec of specs){
+  const indexes=lines.map((line,i)=>spec.label.test(line)?i:-1).filter(i=>i>=0);
+  if(!indexes.length)continue;
+  const value=values[spec.key];
+  if(indexes.length!==1||!spec.canonical.test(value)){skipped.push(spec.key);continue}
+  if(spec.key==='date'){
+   const parsed=new Date(value+'T00:00:00Z');
+   if(value.startsWith('0000')||!Number.isFinite(parsed.getTime())||parsed.toISOString().slice(0,10)!==value){skipped.push(spec.key);continue}
+  }
+  const i=indexes[0],match=lines[i].match(spec.whole);
+  if(!match||match[2].replace(/[^0-9]/g,'')!==value.replace(/[^0-9]/g,'')){
+   skipped.push(spec.key);continue;
+  }
+  const after=(spec.key==='date'?'Date: ':'Amount: ')+value;
+  if(lines[i]!==after){changes.push(lines[i]+' → '+after);lines[i]=after}
+ }
+ return {text:lines.join('\n'),changes,skipped};
+}
+function clearFormatSuggestions(){
+ formatSuggestion=null;$('apply_format').disabled=true;
+ $('format_preview').hidden=true;$('format_preview').textContent='';$('format_status').textContent='';
+}
+$('preview_format').onclick=()=>{
+ clearFormatSuggestions();if(!current||current.review_mode==='text')return;
+ const before=$('corrected_text').value,values=Object.fromEntries(fields.map(k=>[k,$(k).value.trim()]));
+ const proposal=proposeFormats(before,values);
+ $('format_status').textContent=proposal.skipped.length?'ข้ามช่องที่ว่าง กำกวม รูปแบบไม่รองรับ หรือลำดับตัวเลขไม่ตรง: '+proposal.skipped.join(', '):'ตรวจค่ากับภาพก่อนใช้ ไม่มีการอ่านภาพซ้ำหรือยืนยันว่าตัวเลขถูก';
+ if(!proposal.changes.length){$('format_status').textContent+=' — ไม่มีรูปแบบที่เสนอแก้ได้';return}
+ formatSuggestion={caseId:current.id,before,values,after:proposal.text};
+ $('format_preview').textContent=proposal.changes.join('\n');$('format_preview').hidden=false;$('apply_format').disabled=false;
+};
+$('apply_format').onclick=()=>{
+ if(!formatSuggestion||!current||current.review_mode==='text')return;
+ const p=formatSuggestion;
+ if(p.caseId!==current.id||p.before!==$('corrected_text').value||fields.some(k=>p.values[k]!==$(k).value.trim())){clearFormatSuggestions();return}
+ $('corrected_text').value=p.after;dirty=true;$('text_confirmed').checked=false;
+ clearSuggestions();renderDiff();$('format_status').textContent='จัดรูปแบบแล้ว ยังไม่ได้บันทึก ตรวจข้อความและตัวเลขกับภาพก่อนยืนยันและ Approve';
 };
