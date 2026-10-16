@@ -16,8 +16,10 @@ review_check/
 ocr-review-decision*.json
 image-ocr-result*.json
 uploads/
+ocr-review-package*.json
+
+# Downloaded model weights and local experiment runs
+.ocr_models/
+ocr_model_runs/
 
 # Synthetic challenge_data/ and static review/ evidence are tracked.
-
-
-ocr-review-package*.json
