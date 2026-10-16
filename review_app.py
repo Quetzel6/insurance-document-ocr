@@ -64,8 +64,12 @@ def validate_package(package):
     if not isinstance(package, dict) or package.get('format') != 'ocr-review-package-v1':
         raise ValueError('Choose an OCR review package downloaded from Image Reader')
     result = package.get('result')
-    if not isinstance(result, dict) or result.get('layout') != 'document' or result.get('field_extraction_enabled') is not True:
-        raise ValueError('Only Document ID / Date / Amount mode can enter this queue')
+    if not isinstance(result, dict) or result.get('layout') not in ('document', 'general', 'sparse'):
+        raise ValueError('Invalid OCR layout')
+    layout = result['layout']
+    structured = layout == 'document'
+    if result.get('field_extraction_enabled') is not structured:
+        raise ValueError('OCR layout and field extraction flag do not agree')
     language = result.get('language')
     if language not in ('eng', 'tha+eng'):
         raise ValueError('Invalid OCR language')
@@ -76,6 +80,8 @@ def validate_package(package):
         raise ValueError('Invalid OCR fields')
     if any(v is not None and (not isinstance(v, str) or len(v) > 100) for v in fields.values()):
         raise ValueError('Invalid OCR field value')
+    if not structured and any(value is not None for value in fields.values()):
+        raise ValueError('General/sparse packages must not contain structured fields')
     encoded = package.get('image_base64')
     if not isinstance(encoded, str) or len(encoded) > 14 * 1024 * 1024:
         raise ValueError('Image is too large')
@@ -106,10 +112,14 @@ def validate_package(package):
         except (OSError, UnidentifiedImageError, Image.DecompressionBombError, Image.DecompressionBombWarning) as exc:
             raise ValueError('Cannot decode source image') from exc
     original = {k: fields[k] or '' for k in FIELDS}
-    identity = json.dumps([source_sha, language, text, original], sort_keys=True, ensure_ascii=False)
+    identity_data = [source_sha, language, text, original]
+    if not structured:
+        identity_data += ['text', layout]
+    identity = json.dumps(identity_data, sort_keys=True, ensure_ascii=False)
     case_id = 'upload-' + hashlib.sha256(identity.encode()).hexdigest()
-    case = dict(id=case_id, original=original, text=text, reasons=validation(original),
-                source_sha256=source_sha, language=language, layout='document',
+    case = dict(id=case_id, original=original, text=text, reasons=validation(original) if structured else [],
+                source_sha256=source_sha, language=language, layout=layout,
+                review_mode='structured' if structured else 'text',
                 source_kind='uploaded', provenance='Imported local package; OCR content is not authenticated')
     return case, output.getvalue()
 
@@ -135,6 +145,7 @@ CREATE TABLE IF NOT EXISTS uploaded_documents (id TEXT PRIMARY KEY, payload TEXT
         cases = {}
         for row in self.db.execute('SELECT id,payload,image FROM uploaded_documents ORDER BY id'):
             case = json.loads(row['payload'])
+            case.setdefault('review_mode', 'structured')
             case['image_bytes'] = bytes(row['image'])
             cases[row['id']] = case
         return cases
@@ -153,13 +164,17 @@ CREATE TABLE IF NOT EXISTS uploaded_documents (id TEXT PRIMARY KEY, payload TEXT
         row = self.db.execute('SELECT payload FROM decisions WHERE id=?', (case_id,)).fetchone()
         return json.loads(row[0]) if row else None
 
-    def save(self, case_id, data, original, original_text=""):
+    def save(self, case_id, data, original, original_text="", review_mode="structured"):
         if not isinstance(data, dict):
             raise ValueError('Expected an object')
+        if review_mode not in ('structured', 'text'):
+            raise ValueError('Invalid review mode')
         values = data.get('values')
         if not isinstance(values, dict) or set(values) != set(FIELDS) or any(not isinstance(v, str) for v in values.values()):
             raise ValueError('All three text fields are required')
         values = {k: v.strip() for k, v in values.items()}
+        if review_mode == 'text' and any(values.values()):
+            raise ValueError('Text-only review must leave ID, date and amount empty')
         status = data.get('status')
         if status not in ('approved', 'rejected'):
             raise ValueError('Choose approved or rejected')
@@ -168,7 +183,7 @@ CREATE TABLE IF NOT EXISTS uploaded_documents (id TEXT PRIMARY KEY, payload TEXT
             raise ValueError('Reviewer name is required (max 100 characters)')
         if not isinstance(note, str) or len(note) > 2000 or (status == 'rejected' and not note.strip()):
             raise ValueError('Rejection requires a reason; notes max 2000 characters')
-        if status == 'approved' and validation(values):
+        if status == 'approved' and review_mode == 'structured' and validation(values):
             raise ValueError(' '.join(validation(values)))
         if type(data.get('version')) is not int:
             raise ValueError('Version is required')
@@ -180,9 +195,15 @@ CREATE TABLE IF NOT EXISTS uploaded_documents (id TEXT PRIMARY KEY, payload TEXT
             raise ValueError('Text confirmation must be true or false')
         if status == 'approved' and corrected != original_text and not confirmed:
             raise ValueError('Confirm the edited OCR text against the source image before approval')
-        consistency = check_consistency(corrected, values)
-        if status == 'approved' and not consistency['passed']:
-            raise ValueError(' '.join(consistency['errors']))
+        if review_mode == 'text':
+            if status == 'approved' and (not corrected.strip() or not confirmed):
+                raise ValueError('Text approval requires non-empty corrected text and confirmation against the image')
+            consistency = dict(passed=None, applicable=False, extracted={}, errors=[],
+                               policy='text-review-v1', limit='Human text review only; structured fields are not applicable')
+        else:
+            consistency = check_consistency(corrected, values)
+            if status == 'approved' and not consistency['passed']:
+                raise ValueError(' '.join(consistency['errors']))
         changes = [dict(operation=tag, before=original_text[a:b], after=corrected[c:d])
                    for tag, a, b, c, d in difflib.SequenceMatcher(None, original_text, corrected, autojunk=False).get_opcodes()
                    if tag != 'equal']
@@ -192,7 +213,7 @@ CREATE TABLE IF NOT EXISTS uploaded_documents (id TEXT PRIMARY KEY, payload TEXT
             version = old['version'] if old else 0
             if data['version'] != version:
                 raise RuntimeError('Another decision was saved. Reload this case before saving.')
-            payload = dict(id=case_id, version=version + 1, status=status, values=values,
+            payload = dict(id=case_id, version=version + 1, status=status, review_mode=review_mode, values=values,
                            original=original, original_text=original_text, corrected_text=corrected,
                            text_confirmed=confirmed, text_changes=changes,
                            consistency=consistency,
@@ -302,9 +323,12 @@ def make_handler(cases, store, token, port, uploads=False):
                     return self.send(200, dict(run_id=store.reset(data['run_id'])))
                 if data.get('id') not in cases:
                     raise ValueError('Unknown document')
+                review_mode = cases[data['id']].get('review_mode', 'structured')
                 if self.path == '/api/suggestions':
+                    if review_mode != 'structured':
+                        raise ValueError('Field suggestions are not applicable to text-only review')
                     return self.send(200, suggest_fields(data.get('corrected_text')))
-                self.send(200, store.save(data['id'], data, cases[data['id']]['original'], cases[data['id']]['text']))
+                self.send(200, store.save(data['id'], data, cases[data['id']]['original'], cases[data['id']]['text'], review_mode=review_mode))
             except (ValueError, TypeError) as exc:
                 self.send(400, {'error': str(exc)})
             except RuntimeError as exc:
@@ -341,5 +365,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
