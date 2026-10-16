@@ -43,13 +43,11 @@ window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.return
 function renderDiff(){
  const a=current.text,b=$('corrected_text').value,out=$('text_diff');out.replaceChildren();
  if(a===b){out.textContent='No text changes.';return}
- let start=0,endA=a.length,endB=b.length;
- while(start<endA&&start<endB&&a[start]===b[start])start++;
- while(endA>start&&endB>start&&a[endA-1]===b[endB-1]){endA--;endB--}
- out.append(document.createTextNode(a.slice(0,start)));
- const removed=document.createElement('del');removed.textContent=a.slice(start,endA);out.append(removed);
- const added=document.createElement('ins');added.textContent=b.slice(start,endB);out.append(added);
- out.append(document.createTextNode(a.slice(endA)));
+ // Keep complete before/after blocks: multi-line edits must not splice unrelated lines.
+ out.append(document.createTextNode('ก่อนแก้ / Original OCR\n'));
+ const removed=document.createElement('del');removed.textContent=a;out.append(removed);
+ out.append(document.createTextNode('\n\nหลังแก้ / Corrected OCR\n'));
+ const added=document.createElement('ins');added.textContent=b;out.append(added);
 }
 
 $('reset_round').onclick=async()=>{

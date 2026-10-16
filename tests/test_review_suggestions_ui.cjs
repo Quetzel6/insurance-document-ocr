@@ -58,6 +58,14 @@ class Element{
  await el('preview_fields').onclick();assert.equal(el('apply_fields').disabled,true);
  assert.equal(el('amount').value,'0.00');
 
+ // Regression: adding B near the top must never display it next to Amount.
+ el('corrected_text').value='Currency THB\nService Synthetic repair estimate\nAmount: 86622.45';
+ el('corrected_text').oninput();
+ const diff=el('text_diff').children;
+ assert.equal(diff.length,4);
+ assert.equal(diff[1].textContent,cases[1].text,'Original block must remain intact');
+ assert.equal(diff[3].textContent,el('corrected_text').value,'Corrected block must exactly match textarea');
+ assert.ok(diff[3].textContent.startsWith('Currency THB\n'));
  const raw='Serwce Synthetx reper estirnate\nAmourt 55082 45\nDocument I0 SYN-117642\nDate 20260911\nน้ำหนัก 412 กรัม';
  el('corrected_text').value=raw;el('corrected_text').oninput();el('form').oninput();
  const saveCount=requests.filter(url=>url==='/api/decision').length;
