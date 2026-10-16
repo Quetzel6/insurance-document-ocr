@@ -30,7 +30,7 @@ async function save(decision){if(!current)return;if(!$('reviewer').value.trim())
 }
 $('form').onsubmit=e=>{e.preventDefault();save('approved')};$('reject').onclick=()=>save('rejected');$('form').oninput=()=>dirty=true; $('corrected_text').oninput=()=>{dirty=true;$('text_confirmed').checked=false;renderDiff()};$('filter').onchange=renderQueue;
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
-(async()=>{try{const r=await fetch('/api/cases');if(!r.ok)throw Error('Could not load queue');const d=await r.json();cases=d.cases;token=d.token;runId=d.run_id;renderQueue();if(cases.length)select([...cases].sort((a,b)=>b.reasons.length-a.reasons.length)[0]);}catch(e){$('title').textContent=e.message}})();
+(async()=>{try{const r=await fetch('/api/cases');if(!r.ok)throw Error('Could not load queue');const d=await r.json();cases=d.cases;token=d.token;runId=d.run_id;$('import_label').hidden=d.queue_kind!=='uploads';renderQueue();if(!cases.length)$('title').textContent='นำเข้าชุดส่งตรวจจาก Image Reader เพื่อเริ่มต้น';if(cases.length)select([...cases].sort((a,b)=>b.reasons.length-a.reasons.length)[0]);}catch(e){$('title').textContent=e.message}})();
 
 function renderDiff(){
  const a=current.text,b=$('corrected_text').value,out=$('text_diff');out.replaceChildren();
@@ -45,7 +45,25 @@ function renderDiff(){
 }
 
 $('reset_round').onclick=async()=>{
- if(!confirm('เริ่มรอบตรวจใหม่? ระบบจะเก็บผลและประวัติรอบเดิมไว้ แล้วให้ทั้ง 40 รายการกลับเป็น Pending ส่วนที่ยังไม่บันทึกจะถูกทิ้ง'))return;
+ if(!confirm('เริ่มรอบตรวจใหม่? ระบบจะเก็บผลและประวัติรอบเดิมไว้ แล้วให้ทุกรายการในคิวนี้กลับเป็น Pending ส่วนที่ยังไม่บันทึกจะถูกทิ้ง'))return;
  $('reset_round').disabled=true;
  try{const r=await fetch('/api/reset',{method:'POST',headers:{'Content-Type':'application/json','X-Review-Token':token},body:JSON.stringify({run_id:runId})});const d=await r.json();if(!r.ok)throw Error(d.error);dirty=false;location.reload()}catch(e){$('message').textContent=e.message;$('reset_round').disabled=false}
+};
+
+
+$('import_file').onchange=async()=>{
+ const file=$('import_file').files[0];if(!file)return;
+ if(dirty&&!confirm('Discard unsaved changes?')){$('import_file').value='';return}
+ $('import_file').disabled=true;
+ try{
+  if(file.size>15*1024*1024)throw Error('ชุดส่งตรวจต้องไม่เกิน 15 MiB');
+  const packageData=JSON.parse(await file.text());
+  const r=await fetch('/api/import',{method:'POST',headers:{'Content-Type':'application/json','X-Review-Token':token},body:JSON.stringify({run_id:runId,package:packageData})});
+  const d=await r.json();if(!r.ok)throw Error(d.error);
+  const response=await fetch('/api/cases');if(!response.ok)throw Error('Cannot refresh queue');
+  const queue=await response.json();cases=queue.cases;token=queue.token;runId=queue.run_id;
+  $('filter').value='all';select(cases.find(c=>c.id===d.id));
+  $('import_status').textContent=d.created?'นำเข้าแล้ว — ตรวจภาพก่อนอนุมัติ':'มีชุดนี้แล้ว — เปิดรายการเดิม';
+ }catch(e){$('import_status').textContent=e.message}
+ finally{$('import_file').disabled=false;$('import_file').value=''}
 };
