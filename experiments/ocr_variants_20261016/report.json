@@ -1,0 +1,3522 @@
+{
+  "split": "dev",
+  "python": "3.12.14",
+  "pillow": "12.3.0",
+  "tesseract": "tesseract 5.3.4",
+  "eng_traineddata_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "fingerprints": {
+    "ocr_variant_experiment.py": "2c6b5e07194f05232a23d5a5b2a94d42fb75685bf0dcd30c8e07dfd21220c79a",
+    "extraction_candidate.py": "f71be47f5cc152468dae39350f5c383ce66194261dfba890bbbb10557c51d718",
+    "project.py": "9d9b960d5b76b1240589d6300b31779e2d9dd1dc23616dab7faf5200b0afadf3",
+    "challenge.py": "c414fe0ba26013bf8732af53fdb740d761caede6d499aa619465487ebf174417",
+    "enhanced.py": "c5ce53b40817332bc42b8b59dfdbae62b3ec7693c9d0c8760270092db234df80",
+    "challenge_data/manifest.json": "c939e8979473f9540412abde49db01456150ce7d95691c31cd20b613be2b92c7",
+    "enhanced_output/frozen.json": "98646bd162893e674410b6fa8298d70457d434b020784f4d8b8cd17d0d94fcd1",
+    "enhanced_output/test_report.json": "3940d6fbff15f2b9cbf4c21cb3fcb3dcfc7b909239082d9146629d58de123a59"
+  },
+  "summary": [
+    {
+      "method": "current",
+      "condition": "all",
+      "images": 40,
+      "originals": 10,
+      "cer": 0.02604895104895105,
+      "complete": 30,
+      "correct": {
+        "document_id": 31,
+        "date": 37,
+        "amount": 30
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 9,
+        "date": 3,
+        "amount": 10
+      }
+    },
+    {
+      "method": "current",
+      "condition": "blur_lowres",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.1041958041958042,
+      "complete": 0,
+      "correct": {
+        "document_id": 1,
+        "date": 7,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 9,
+        "date": 3,
+        "amount": 10
+      }
+    },
+    {
+      "method": "current",
+      "condition": "clean",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "current",
+      "condition": "shadow",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "current",
+      "condition": "skew",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "prepared_sparse",
+      "condition": "all",
+      "images": 40,
+      "originals": 10,
+      "cer": 0.029895104895104895,
+      "complete": 30,
+      "correct": {
+        "document_id": 31,
+        "date": 34,
+        "amount": 31
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 9,
+        "date": 6,
+        "amount": 9
+      }
+    },
+    {
+      "method": "prepared_sparse",
+      "condition": "blur_lowres",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.11958041958041958,
+      "complete": 0,
+      "correct": {
+        "document_id": 1,
+        "date": 4,
+        "amount": 1
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 9,
+        "date": 6,
+        "amount": 9
+      }
+    },
+    {
+      "method": "prepared_sparse",
+      "condition": "clean",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "prepared_sparse",
+      "condition": "shadow",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "prepared_sparse",
+      "condition": "skew",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "grayscale_block",
+      "condition": "all",
+      "images": 40,
+      "originals": 10,
+      "cer": 0.2867132867132867,
+      "complete": 10,
+      "correct": {
+        "document_id": 12,
+        "date": 20,
+        "amount": 15
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 1,
+        "amount": 2
+      },
+      "missing": {
+        "document_id": 28,
+        "date": 19,
+        "amount": 23
+      }
+    },
+    {
+      "method": "grayscale_block",
+      "condition": "blur_lowres",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.11398601398601399,
+      "complete": 0,
+      "correct": {
+        "document_id": 2,
+        "date": 1,
+        "amount": 1
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 8,
+        "date": 9,
+        "amount": 9
+      }
+    },
+    {
+      "method": "grayscale_block",
+      "condition": "clean",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "grayscale_block",
+      "condition": "shadow",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.9993006993006993,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      }
+    },
+    {
+      "method": "grayscale_block",
+      "condition": "skew",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.033566433566433566,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 9,
+        "amount": 4
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 1,
+        "amount": 2
+      },
+      "missing": {
+        "document_id": 10,
+        "date": 0,
+        "amount": 4
+      }
+    },
+    {
+      "method": "prepared_otsu",
+      "condition": "all",
+      "images": 40,
+      "originals": 10,
+      "cer": 0.08041958041958042,
+      "complete": 30,
+      "correct": {
+        "document_id": 30,
+        "date": 30,
+        "amount": 30
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      }
+    },
+    {
+      "method": "prepared_otsu",
+      "condition": "blur_lowres",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.32167832167832167,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      }
+    },
+    {
+      "method": "prepared_otsu",
+      "condition": "clean",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "prepared_otsu",
+      "condition": "shadow",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "prepared_otsu",
+      "condition": "skew",
+      "images": 10,
+      "originals": 10,
+      "cer": 0.0,
+      "complete": 10,
+      "correct": {
+        "document_id": 10,
+        "date": 10,
+        "amount": 10
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "t2-0-clean",
+      "original_id": "t2-0",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-clean",
+      "original_id": "t2-0",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-clean",
+      "original_id": "t2-0",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-clean",
+      "original_id": "t2-0",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-blur_lowres",
+      "original_id": "t2-0",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount $8520 45\n\nDate 20260910\n\nService Synthetic reper estmate\nCurrency THB\nDocument ID: SYN 207642\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-10",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 12,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-blur_lowres",
+      "original_id": "t2-0",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount $8520 45\n\nDate 2026.09 10\n\nService Synthetc reper estmate\n\nCurrency. THE\n\nDocument ID: SYN. 207642\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 15,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-blur_lowres",
+      "original_id": "t2-0",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount $8520 45\n\nDate 2026.09 10\n\nService Syntheb< reper estmate\nCurrency: THB\nDocument ID: SYN 207642\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 14,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-blur_lowres",
+      "original_id": "t2-0",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVNTHMETIC EVOICE . NOT A REAL CL Am\nAorourt, $8520 45\n\nOete 2026 08 10\n\nSernce Synthetc reper esbmete\nCurrency THO\nOvecument IO SVN 207642\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 37,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-skew",
+      "original_id": "t2-0",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-skew",
+      "original_id": "t2-0",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-skew",
+      "original_id": "t2-0",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nAmount: 5520.45\nDate: 2026-09-19\nService: synthetic repair estimate\nCurrency: THB\nDocument \\D: SYN-207 642\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-19",
+        "amount": "5520.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 6,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-skew",
+      "original_id": "t2-0",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-shadow",
+      "original_id": "t2-0",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-shadow",
+      "original_id": "t2-0",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-shadow",
+      "original_id": "t2-0",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "-\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 142,
+      "chars": 143
+    },
+    {
+      "id": "t2-0-shadow",
+      "original_id": "t2-0",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 58520.45\n\nDate: 2026-09-10\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDocument ID: SYN-207642\n",
+      "prediction": {
+        "document_id": "SYN-207642",
+        "date": "2026-09-10",
+        "amount": "58520.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-clean",
+      "original_id": "t2-1",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-clean",
+      "original_id": "t2-1",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-11\n\nService: Synthetic repair estimate\n\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-clean",
+      "original_id": "t2-1",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-clean",
+      "original_id": "t2-1",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-blur_lowres",
+      "original_id": "t2-1",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService Synthetc repay estmate\nDocument ID: SYN.217642\n\nCurrency. THB\n\nAmount 89840 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-11",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 9,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-blur_lowres",
+      "original_id": "t2-1",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate 2026-09-11\n\nService Synthetc repay estmaete\n\nDocument ID: SYN. 217642\n\nCurrency THB\n\nAmount 89640 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-11",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 13,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-blur_lowres",
+      "original_id": "t2-1",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate 2026-0911\n\nService Synthet<c reper estmate\nDocument ID: SYN-217642\nCurrency: THB\n\nAmount 89640 45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": false,
+        "amount": false
+      },
+      "edits": 10,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-blur_lowres",
+      "original_id": "t2-1",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC WEVOICE . NOT A REAL CL Ame\nOete 2026-09 11\n\nService Syrtheec reopen esernete\nOocument IO SVN 217642\n\nCurrency THO\n\nArnourt 00040 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 37,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-skew",
+      "original_id": "t2-1",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-skew",
+      "original_id": "t2-1",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-11\n\nService: Synthetic repair estimate\n\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-skew",
+      "original_id": "t2-1",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nDate: 2026-09-11\nService: synthetic repair estimate\nDocument \\D: SYN-217 642\nCurrency: THB\nAmount: g9340.45\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-11",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 6,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-skew",
+      "original_id": "t2-1",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-shadow",
+      "original_id": "t2-1",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-shadow",
+      "original_id": "t2-1",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-11\n\nService: Synthetic repair estimate\n\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-shadow",
+      "original_id": "t2-1",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "=\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t2-1-shadow",
+      "original_id": "t2-1",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-11\n\nService: Synthetic repair estimate\nDocument ID: SYN-217642\n\nCurrency: THB\n\nAmount: 89840.45\n",
+      "prediction": {
+        "document_id": "SYN-217642",
+        "date": "2026-09-11",
+        "amount": "89840.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-clean",
+      "original_id": "t2-2",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-clean",
+      "original_id": "t2-2",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-clean",
+      "original_id": "t2-2",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-clean",
+      "original_id": "t2-2",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-blur_lowres",
+      "original_id": "t2-2",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService Synthetc repay estmate\nDate 2026-09-12\n\nAmount 45382 45\n\nCurrency THB\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": false
+      },
+      "edits": 9,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-blur_lowres",
+      "original_id": "t2-2",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService Synthetc reper estmaete\n\nDate 2026.09 12\n\nAmount: 45382 45\n\nCurrency THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": false,
+        "amount": false
+      },
+      "edits": 11,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-blur_lowres",
+      "original_id": "t2-2",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService Synthetc reper estmate\nDate 2026.09 12\n\nAmount 45382 45\n\nCurrency: THE\nDocument iD: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": false,
+        "amount": false
+      },
+      "edits": 11,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-blur_lowres",
+      "original_id": "t2-2",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVNTHMETIC WEVOICE . NOT A REAL CL Ame\nSernce Syntheec reper evbmete\nOete 2026 08 12\n\nAmmourt 43362 4%\n\nCurrency THO\nOvecument 1D SVN 227642\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 41,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-skew",
+      "original_id": "t2-2",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-skew",
+      "original_id": "t2-2",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-skew",
+      "original_id": "t2-2",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nService: synthetic repair estimate\nDate: 2026-09-12\nAmount: 45382.45\nCurrency: THB\nDocument \\D: SYN-227 642\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      },
+      "edits": 4,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-skew",
+      "original_id": "t2-2",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-shadow",
+      "original_id": "t2-2",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-shadow",
+      "original_id": "t2-2",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-shadow",
+      "original_id": "t2-2",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "=\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t2-2-shadow",
+      "original_id": "t2-2",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\n\nDate: 2026-09-12\n\nAmount: 45382.45\n\nCurrency: THB\n\nDocument ID: SYN-227642\n",
+      "prediction": {
+        "document_id": "SYN-227642",
+        "date": "2026-09-12",
+        "amount": "45382.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-clean",
+      "original_id": "t2-3",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-clean",
+      "original_id": "t2-3",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-clean",
+      "original_id": "t2-3",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-clean",
+      "original_id": "t2-3",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-blur_lowres",
+      "original_id": "t2-3",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\nDocument ID: SYN.237642\n\nAmount: 40021 45\n\nDate: 2026-09-13\n\nCurrency THB\n\nService Synthetc repay estate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-13",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 10,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-blur_lowres",
+      "original_id": "t2-3",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nDocument ID: SYN.237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency. THB\n\nService Synthetc reper estmate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      },
+      "edits": 8,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-blur_lowres",
+      "original_id": "t2-3",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN. 237642\n\nAmount 40021 45\n\nDate: 2026-09-13\n\nCurrency: THE\n\nService Synthetc reper estmate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-13",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 10,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-blur_lowres",
+      "original_id": "t2-3",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVNTHMETIC OEVOICE . NOT A REAL CL Ame\nOecument IO SVN. 237642\n\nAvemrt 40021 45\n\nOeste 2026 09 13\n\nCurrency THO\n\nService Synthetc reper esbmate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 35,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-skew",
+      "original_id": "t2-3",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-skew",
+      "original_id": "t2-3",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-skew",
+      "original_id": "t2-3",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nDocument \\D: SYN-237642\nAmount: 40021.45\nDate: 2026-09-13\nCurrency: THB\nService: synthetic repair estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      },
+      "edits": 3,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-skew",
+      "original_id": "t2-3",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-shadow",
+      "original_id": "t2-3",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-shadow",
+      "original_id": "t2-3",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-shadow",
+      "original_id": "t2-3",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "=\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t2-3-shadow",
+      "original_id": "t2-3",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDocument ID: SYN-237642\n\nAmount: 40021.45\n\nDate: 2026-09-13\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-237642",
+        "date": "2026-09-13",
+        "amount": "40021.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-clean",
+      "original_id": "t2-4",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-clean",
+      "original_id": "t2-4",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-clean",
+      "original_id": "t2-4",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-clean",
+      "original_id": "t2-4",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-blur_lowres",
+      "original_id": "t2-4",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService Synthetc repay estmate\nAmount: 37653 45\n\nDocument ID: SYN 247642\n\nDate 20260914\n\nCurrency THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-14",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 11,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-blur_lowres",
+      "original_id": "t2-4",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService Synthetc repay estmete\n\nAmount: 3765345\n\nDocument ID: SYN 247642\n\nDate 20260914\n\nCurrency THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-14",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 12,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-blur_lowres",
+      "original_id": "t2-4",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService Synthetc reper estmate\nAmount: 37653.45\nDocument ID: SYN 247642\n\nDate 2026.09 14\n\nCurrency: THE\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      },
+      "edits": 10,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-blur_lowres",
+      "original_id": "t2-4",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVNTHMETIC WEVOICE . NOT A REAL CL Ame\nService Syntheec reper evbmete\nArrmrt 37683 45\n\nOocument IO SVN 247642\n\nOete 2026-09 14\n\nCurrency THO\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 35,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-skew",
+      "original_id": "t2-4",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-skew",
+      "original_id": "t2-4",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-skew",
+      "original_id": "t2-4",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nService: synthetic repair estimate\nAmount: 37653.45\nDocument \\D: SYN-247 642\nDate: 2026-09-14\nCurrency: THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      },
+      "edits": 4,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-skew",
+      "original_id": "t2-4",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-shadow",
+      "original_id": "t2-4",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-shadow",
+      "original_id": "t2-4",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nService: Synthetic repair estimate\n\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-shadow",
+      "original_id": "t2-4",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "z\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t2-4-shadow",
+      "original_id": "t2-4",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nService: Synthetic repair estimate\nAmount: 37653.45\n\nDocument ID: SYN-247642\n\nDate: 2026-09-14\n\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-247642",
+        "date": "2026-09-14",
+        "amount": "37653.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-clean",
+      "original_id": "t3-0",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-clean",
+      "original_id": "t3-0",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-clean",
+      "original_id": "t3-0",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-clean",
+      "original_id": "t3-0",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-blur_lowres",
+      "original_id": "t3-0",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\nDete 20260910\n\nAmmourt 10142 45\nDocument IO SY 307642\n\nCurrency TH\n\nService Synthet< reper estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 21,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-blur_lowres",
+      "original_id": "t3-0",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nDete 2026-09-10\n\nAmmourt 70142 45\n\nDecument IO SY 307642\n\nCurrency THS\n\nService Synthet< reper estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 19,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-blur_lowres",
+      "original_id": "t3-0",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTMETIC INVOICE NOT A REAL CLAIM\nDete 2026-09-10\n\nAmourt 10142 45\nDocument 10 SYN 307642\n\nCurrency THS\n\nService Synthet\u00ab repew estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 21,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-blur_lowres",
+      "original_id": "t3-0",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SveTIS TKK GrvONCE . NOT A REA Clame\nGate 2676-60-10\n\naermart, YO142 63\nCucument \u00a9 Sve 397662\nGmeecy WH\n\nService Synthetc uper evtenste\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 59,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-skew",
+      "original_id": "t3-0",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-skew",
+      "original_id": "t3-0",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-skew",
+      "original_id": "t3-0",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nDate: 2026-09-10\nAmount: 70142 A5\nDocument \\D: sYN-307 642\ncurrency: THB\nservice: synthetic repair estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-10",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 6,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-skew",
+      "original_id": "t3-0",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-shadow",
+      "original_id": "t3-0",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-shadow",
+      "original_id": "t3-0",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-shadow",
+      "original_id": "t3-0",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t3-0-shadow",
+      "original_id": "t3-0",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nDate: 2026-09-10\n\nAmount: 70142.45\n\nDocument ID: SYN-307642\n\nCurrency: THB\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-307642",
+        "date": "2026-09-10",
+        "amount": "70142.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-clean",
+      "original_id": "t3-1",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-clean",
+      "original_id": "t3-1",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-clean",
+      "original_id": "t3-1",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-clean",
+      "original_id": "t3-1",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-blur_lowres",
+      "original_id": "t3-1",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE NOT A REAL CLAIM\nCurrency TH\n\nService Synthet< repew estimate\nOeste 2026-09-11\nDocument IO SYN. 317642\n\nAmmourt 86622 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 22,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-blur_lowres",
+      "original_id": "t3-1",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nCurrency THS\n\nService Synthet< reper estimate\n\nDete 20260911\n\nDecurnent 10 Sy 317642\n\nAmourt 86622 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 23,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-blur_lowres",
+      "original_id": "t3-1",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTMETIC INVOICE NOT A REAL CLAIM\nCurrency THS\n\nService Synthet< repaw estimate\n\nDete 20260911\nDocument ID SYW- 317642\n\nAmourt 86622 45\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 20,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-blur_lowres",
+      "original_id": "t3-1",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVTTIC GEVOICE . NOT A RAs Clam\nGevercy THR\n\nServe Synthee uper eutenete\nGate 2626-60-11\nOacument iD Svw-31 7662\n\narwet, 06622 4\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 51,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-skew",
+      "original_id": "t3-1",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-skew",
+      "original_id": "t3-1",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-skew",
+      "original_id": "t3-1",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\ncurrency: THB\nService: synthetic repair estimate\nDate: 2026-09-11\nDocument \\D: SYN-317642\nAmount: 36622-45\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-11",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 5,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-skew",
+      "original_id": "t3-1",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-shadow",
+      "original_id": "t3-1",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-shadow",
+      "original_id": "t3-1",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-shadow",
+      "original_id": "t3-1",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t3-1-shadow",
+      "original_id": "t3-1",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nService: Synthetic repair estimate\n\nDate: 2026-09-11\n\nDocument ID: SYN-317642\n\nAmount: 86622.45\n",
+      "prediction": {
+        "document_id": "SYN-317642",
+        "date": "2026-09-11",
+        "amount": "86622.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-clean",
+      "original_id": "t3-2",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-clean",
+      "original_id": "t3-2",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\n\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-clean",
+      "original_id": "t3-2",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-clean",
+      "original_id": "t3-2",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-blur_lowres",
+      "original_id": "t3-2",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\nCurrency THS\nDocument IO SYN. 327642\n\nService Synthet< repay estimate\nAmourt 716784 45\n\nDate 2026-09-12\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-12",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 17,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-blur_lowres",
+      "original_id": "t3-2",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nCurrency THS\n\nDecurment IO Sv 127642\n\nService Synthet< reper estimate\n\nAeroort 16784 45\n\nDate 2026-09-12\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-12",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 24,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-blur_lowres",
+      "original_id": "t3-2",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTMETIC INVOICE NOT A REAL CLAIM\nCurrency THS\nDocurnent 10 SYN 327642\n\nService Synthet< repaw estimate\nAmmourt 16784 45\n\nDate 2026-0912\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 23,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-blur_lowres",
+      "original_id": "t3-2",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVAETITIC GEVOICE . NOT A EAs Clase\nCmmeny THR\nGecwnent \u00a9 Sr- 527642\n\nServe Synth eeper ettenste\naormara 76704 63\n\nGute 2676-00-12\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 59,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-skew",
+      "original_id": "t3-2",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-skew",
+      "original_id": "t3-2",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\n\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-skew",
+      "original_id": "t3-2",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\ncurrency: THB\nDocument \\D: sYN-327 642\nService: synthetic repair estimate\nAmount: 6784.45\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-12",
+        "amount": "6784.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 5,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-skew",
+      "original_id": "t3-2",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-shadow",
+      "original_id": "t3-2",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-shadow",
+      "original_id": "t3-2",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\n\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-shadow",
+      "original_id": "t3-2",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t3-2-shadow",
+      "original_id": "t3-2",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-327642\n\nService: Synthetic repair estimate\nAmount: 76784.45\n\nDate: 2026-09-12\n",
+      "prediction": {
+        "document_id": "SYN-327642",
+        "date": "2026-09-12",
+        "amount": "76784.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-clean",
+      "original_id": "t3-3",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-clean",
+      "original_id": "t3-3",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-clean",
+      "original_id": "t3-3",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-clean",
+      "original_id": "t3-3",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-blur_lowres",
+      "original_id": "t3-3",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE NOT A REAL CLAIM\nCurrency THS\nDocument IO SYN. 337642\n\nDete 2026-09-13\n\nAmourt 30969 45\n\nService Synthet< repew estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 19,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-blur_lowres",
+      "original_id": "t3-3",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nCurrency THS\n\nDecurment IO SYN. 337642\n\nDete 20260913\n\nAmrourt }0969 45\n\nService Synthet< reper estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 23,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-blur_lowres",
+      "original_id": "t3-3",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTMETIC INVOICE NOT A REAL CLAIM\nCurrency THS\nDocurnent IO SYN 337642\n\nDete 20260913\n\nAmourt 30969 45\n\nService Synthet\u00ab repew estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 23,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-blur_lowres",
+      "original_id": "t3-3",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVTTIC GEVOICE . NOT A RAs Clam\nCGevercy THB\nGecwment \u00a9 Sri 337642\n\nGate 2626-60-13\n\naerate 30008 0\n\nServce Synthenc uper evtenete\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 52,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-skew",
+      "original_id": "t3-3",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-skew",
+      "original_id": "t3-3",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-skew",
+      "original_id": "t3-3",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\ncurrency: THB\nDocument \\D: sYN-337 642\nDate: 2026-09-13\nAmount: 30969-45\nservice: synthetic repair estimate\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-13",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 5,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-skew",
+      "original_id": "t3-3",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-shadow",
+      "original_id": "t3-3",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-shadow",
+      "original_id": "t3-3",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-shadow",
+      "original_id": "t3-3",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t3-3-shadow",
+      "original_id": "t3-3",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nCurrency: THB\n\nDocument ID: SYN-337642\n\nDate: 2026-09-13\n\nAmount: 30969.45\n\nService: Synthetic repair estimate\n",
+      "prediction": {
+        "document_id": "SYN-337642",
+        "date": "2026-09-13",
+        "amount": "30969.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-clean",
+      "original_id": "t3-4",
+      "condition": "clean",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-clean",
+      "original_id": "t3-4",
+      "condition": "clean",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-clean",
+      "original_id": "t3-4",
+      "condition": "clean",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-clean",
+      "original_id": "t3-4",
+      "condition": "clean",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-blur_lowres",
+      "original_id": "t3-4",
+      "condition": "blur_lowres",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\nAmourt, 19352 45\nDocument IO SYN 347642\n\nService Synthet< repew estimate\nCurrency THS\n\nDate 20260914\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-14",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      },
+      "edits": 19,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-blur_lowres",
+      "original_id": "t3-4",
+      "condition": "blur_lowres",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE . NOT A REAL CLAIM\n\nAmmourt 19752 45\n\nDecurment IO SY 347642\n\nService Synthet< repew estimate\n\nCurrency THS\n\nDate 2026-0914\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 23,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-blur_lowres",
+      "original_id": "t3-4",
+      "condition": "blur_lowres",
+      "method": "grayscale_block",
+      "text": "SYNTMETIC INVOICE NOT A REAL CLAIM\nAmourt 19952 45\nDocument IO SYN 347642\n\nService Synthet< repaw estimate\nCurrency THS\n\nDete 2026-0914\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 21,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-blur_lowres",
+      "original_id": "t3-4",
+      "condition": "blur_lowres",
+      "method": "prepared_otsu",
+      "text": "SVETITIC GEVOICE . NOT A REAL Clase\narouse TOA? 45\nCucument \u00a9 Sri 367662\n\nServe Synth veper ettenste\nComency WH\n\nGate 2626-00-16\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 54,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-skew",
+      "original_id": "t3-4",
+      "condition": "skew",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-skew",
+      "original_id": "t3-4",
+      "condition": "skew",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-skew",
+      "original_id": "t3-4",
+      "condition": "skew",
+      "method": "grayscale_block",
+      "text": "SYNTHETIC \\NVOICE - NOTA REAL CLAIM\nAmount: 79352.45\nDocument \\D: sYN-347 642\nService: synthetic repair estimate\ncurrency: THB\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      },
+      "edits": 4,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-skew",
+      "original_id": "t3-4",
+      "condition": "skew",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-shadow",
+      "original_id": "t3-4",
+      "condition": "shadow",
+      "method": "current",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-shadow",
+      "original_id": "t3-4",
+      "condition": "shadow",
+      "method": "prepared_sparse",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\n\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\n\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-shadow",
+      "original_id": "t3-4",
+      "condition": "shadow",
+      "method": "grayscale_block",
+      "text": "",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 143,
+      "chars": 143
+    },
+    {
+      "id": "t3-4-shadow",
+      "original_id": "t3-4",
+      "condition": "shadow",
+      "method": "prepared_otsu",
+      "text": "SYNTHETIC INVOICE - NOT A REAL CLAIM\nAmount: 79352.45\n\nDocument ID: SYN-347642\n\nService: Synthetic repair estimate\nCurrency: THB\n\nDate: 2026-09-14\n",
+      "prediction": {
+        "document_id": "SYN-347642",
+        "date": "2026-09-14",
+        "amount": "79352.45"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 143
+    }
+  ],
+  "limitations": "Exploratory English synthetic dev only: 40 variants / 10 correlated originals in two layouts. Existing data have been inspected in prior development. Test split is not run. No new generalization claim, deployment change, digit guessing or model training. Timing is not compared."
+}
