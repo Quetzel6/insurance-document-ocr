@@ -1,15 +1,16 @@
 # Review uploaded images
 
 1. Run Image Reader as described in README.md and open http://127.0.0.1:8766.
-2. Select Document ID / Date / Amount mode, read an image, then click
+2. Select Document ID / Date / Amount, general or sparse layout, read an image, then click
    ดาวน์โหลดชุดส่งตรวจ. Save ocr-review-package.json locally.
 3. In another terminal, from the repository directory, run:
 
        python3 review_app.py --uploads --port 8767
 
 4. Open http://127.0.0.1:8767. Use นำเข้าชุดส่งตรวจ to select the package.
-5. Check the image. Correct OCR text and the three fields separately,
-   confirm edited text, then approve; or reject with a Thai/English reason.
+5. Check the image. Document mode reviews OCR text and three fields separately.
+   General/sparse modes review text only: confirm against the image, then
+   Approve text. Either mode can be rejected with a Thai/English reason.
 6. Export decisions & history to retain review results and source provenance.
 
 The uploaded-image queue uses review_state/uploads.sqlite3. It stores the
@@ -33,7 +34,9 @@ stopped if you need the images as well. Existing report-based
 check_review_export.py is for the synthetic benchmark and will reject the
 uploaded queue's uploads-v1 fingerprint; do not use it as an accuracy check.
 
-Only the current synthetic-style SYN- plus six-digit ID, ISO calendar date
-and decimal amount contract can be approved. General/sparse mode packages,
-PDF, handwriting and arbitrary insurance ID formats are not supported here.
+Document-field approval supports only the current synthetic-style SYN- plus
+six-digit ID, ISO calendar date and decimal amount contract. General/sparse
+packages use text-only approval and do not validate structured fields. See
+GENERAL_TEXT_REVIEW.md. PDF, handwriting and arbitrary insurance ID formats
+for structured approval are not supported here.
 Approval is a human decision, not proof of correctness or model training.
