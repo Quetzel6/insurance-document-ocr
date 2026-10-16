@@ -17,11 +17,17 @@ function renderQueue(){
  for(const c of visible){const b=document.createElement('button');b.textContent=`${c.id} · ${status(c)}${c.reasons.length?' ⚑':''}`;b.className=current&&c.id===current.id?'active':'';b.onclick=()=>{if(!dirty||confirm('Discard unsaved changes?'))select(c)};$('queue').append(b)}
  if(!visible.length)$('queue').textContent='No cases in this filter.';
 }
-function select(c){$('image').hidden=false;current=c;clearSuggestions();dirty=false;$('title').textContent=c.id;$('image').src='/image/'+encodeURIComponent(c.id);$('ocr').textContent=c.text;
- const d=c.decision;for(const k of fields)$(k).value=(d?d.values:c.original)[k];
+function select(c){$('image').hidden=false;current=c;clearSuggestions();
+ const textOnly=c.review_mode==='text';
+ $('structured_fields').hidden=textOnly;$('suggestion_tools').hidden=textOnly;
+ for(const k of fields){$(k).disabled=textOnly;$(k).required=!textOnly}
+ $('approve').textContent=textOnly?'Approve text':'Approve values';
+ $('confirmation_help').textContent=textOnly?'ตรวจข้อความทั้งหมดกับภาพและติ๊กยืนยันทุกครั้งก่อน Approve text หากอ่านไม่ได้ให้ Reject พร้อมเหตุผล':'Required to approve changed text. If unreadable, reject with a reason.';
+ consistencyNotice.textContent=textOnly?'ตรวจเฉพาะข้อความ: ไม่ใช้ ID / Date / Amount ผล OCR อาจผิดได้ โปรดตรวจภาพก่อนอนุมัติ ไม่รองรับการแปลงตารางเป็นเซลล์':'Approval requires matching ID, Date and Amount in text and fields. DocumentID is accepted. Verify all values against the image.';dirty=false;$('title').textContent=c.id;$('image').src='/image/'+encodeURIComponent(c.id);$('ocr').textContent=c.text;
+ const d=c.decision;for(const k of fields)$(k).value=textOnly?'':(d?d.values:c.original)[k];
  $('corrected_text').value=d&&typeof d.corrected_text==='string'?d.corrected_text:c.text; $('text_confirmed').checked=!!(d&&d.text_confirmed); renderDiff();
  $('note').value=d?d.note:'';if(d)$('reviewer').value=d.reviewer;
- $('reasons').textContent=c.reasons.length?'Original prediction flags: '+c.reasons.join(' '):'Original prediction passes format checks. Inspect every field against the image.';
+ $('reasons').textContent=textOnly?'โหมดตรวจข้อความทั่วไป — แก้ข้อความจากภาพ ไม่ต้องกรอก ID / Date / Amount':c.reasons.length?'Original prediction flags: '+c.reasons.join(' '):'Original prediction passes format checks. Inspect every field against the image.';
  $('original').textContent='Original prediction: '+fields.map(k=>`${k}: ${c.original[k]||'(missing)'}`).join(' · ');
  $('history').textContent=d?`${d.status} · version ${d.version}\n${d.reviewer} · ${d.saved_at}\n${d.note}`:'None';$('message').textContent='';renderQueue();
 }
@@ -61,7 +67,7 @@ $('import_file').onchange=async()=>{
   if(!file.name.toLowerCase().endsWith('.json'))throw Error('ช่องนี้รับชุดส่งตรวจ .json เท่านั้น กรุณาอ่านภาพที่พอร์ต 8766 แล้วกดดาวน์โหลดชุดส่งตรวจ');
   let packageData;try{packageData=JSON.parse(await file.text())}catch{throw Error('อ่าน JSON ไม่ได้ กรุณาดาวน์โหลดชุดส่งตรวจใหม่จากพอร์ต 8766')}
   if(!packageData||packageData.format!=='ocr-review-package-v1'||!packageData.image_base64||!packageData.result)throw Error('ไฟล์นี้ไม่ใช่ชุดส่งตรวจ กรุณาไปพอร์ต 8766 แล้วกด “ดาวน์โหลดชุดส่งตรวจ” ใช้ไฟล์ ocr-review-package.json ไม่ใช่ผล JSON หรือประวัติ decisions');
-  if(packageData.result.layout!=='document')throw Error('คิวนี้รองรับโหมดเอกสาร ID / Date / Amount กรุณาเลือกโหมดนี้และอ่าน OCR ใหม่ที่พอร์ต 8766');
+  if(!['document','general','sparse'].includes(packageData.result.layout))throw Error('รูปแบบภาพไม่รองรับ กรุณาสร้างชุดส่งตรวจใหม่ที่พอร์ต 8766');
   const r=await fetch('/api/import',{method:'POST',headers:{'Content-Type':'application/json','X-Review-Token':token},body:JSON.stringify({run_id:runId,package:packageData})});
   const d=await r.json();if(!r.ok)throw Error(d.error);
   const response=await fetch('/api/cases');if(!response.ok)throw Error('Cannot refresh queue');
@@ -75,11 +81,11 @@ $('import_file').onchange=async()=>{
 
 function clearSuggestions(){
  suggestion=null;suggestionRevision++;
- $('apply_fields').disabled=true;$('preview_fields').disabled=!current;
+ $('apply_fields').disabled=true;$('preview_fields').disabled=!current||current.review_mode==='text';
  $('suggest_preview').hidden=true;$('suggest_preview').textContent='';$('suggest_status').textContent='';
 }
 $('preview_fields').onclick=async()=>{
- if(!current)return;
+ if(!current||current.review_mode==='text')return;
  clearSuggestions();
  const revision=suggestionRevision,caseId=current.id,text=$('corrected_text').value;
  const before=Object.fromEntries(fields.map(k=>[k,$(k).value]));
@@ -97,7 +103,7 @@ $('preview_fields').onclick=async()=>{
   $('apply_fields').disabled=found.length===0;
   $('suggest_status').textContent=found.length?'ตรวจค่าที่เสนอกับภาพ แล้วกดใช้ค่า ช่องที่ไม่พบจะไม่ถูกล้าง':'ไม่พบค่าที่ชัดเจน กรุณาแก้ข้อความจากภาพ หรือ Reject หากอ่านไม่ได้';
  }catch(error){if(revision===suggestionRevision)$('suggest_status').textContent=error.message}
- finally{if(revision===suggestionRevision)$('preview_fields').disabled=!current}
+ finally{if(revision===suggestionRevision)$('preview_fields').disabled=!current||current.review_mode==='text'}
 };
 $('apply_fields').onclick=()=>{
  if(!suggestion||!current)return;
@@ -109,3 +115,4 @@ $('apply_fields').onclick=()=>{
  dirty=true;$('text_confirmed').checked=false;clearSuggestions();
  $('suggest_status').textContent='เติมค่าที่พบแล้ว ยังไม่ได้บันทึก — ตรวจภาพและยืนยันข้อความก่อน Approve';
 };
+
