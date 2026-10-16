@@ -30,6 +30,8 @@ jobs:
         run: |
           node --check review_ui.js
           node --check image_reader.js
+      - name: Test Review Desk suggestion interactions
+        run: node tests/test_review_suggestions_ui.cjs
       - name: Build Thai OCR environment
         run: docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
       - name: Verify English and Thai language packs
