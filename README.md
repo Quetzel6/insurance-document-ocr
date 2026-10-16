@@ -47,7 +47,7 @@ Results do not automatically enter the Review Desk queue.
 
 ## Review uploaded images
 
-In Document mode, click Download review package after reading OCR. The
+In any layout, click Download review package after reading OCR. The
 package includes the source image and OCR output; keep it private.
 
 Start the separate uploaded-image queue (activate .venv in this terminal):
@@ -59,8 +59,9 @@ Open http://127.0.0.1:8767 and import ocr-review-package.json. Compare the
 image, correct both text and fields, approve/reject, and export decisions.
 The database is review_state/uploads.sqlite3; it persists images and history.
 Reset archives decisions and makes the existing images pending again; it
-does not delete stored images. General/sparse text is not supported by this
-structured review queue. See UPLOAD_REVIEW_GUIDE.md.
+does not delete stored images. Document mode reviews text and three fields.
+General/sparse modes review text only, with explicit image confirmation before
+Approve text. See UPLOAD_REVIEW_GUIDE.md and GENERAL_TEXT_REVIEW.md.
 
 ## Verification
 
