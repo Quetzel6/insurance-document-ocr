@@ -1,0 +1,12 @@
+{
+  "selected": "page_current",
+  "fingerprints": {
+    "line_ocr_experiment.py": "3eae9468f9cc241155a2947d31b7c121da37d64f2e20ee0176fe89cb4b0ef577",
+    "enhanced.py": "c5ce53b40817332bc42b8b59dfdbae62b3ec7693c9d0c8760270092db234df80",
+    "project.py": "9d9b960d5b76b1240589d6300b31779e2d9dd1dc23616dab7faf5200b0afadf3",
+    "extraction_candidate.py": "f71be47f5cc152468dae39350f5c383ce66194261dfba890bbbb10557c51d718",
+    "manifest": "cd4d82367ab8d603c139fcb2065a409927930e63458a3162995066dc2d3939a9"
+  },
+  "dev_report_sha": "7e5c9fb775b1bcf14c7e8cdd06232038de5a9fdc136f9258403ea7ddfd0aae3c",
+  "policy": "Selected before test. Evaluate both fixed methods once; no tuning after test inspection."
+}
