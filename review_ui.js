@@ -128,7 +128,9 @@ function proposeWords(text){
  replace(/^([ \t]*)(amourt|arnrourt)(?=[ \t:])/gim,'Amount');
  replace(/^([ \t]*)(serwce)(?=[ \t:])/gim,'Service');
  text=text.replace(/^([ \t]*Service[^\r\n]*)$/gim,line=>{
-  return line.replace(/\b(reper|repew)\b(?=[ \t]+(?:estimate|estirnate|estirnte)\b)/gi,word=>{
+  return line.replace(/\b(Synthetx)\b/gi,word=>{
+   changes.push(`${word} → Synthetic`);return 'Synthetic';
+  }).replace(/\b(reper|repew)\b(?=[ \t]+(?:estimate|estirnate|estirnte)\b)/gi,word=>{
    changes.push(`${word} → repair`);return 'repair';
   }).replace(/\b(estirnate|estirnte)\b/gi,word=>{
    changes.push(`${word} → estimate`);return 'estimate';
