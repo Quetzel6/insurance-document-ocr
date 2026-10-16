@@ -57,6 +57,29 @@ class Element{
  answer=async()=>({values:{document_id:null,date:null,amount:null}});
  await el('preview_fields').onclick();assert.equal(el('apply_fields').disabled,true);
  assert.equal(el('amount').value,'0.00');
+
+ const raw='Serwce Synthetic reper estirnate\nAmourt 55082 45\nDocument I0 SYN-117642\nDate 20260911\nน้ำหนัก 412 กรัม';
+ el('corrected_text').value=raw;el('corrected_text').oninput();el('form').oninput();
+ const saveCount=requests.filter(url=>url==='/api/decision').length;
+ el('preview_words').onclick();
+ assert.equal(el('corrected_text').value,raw,'Word preview must not edit text');
+ assert.equal(el('apply_words').disabled,false);
+ el('text_confirmed').checked=true;el('apply_words').onclick();
+ assert.equal(el('corrected_text').value,'Service Synthetic repair estimate\nAmount 55082 45\nDocument I0 SYN-117642\nDate 20260911\nน้ำหนัก 412 กรัม');
+ assert.equal(el('text_confirmed').checked,false);
+ assert.equal(el('amount').value,'0.00','Word suggestions must not change fields');
+ assert.equal(requests.filter(url=>url==='/api/decision').length,saveCount,'No automatic save');
+ el('corrected_text').value='Arnrourt 0.00\nService repew estirnte';el('preview_words').onclick();
+ el('corrected_text').value='Human edit';el('apply_words').onclick();
+ assert.equal(el('corrected_text').value,'Human edit','Stale text proposal must be discarded');
+ el('corrected_text').value='Amourt 123.45';el('preview_words').onclick();
+ el('queue').children[0].onclick();el('apply_words').onclick();
+ assert.equal(el('corrected_text').value,text('1.00'),'Switching case must invalidate proposal');
+ el('corrected_text').value='XSerwce Amourt\nOther reper estirnate\nAmount 123.45';el('preview_words').onclick();
+ assert.equal(el('apply_words').disabled,true,'Unknown or embedded words must stay unchanged');
+ el('corrected_text').value='Arnrourt 0.00\nService repew estirnte';el('preview_words').onclick();el('apply_words').onclick();
+ assert.equal(el('corrected_text').value,'Amount 0.00\nService repair estimate');
+ console.log('Word suggestions passed: explicit vocabulary, preview/apply, no digit/punctuation repair, stale text/case protection, no save.');
  el('queue').children[2].onclick();
  assert.equal(el('structured_fields').hidden,true);assert.equal(el('suggestion_tools').hidden,true);
  for(const key of ['document_id','date','amount']){assert.equal(el(key).disabled,true);assert.equal(el(key).required,false);assert.equal(el(key).value,'')}
