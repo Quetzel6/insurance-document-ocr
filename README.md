@@ -15,11 +15,17 @@ Local OCR prototype using Python, Tesseract and Pillow.
 
 Requires Python and Docker. Run from the repository directory:
 
-    python3 -m pip install -r requirements.txt
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
     docker build -t insurance-document-orc:pilot .
     docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
 
 ## Review Desk
+
+In each new terminal, activate the project environment first:
+
+    source .venv/bin/activate
 
     python3 review_app.py
 
@@ -44,8 +50,9 @@ Results do not automatically enter the Review Desk queue.
 In Document mode, click Download review package after reading OCR. The
 package includes the source image and OCR output; keep it private.
 
-Start the separate uploaded-image queue:
+Start the separate uploaded-image queue (activate .venv in this terminal):
 
+    source .venv/bin/activate
     python3 review_app.py --uploads --port 8767
 
 Open http://127.0.0.1:8767 and import ocr-review-package.json. Compare the
