@@ -1,10 +1,11 @@
 'use strict';
 const consistencyNotice=document.createElement('p');
 consistencyNotice.className='notice';
-consistencyNotice.textContent='v0.7: Approval requires matching Document ID, Date and Amount lines in corrected text and the three fields. Example: Amount: 123.45. No digits are guessed. Matching values can still be wrong; verify the image. Older approvals were not checked retroactively.';
+consistencyNotice.textContent='v0.7: Approval requires matching Document ID, Date and Amount lines in corrected text and the three fields. DocumentID is also accepted. Example: Amount: 123.45. No digits are guessed. Matching values can still be wrong; verify the image. Older approvals were not checked retroactively.';
 document.querySelector('main').prepend(consistencyNotice);
 const $=id=>document.getElementById(id);
 let cases=[],token='',runId='',current=null,dirty=false;
+let suggestion=null,suggestionRevision=0;
 const fields=['document_id','date','amount'];
 const status=c=>c.decision?c.decision.status:'pending';
 function renderQueue(){
@@ -16,7 +17,7 @@ function renderQueue(){
  for(const c of visible){const b=document.createElement('button');b.textContent=`${c.id} · ${status(c)}${c.reasons.length?' ⚑':''}`;b.className=current&&c.id===current.id?'active':'';b.onclick=()=>{if(!dirty||confirm('Discard unsaved changes?'))select(c)};$('queue').append(b)}
  if(!visible.length)$('queue').textContent='No cases in this filter.';
 }
-function select(c){$('image').hidden=false;current=c;dirty=false;$('title').textContent=c.id;$('image').src='/image/'+encodeURIComponent(c.id);$('ocr').textContent=c.text;
+function select(c){$('image').hidden=false;current=c;clearSuggestions();dirty=false;$('title').textContent=c.id;$('image').src='/image/'+encodeURIComponent(c.id);$('ocr').textContent=c.text;
  const d=c.decision;for(const k of fields)$(k).value=(d?d.values:c.original)[k];
  $('corrected_text').value=d&&typeof d.corrected_text==='string'?d.corrected_text:c.text; $('text_confirmed').checked=!!(d&&d.text_confirmed); renderDiff();
  $('note').value=d?d.note:'';if(d)$('reviewer').value=d.reviewer;
@@ -28,7 +29,7 @@ async function save(decision){if(!current)return;if(!$('reviewer').value.trim())
  const body={run_id:runId,id:current.id,version:current.decision?current.decision.version:0,status:decision,reviewer:$('reviewer').value,note:$('note').value,corrected_text:$('corrected_text').value,text_confirmed:$('text_confirmed').checked,values:Object.fromEntries(fields.map(k=>[k,$(k).value]))};
  try{const r=await fetch('/api/decision',{method:'POST',headers:{'Content-Type':'application/json','X-Review-Token':token},body:JSON.stringify(body)});const d=await r.json();if(!r.ok)throw Error(d.error);current.decision=d;select(current);$('message').style.color='#176759';$('message').textContent='Decision saved. Select another case to continue.'}catch(e){$('message').style.color='#8c2d2d';$('message').textContent=e.message}
 }
-$('form').onsubmit=e=>{e.preventDefault();save('approved')};$('reject').onclick=()=>save('rejected');$('form').oninput=()=>dirty=true; $('corrected_text').oninput=()=>{dirty=true;$('text_confirmed').checked=false;renderDiff()};$('filter').onchange=renderQueue;
+$('form').onsubmit=e=>{e.preventDefault();save('approved')};$('reject').onclick=()=>save('rejected');$('form').oninput=()=>{dirty=true;clearSuggestions()}; $('corrected_text').oninput=()=>{dirty=true;$('text_confirmed').checked=false;renderDiff()};$('filter').onchange=renderQueue;
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
 (async()=>{try{const r=await fetch('/api/cases');if(!r.ok)throw Error('Could not load queue');const d=await r.json();cases=d.cases;token=d.token;runId=d.run_id;$('import_label').hidden=d.queue_kind!=='uploads';$('import_help').hidden=d.queue_kind!=='uploads';renderQueue();if(!cases.length)$('title').textContent='นำเข้าชุดส่งตรวจจาก Image Reader เพื่อเริ่มต้น';if(cases.length)select([...cases].sort((a,b)=>b.reasons.length-a.reasons.length)[0]);}catch(e){$('title').textContent=e.message}})();
 
@@ -69,4 +70,42 @@ $('import_file').onchange=async()=>{
   $('import_status').textContent=d.created?'นำเข้าแล้ว — ตรวจภาพก่อนอนุมัติ':'มีชุดนี้แล้ว — เปิดรายการเดิม';
  }catch(e){$('import_status').style.color='#8c2d2d';$('import_status').textContent=e.message}
  finally{$('import_file').disabled=false;$('import_file').value=''}
+};
+
+
+function clearSuggestions(){
+ suggestion=null;suggestionRevision++;
+ $('apply_fields').disabled=true;$('preview_fields').disabled=!current;
+ $('suggest_preview').hidden=true;$('suggest_preview').textContent='';$('suggest_status').textContent='';
+}
+$('preview_fields').onclick=async()=>{
+ if(!current)return;
+ clearSuggestions();
+ const revision=suggestionRevision,caseId=current.id,text=$('corrected_text').value;
+ const before=Object.fromEntries(fields.map(k=>[k,$(k).value]));
+ $('preview_fields').disabled=true;$('suggest_status').textContent='กำลังตรวจข้อความเพื่อเสนอค่า…';
+ try{
+  const response=await fetch('/api/suggestions',{method:'POST',headers:{'Content-Type':'application/json','X-Review-Token':token},body:JSON.stringify({run_id:runId,id:caseId,corrected_text:text})});
+  const data=await response.json();
+  if(revision!==suggestionRevision||!current||current.id!==caseId||$('corrected_text').value!==text)return;
+  if(!response.ok)throw Error(data.error);
+  suggestion={caseId,text,before,values:data.values,revision};
+  const names={document_id:'Document ID',date:'Date',amount:'Amount'};
+  $('suggest_preview').textContent=fields.map(k=>`${names[k]}: ${before[k]||'(ว่าง)'} → ${data.values[k]===null?'ไม่พบ/กำกวม — คงค่าเดิม':data.values[k]}`).join('\n');
+  $('suggest_preview').hidden=false;
+  const found=fields.filter(k=>data.values[k]!==null);
+  $('apply_fields').disabled=found.length===0;
+  $('suggest_status').textContent=found.length?'ตรวจค่าที่เสนอกับภาพ แล้วกดใช้ค่า ช่องที่ไม่พบจะไม่ถูกล้าง':'ไม่พบค่าที่ชัดเจน กรุณาแก้ข้อความจากภาพ หรือ Reject หากอ่านไม่ได้';
+ }catch(error){if(revision===suggestionRevision)$('suggest_status').textContent=error.message}
+ finally{if(revision===suggestionRevision)$('preview_fields').disabled=!current}
+};
+$('apply_fields').onclick=()=>{
+ if(!suggestion||!current)return;
+ const proposal=suggestion;
+ if(proposal.revision!==suggestionRevision||proposal.caseId!==current.id||proposal.text!==$('corrected_text').value||fields.some(k=>proposal.before[k]!==$(k).value)){
+  clearSuggestions();$('suggest_status').textContent='ข้อมูลเปลี่ยนแล้ว กรุณากดเสนอค่าใหม่';return;
+ }
+ for(const k of fields)if(proposal.values[k]!==null)$(k).value=proposal.values[k];
+ dirty=true;$('text_confirmed').checked=false;clearSuggestions();
+ $('suggest_status').textContent='เติมค่าที่พบแล้ว ยังไม่ได้บันทึก — ตรวจภาพและยืนยันข้อความก่อน Approve';
 };

@@ -15,6 +15,7 @@ from decimal import Decimal
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from review_consistency import check_consistency
+from review_suggestions import suggest_fields
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parent
@@ -278,7 +279,7 @@ def make_handler(cases, store, token, port, uploads=False):
         def do_POST(self):
             if not self.allowed() or self.headers.get('X-Review-Token') != token:
                 return self.send(403, {'error': 'Invalid local session'})
-            if self.path not in ('/api/decision', '/api/reset', '/api/import'):
+            if self.path not in ('/api/decision', '/api/reset', '/api/import', '/api/suggestions'):
                 return self.send(404, {'error': 'Not found'})
             try:
                 length = int(self.headers.get('Content-Length', '0'))
@@ -301,6 +302,8 @@ def make_handler(cases, store, token, port, uploads=False):
                     return self.send(200, dict(run_id=store.reset(data['run_id'])))
                 if data.get('id') not in cases:
                     raise ValueError('Unknown document')
+                if self.path == '/api/suggestions':
+                    return self.send(200, suggest_fields(data.get('corrected_text')))
                 self.send(200, store.save(data['id'], data, cases[data['id']]['original'], cases[data['id']]['text']))
             except (ValueError, TypeError) as exc:
                 self.send(400, {'error': str(exc)})
@@ -338,4 +341,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
