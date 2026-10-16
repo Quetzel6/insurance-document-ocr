@@ -6,6 +6,7 @@ document.querySelector('main').prepend(consistencyNotice);
 const $=id=>document.getElementById(id);
 let cases=[],token='',runId='',current=null,dirty=false;
 let suggestion=null,suggestionRevision=0;
+let wordSuggestion=null;
 const fields=['document_id','date','amount'];
 const status=c=>c.decision?c.decision.status:'pending';
 function renderQueue(){
@@ -80,6 +81,7 @@ $('import_file').onchange=async()=>{
 
 
 function clearSuggestions(){
+ clearWordSuggestions();
  suggestion=null;suggestionRevision++;
  $('apply_fields').disabled=true;$('preview_fields').disabled=!current||current.review_mode==='text';
  $('suggest_preview').hidden=true;$('suggest_preview').textContent='';$('suggest_status').textContent='';
@@ -116,3 +118,42 @@ $('apply_fields').onclick=()=>{
  $('suggest_status').textContent='เติมค่าที่พบแล้ว ยังไม่ได้บันทึก — ตรวจภาพและยืนยันข้อความก่อน Approve';
 };
 
+
+// Small, explicit vocabulary only. Numeric values and punctuation stay untouched.
+function proposeWords(text){
+ const changes=[];
+ const replace=(pattern,replacement)=>{text=text.replace(pattern,(whole,prefix,word)=>{
+  changes.push(`${word} → ${replacement}`);return prefix+replacement;
+ })};
+ replace(/^([ \t]*)(amourt|arnrourt)(?=[ \t:])/gim,'Amount');
+ replace(/^([ \t]*)(serwce)(?=[ \t:])/gim,'Service');
+ text=text.replace(/^([ \t]*Service[^\r\n]*)$/gim,line=>{
+  return line.replace(/\b(reper|repew)\b(?=[ \t]+(?:estimate|estirnate|estirnte)\b)/gi,word=>{
+   changes.push(`${word} → repair`);return 'repair';
+  }).replace(/\b(estirnate|estirnte)\b/gi,word=>{
+   changes.push(`${word} → estimate`);return 'estimate';
+  });
+ });
+ return {text,changes};
+}
+function clearWordSuggestions(){
+ wordSuggestion=null;$('apply_words').disabled=true;
+ $('word_preview').hidden=true;$('word_preview').textContent='';$('word_status').textContent='';
+}
+$('preview_words').onclick=()=>{
+ clearWordSuggestions();if(!current)return;
+ const before=$('corrected_text').value,proposal=proposeWords(before);
+ if(!proposal.changes.length){$('word_status').textContent='ไม่พบคำในรายการที่เสนอแก้ได้ ตัวเลขและคำอื่นต้องตรวจจากภาพ';return}
+ wordSuggestion={caseId:current.id,before,after:proposal.text};
+ $('word_preview').textContent=proposal.changes.join('\n')+'\n\n'+proposal.text;
+ $('word_preview').hidden=false;$('apply_words').disabled=false;
+ $('word_status').textContent='ตรวจคำที่เสนอกับภาพก่อนใช้ ยังไม่แก้ข้อความหรือบันทึก';
+};
+$('apply_words').onclick=()=>{
+ if(!wordSuggestion||!current)return;
+ const proposal=wordSuggestion;
+ if(proposal.caseId!==current.id||proposal.before!==$('corrected_text').value){clearWordSuggestions();return}
+ $('corrected_text').value=proposal.after;dirty=true;$('text_confirmed').checked=false;
+ clearSuggestions();renderDiff();
+ $('word_status').textContent='ใช้ข้อความที่เสนอแล้ว — ตัวเลขคงเดิม ตรวจภาพและยืนยันก่อนอนุมัติ ยังไม่ได้บันทึก';
+};
