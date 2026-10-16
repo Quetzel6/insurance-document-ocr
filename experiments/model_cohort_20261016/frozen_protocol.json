@@ -1,0 +1,14 @@
+{
+  "selected": "tessdata_best",
+  "fingerprints": {
+    "model_ocr_experiment.py": "a8bd6c74a52951393b3e7a6630898fc4970a0a71b80579a485c9b07f5efef59a",
+    "enhanced.py": "c5ce53b40817332bc42b8b59dfdbae62b3ec7693c9d0c8760270092db234df80",
+    "project.py": "9d9b960d5b76b1240589d6300b31779e2d9dd1dc23616dab7faf5200b0afadf3",
+    "extraction_candidate.py": "f71be47f5cc152468dae39350f5c383ce66194261dfba890bbbb10557c51d718",
+    "manifest": "6e5209e485fc25d0fcf334b4b6ef89c9da180797affaf11fcaf2564eaeb8678f",
+    "installed_eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+    "best_eng": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba"
+  },
+  "dev_report_sha": "2c728f2f679e8c47fca2acc812362ecc60bd99d73cce706e2c310c02980309ee",
+  "policy": "Selected before test. Evaluate both fixed methods once; no tuning after test inspection."
+}
