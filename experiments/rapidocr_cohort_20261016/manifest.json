@@ -1,0 +1,828 @@
+{
+  "seed": 2026101611,
+  "fonts": {
+    "DejaVuSans.ttf": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+    "DejaVuSerif.ttf": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+    "DejaVuSansMono.ttf": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88"
+  },
+  "pillow": "12.3.0",
+  "records": [
+    {
+      "id": "rapid-dev-F0-0-clean",
+      "original_id": "rapid-dev-F0-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 23,
+      "condition": "clean",
+      "image": "rapid-dev-F0-0-clean.png",
+      "sha": "7a69a68ce690bae1fe75cc59b28feb67d854b2b7be02f88b8c230f56bc18f6c6",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 47471.75\nDate: 2026-01-01\nDocument ID: SYN-828477\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-828477",
+        "date": "2026-01-01",
+        "amount": "47471.75"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-0-blur_mild",
+      "original_id": "rapid-dev-F0-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 23,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F0-0-blur_mild.png",
+      "sha": "f75c31d9e1ec503f2b84e8246e239f180d79ad7dfd4b25726553f15fb655616d",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 47471.75\nDate: 2026-01-01\nDocument ID: SYN-828477\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-828477",
+        "date": "2026-01-01",
+        "amount": "47471.75"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-0-blur_strong",
+      "original_id": "rapid-dev-F0-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 23,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F0-0-blur_strong.png",
+      "sha": "24b0715dedcc5b9b779ea1bdccd3af4f382737253befb5aedddab2205eca02db",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 47471.75\nDate: 2026-01-01\nDocument ID: SYN-828477\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-828477",
+        "date": "2026-01-01",
+        "amount": "47471.75"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-0-shadow",
+      "original_id": "rapid-dev-F0-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 23,
+      "condition": "shadow",
+      "image": "rapid-dev-F0-0-shadow.png",
+      "sha": "60d7f03e7c4ecb6df48b1c73e9e351178b1b477d00e4329829b61cf7be642e83",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 47471.75\nDate: 2026-01-01\nDocument ID: SYN-828477\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-828477",
+        "date": "2026-01-01",
+        "amount": "47471.75"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-1-clean",
+      "original_id": "rapid-dev-F0-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 29,
+      "condition": "clean",
+      "image": "rapid-dev-F0-1-clean.png",
+      "sha": "92e4ce2b8bba2ab575acf67bc9d108f325e4ba925cedc76ea184211f2059b41e",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 7137.95\nDate: 2025-11-09\nDocument ID: SYN-893621\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-893621",
+        "date": "2025-11-09",
+        "amount": "7137.95"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-1-blur_mild",
+      "original_id": "rapid-dev-F0-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 29,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F0-1-blur_mild.png",
+      "sha": "1ca237d4bf9eb18294c86f9e61ed39aea264ac700b1faedf9ab4162ca8096876",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 7137.95\nDate: 2025-11-09\nDocument ID: SYN-893621\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-893621",
+        "date": "2025-11-09",
+        "amount": "7137.95"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-1-blur_strong",
+      "original_id": "rapid-dev-F0-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 29,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F0-1-blur_strong.png",
+      "sha": "6fe20cf4580f222e56f0a0796d907d5c11eb05f8d24f2850330df537ea91a0fb",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 7137.95\nDate: 2025-11-09\nDocument ID: SYN-893621\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-893621",
+        "date": "2025-11-09",
+        "amount": "7137.95"
+      }
+    },
+    {
+      "id": "rapid-dev-F0-1-shadow",
+      "original_id": "rapid-dev-F0-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 29,
+      "condition": "shadow",
+      "image": "rapid-dev-F0-1-shadow.png",
+      "sha": "66630e40c34dc7d68ab93bc15b911f9f90ac2656bf0278d36fad2a1e9247c6d0",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 7137.95\nDate: 2025-11-09\nDocument ID: SYN-893621\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-893621",
+        "date": "2025-11-09",
+        "amount": "7137.95"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-0-clean",
+      "original_id": "rapid-dev-F1-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 23,
+      "condition": "clean",
+      "image": "rapid-dev-F1-0-clean.png",
+      "sha": "c7174c83072bcb18b7c810266678800e6490e89795c38dadf349c8527177bf56",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 81028.92\nDate: 2024-07-22\nDocument ID: SYN-113574\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-113574",
+        "date": "2024-07-22",
+        "amount": "81028.92"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-0-blur_mild",
+      "original_id": "rapid-dev-F1-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 23,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F1-0-blur_mild.png",
+      "sha": "7b80bf9ef68d70a633e4cf676cd92b5b9ab44471d6c96a094b51c77998b83356",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 81028.92\nDate: 2024-07-22\nDocument ID: SYN-113574\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-113574",
+        "date": "2024-07-22",
+        "amount": "81028.92"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-0-blur_strong",
+      "original_id": "rapid-dev-F1-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 23,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F1-0-blur_strong.png",
+      "sha": "afbd933017720deef56c516bc83585990e0c3f1276490de5c82afe14baa37630",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 81028.92\nDate: 2024-07-22\nDocument ID: SYN-113574\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-113574",
+        "date": "2024-07-22",
+        "amount": "81028.92"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-0-shadow",
+      "original_id": "rapid-dev-F1-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 23,
+      "condition": "shadow",
+      "image": "rapid-dev-F1-0-shadow.png",
+      "sha": "e11e2f85780dd7772e6233d44a60dcf0e324a0e72095bc5e5b0ab0b57e5bcd67",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 81028.92\nDate: 2024-07-22\nDocument ID: SYN-113574\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-113574",
+        "date": "2024-07-22",
+        "amount": "81028.92"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-1-clean",
+      "original_id": "rapid-dev-F1-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 29,
+      "condition": "clean",
+      "image": "rapid-dev-F1-1-clean.png",
+      "sha": "a044ef76e6b92db2b2bf1e4a979df96415774602e7dbbe1266df64c9daa9cc27",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 69872.67\nDate: 2026-02-02\nDocument ID: SYN-515950\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-515950",
+        "date": "2026-02-02",
+        "amount": "69872.67"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-1-blur_mild",
+      "original_id": "rapid-dev-F1-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 29,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F1-1-blur_mild.png",
+      "sha": "346c23f1363490fb2a2e27307dfe25a471d2a2489a9658c9deaefa464467da66",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 69872.67\nDate: 2026-02-02\nDocument ID: SYN-515950\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-515950",
+        "date": "2026-02-02",
+        "amount": "69872.67"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-1-blur_strong",
+      "original_id": "rapid-dev-F1-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 29,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F1-1-blur_strong.png",
+      "sha": "bca46aedb41f55d0ad8a42f9c48cb97deb569541fe02a413e7d7d574a0dd275a",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 69872.67\nDate: 2026-02-02\nDocument ID: SYN-515950\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-515950",
+        "date": "2026-02-02",
+        "amount": "69872.67"
+      }
+    },
+    {
+      "id": "rapid-dev-F1-1-shadow",
+      "original_id": "rapid-dev-F1-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 29,
+      "condition": "shadow",
+      "image": "rapid-dev-F1-1-shadow.png",
+      "sha": "0e0b44b6726b5e30381962d03f8e0351867897a5c1ba10b3c8b0fd25fb0a447d",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 69872.67\nDate: 2026-02-02\nDocument ID: SYN-515950\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-515950",
+        "date": "2026-02-02",
+        "amount": "69872.67"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-0-clean",
+      "original_id": "rapid-dev-F2-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 23,
+      "condition": "clean",
+      "image": "rapid-dev-F2-0-clean.png",
+      "sha": "e4ea427243a97a6ad0e0cfd501f9b03a7ba751b39b30fa468636c011773ef670",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 35196.16\nDate: 2024-10-25\nDocument ID: SYN-479927\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-479927",
+        "date": "2024-10-25",
+        "amount": "35196.16"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-0-blur_mild",
+      "original_id": "rapid-dev-F2-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 23,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F2-0-blur_mild.png",
+      "sha": "2679f03d7f5c8191b35dc21772a3f8685db4687ed9fdc434e788e6fc3bf618b2",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 35196.16\nDate: 2024-10-25\nDocument ID: SYN-479927\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-479927",
+        "date": "2024-10-25",
+        "amount": "35196.16"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-0-blur_strong",
+      "original_id": "rapid-dev-F2-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 23,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F2-0-blur_strong.png",
+      "sha": "75af0ce26b85aabad36f997ad27bb496f2edb4b864f3f8b3297bd3abbf396c11",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 35196.16\nDate: 2024-10-25\nDocument ID: SYN-479927\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-479927",
+        "date": "2024-10-25",
+        "amount": "35196.16"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-0-shadow",
+      "original_id": "rapid-dev-F2-0",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 23,
+      "condition": "shadow",
+      "image": "rapid-dev-F2-0-shadow.png",
+      "sha": "d6a3bee2916a38e8d5df0bf369a5d56393b4b57c58d8a74681710487295dceee",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 35196.16\nDate: 2024-10-25\nDocument ID: SYN-479927\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-479927",
+        "date": "2024-10-25",
+        "amount": "35196.16"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-1-clean",
+      "original_id": "rapid-dev-F2-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 29,
+      "condition": "clean",
+      "image": "rapid-dev-F2-1-clean.png",
+      "sha": "2998decd4ddaa76e01e7914f670aa12206731b77a5017d6c454924cd89fb5241",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 84421.50\nDate: 2024-09-03\nDocument ID: SYN-807661\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-807661",
+        "date": "2024-09-03",
+        "amount": "84421.50"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-1-blur_mild",
+      "original_id": "rapid-dev-F2-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 29,
+      "condition": "blur_mild",
+      "image": "rapid-dev-F2-1-blur_mild.png",
+      "sha": "cc7b25d20452fa84bce41a29536589272837491f9cf79fe4f4cfbdfba5d9e996",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 84421.50\nDate: 2024-09-03\nDocument ID: SYN-807661\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-807661",
+        "date": "2024-09-03",
+        "amount": "84421.50"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-1-blur_strong",
+      "original_id": "rapid-dev-F2-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 29,
+      "condition": "blur_strong",
+      "image": "rapid-dev-F2-1-blur_strong.png",
+      "sha": "2e47ea62f051f169f20c3c138067aa4bd2c949a787e8e09780c04ef0e9e24523",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 84421.50\nDate: 2024-09-03\nDocument ID: SYN-807661\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-807661",
+        "date": "2024-09-03",
+        "amount": "84421.50"
+      }
+    },
+    {
+      "id": "rapid-dev-F2-1-shadow",
+      "original_id": "rapid-dev-F2-1",
+      "split": "dev",
+      "layout": "dev-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 29,
+      "condition": "shadow",
+      "image": "rapid-dev-F2-1-shadow.png",
+      "sha": "c86e849d487dbc9087b01f1815f9debb0485eb2013a70a42576058108281189a",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nAmount: 84421.50\nDate: 2024-09-03\nDocument ID: SYN-807661\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-807661",
+        "date": "2024-09-03",
+        "amount": "84421.50"
+      }
+    },
+    {
+      "id": "rapid-test-F0-0-clean",
+      "original_id": "rapid-test-F0-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 25,
+      "condition": "clean",
+      "image": "rapid-test-F0-0-clean.png",
+      "sha": "9626699e8fcfce3c088277e0cc3d930da408b0404a7fcbdb9ab2105b5a3f8242",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-10-12\nDocument ID: SYN-295088\nAmount: 57428.80\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-295088",
+        "date": "2025-10-12",
+        "amount": "57428.80"
+      }
+    },
+    {
+      "id": "rapid-test-F0-0-blur_mild",
+      "original_id": "rapid-test-F0-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 25,
+      "condition": "blur_mild",
+      "image": "rapid-test-F0-0-blur_mild.png",
+      "sha": "8b0fee972887f977c44c5090d4d09d97a56e8cfd85a6185087aa117096f967db",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-10-12\nDocument ID: SYN-295088\nAmount: 57428.80\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-295088",
+        "date": "2025-10-12",
+        "amount": "57428.80"
+      }
+    },
+    {
+      "id": "rapid-test-F0-0-blur_strong",
+      "original_id": "rapid-test-F0-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 25,
+      "condition": "blur_strong",
+      "image": "rapid-test-F0-0-blur_strong.png",
+      "sha": "b67f3903a6c023b2e6047f25be43e424e4db46ca56396449eb0c7cd8526708c9",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-10-12\nDocument ID: SYN-295088\nAmount: 57428.80\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-295088",
+        "date": "2025-10-12",
+        "amount": "57428.80"
+      }
+    },
+    {
+      "id": "rapid-test-F0-0-shadow",
+      "original_id": "rapid-test-F0-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 25,
+      "condition": "shadow",
+      "image": "rapid-test-F0-0-shadow.png",
+      "sha": "458de6a19216a601a7853ef6809215ddca56bb19e9fcff48dd841b1fd931dc36",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-10-12\nDocument ID: SYN-295088\nAmount: 57428.80\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-295088",
+        "date": "2025-10-12",
+        "amount": "57428.80"
+      }
+    },
+    {
+      "id": "rapid-test-F0-1-clean",
+      "original_id": "rapid-test-F0-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 31,
+      "condition": "clean",
+      "image": "rapid-test-F0-1-clean.png",
+      "sha": "80485fca64a45fc915193a84c87fb6b51e09c2fe1375fd24ded3df3f9537a817",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-05-23\nDocument ID: SYN-216127\nAmount: 81620.19\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-216127",
+        "date": "2026-05-23",
+        "amount": "81620.19"
+      }
+    },
+    {
+      "id": "rapid-test-F0-1-blur_mild",
+      "original_id": "rapid-test-F0-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 31,
+      "condition": "blur_mild",
+      "image": "rapid-test-F0-1-blur_mild.png",
+      "sha": "7ff5278565720408560548a3f242641952c40b23c2b07266086e7e959adbf130",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-05-23\nDocument ID: SYN-216127\nAmount: 81620.19\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-216127",
+        "date": "2026-05-23",
+        "amount": "81620.19"
+      }
+    },
+    {
+      "id": "rapid-test-F0-1-blur_strong",
+      "original_id": "rapid-test-F0-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 31,
+      "condition": "blur_strong",
+      "image": "rapid-test-F0-1-blur_strong.png",
+      "sha": "1b5ee814881665e478116f2c533e28c66d6e945141c82e30c2d9320be99d053a",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-05-23\nDocument ID: SYN-216127\nAmount: 81620.19\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-216127",
+        "date": "2026-05-23",
+        "amount": "81620.19"
+      }
+    },
+    {
+      "id": "rapid-test-F0-1-shadow",
+      "original_id": "rapid-test-F0-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSans.ttf",
+      "font_size": 31,
+      "condition": "shadow",
+      "image": "rapid-test-F0-1-shadow.png",
+      "sha": "4b97b8bb459759ff674ee72e7937713236fb3031a7dad99003de8db067e0a6a3",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-05-23\nDocument ID: SYN-216127\nAmount: 81620.19\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-216127",
+        "date": "2026-05-23",
+        "amount": "81620.19"
+      }
+    },
+    {
+      "id": "rapid-test-F1-0-clean",
+      "original_id": "rapid-test-F1-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 25,
+      "condition": "clean",
+      "image": "rapid-test-F1-0-clean.png",
+      "sha": "a2512dc571c3f595f8ba91397ac8271d05bef063b73b013882992d569c91c4d9",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-02-06\nDocument ID: SYN-740042\nAmount: 19232.16\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-740042",
+        "date": "2026-02-06",
+        "amount": "19232.16"
+      }
+    },
+    {
+      "id": "rapid-test-F1-0-blur_mild",
+      "original_id": "rapid-test-F1-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 25,
+      "condition": "blur_mild",
+      "image": "rapid-test-F1-0-blur_mild.png",
+      "sha": "5a46884903dcb5e8e7b5747598b2004a33d37f1a0f33b126d268af2ad2903cd5",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-02-06\nDocument ID: SYN-740042\nAmount: 19232.16\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-740042",
+        "date": "2026-02-06",
+        "amount": "19232.16"
+      }
+    },
+    {
+      "id": "rapid-test-F1-0-blur_strong",
+      "original_id": "rapid-test-F1-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 25,
+      "condition": "blur_strong",
+      "image": "rapid-test-F1-0-blur_strong.png",
+      "sha": "1da84cbbfc2dc3a404ec5602cdd1e719cbced13c67c584de7b8d5dec89108330",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-02-06\nDocument ID: SYN-740042\nAmount: 19232.16\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-740042",
+        "date": "2026-02-06",
+        "amount": "19232.16"
+      }
+    },
+    {
+      "id": "rapid-test-F1-0-shadow",
+      "original_id": "rapid-test-F1-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 25,
+      "condition": "shadow",
+      "image": "rapid-test-F1-0-shadow.png",
+      "sha": "a27ecf5334d285feb79d8cdda0f5f77ee2cc153aaff1b785646f7c393cfa857d",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-02-06\nDocument ID: SYN-740042\nAmount: 19232.16\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-740042",
+        "date": "2026-02-06",
+        "amount": "19232.16"
+      }
+    },
+    {
+      "id": "rapid-test-F1-1-clean",
+      "original_id": "rapid-test-F1-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 31,
+      "condition": "clean",
+      "image": "rapid-test-F1-1-clean.png",
+      "sha": "c535234789f54d3b6dda703f14ccc028886b624f2f356f8e209e40508e18859b",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-04-14\nDocument ID: SYN-569245\nAmount: 60115.68\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-569245",
+        "date": "2025-04-14",
+        "amount": "60115.68"
+      }
+    },
+    {
+      "id": "rapid-test-F1-1-blur_mild",
+      "original_id": "rapid-test-F1-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 31,
+      "condition": "blur_mild",
+      "image": "rapid-test-F1-1-blur_mild.png",
+      "sha": "8316a70dad15f10173169e49ccff0e7d780a510059f86623ad719f04a825db82",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-04-14\nDocument ID: SYN-569245\nAmount: 60115.68\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-569245",
+        "date": "2025-04-14",
+        "amount": "60115.68"
+      }
+    },
+    {
+      "id": "rapid-test-F1-1-blur_strong",
+      "original_id": "rapid-test-F1-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 31,
+      "condition": "blur_strong",
+      "image": "rapid-test-F1-1-blur_strong.png",
+      "sha": "d34745d77cb95d69c9e10d9c5754b11bf59341124048ee215860a750644cb3c2",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-04-14\nDocument ID: SYN-569245\nAmount: 60115.68\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-569245",
+        "date": "2025-04-14",
+        "amount": "60115.68"
+      }
+    },
+    {
+      "id": "rapid-test-F1-1-shadow",
+      "original_id": "rapid-test-F1-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSerif.ttf",
+      "font_size": 31,
+      "condition": "shadow",
+      "image": "rapid-test-F1-1-shadow.png",
+      "sha": "782519cf35a36c68f6cc64937cf8075193a746a57588717e7ba9ac45c7ec481b",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2025-04-14\nDocument ID: SYN-569245\nAmount: 60115.68\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-569245",
+        "date": "2025-04-14",
+        "amount": "60115.68"
+      }
+    },
+    {
+      "id": "rapid-test-F2-0-clean",
+      "original_id": "rapid-test-F2-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 25,
+      "condition": "clean",
+      "image": "rapid-test-F2-0-clean.png",
+      "sha": "8132612f2266a8e24dc9e9e9091858bed65a52942d35c96c5aa43ecc02d43f16",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-06-02\nDocument ID: SYN-897494\nAmount: 46416.96\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-897494",
+        "date": "2026-06-02",
+        "amount": "46416.96"
+      }
+    },
+    {
+      "id": "rapid-test-F2-0-blur_mild",
+      "original_id": "rapid-test-F2-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 25,
+      "condition": "blur_mild",
+      "image": "rapid-test-F2-0-blur_mild.png",
+      "sha": "b94ee0975c0d2d9fb4c22a2966d2765400f578d9a07cb3afb5f3d63ee96e6e4e",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-06-02\nDocument ID: SYN-897494\nAmount: 46416.96\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-897494",
+        "date": "2026-06-02",
+        "amount": "46416.96"
+      }
+    },
+    {
+      "id": "rapid-test-F2-0-blur_strong",
+      "original_id": "rapid-test-F2-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 25,
+      "condition": "blur_strong",
+      "image": "rapid-test-F2-0-blur_strong.png",
+      "sha": "cf30168c5834d612ded8d96cf4337a61e09cae8f25e357981841eaa75fb6766f",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-06-02\nDocument ID: SYN-897494\nAmount: 46416.96\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-897494",
+        "date": "2026-06-02",
+        "amount": "46416.96"
+      }
+    },
+    {
+      "id": "rapid-test-F2-0-shadow",
+      "original_id": "rapid-test-F2-0",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 25,
+      "condition": "shadow",
+      "image": "rapid-test-F2-0-shadow.png",
+      "sha": "34a9111a72000fc48d97a44c4d5be021dd5c50db4f694ca5bf2956dfbeff3e7e",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-06-02\nDocument ID: SYN-897494\nAmount: 46416.96\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-897494",
+        "date": "2026-06-02",
+        "amount": "46416.96"
+      }
+    },
+    {
+      "id": "rapid-test-F2-1-clean",
+      "original_id": "rapid-test-F2-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 31,
+      "condition": "clean",
+      "image": "rapid-test-F2-1-clean.png",
+      "sha": "8766b43c41ffc3bd59db7685a204a98b9d52847667308b79a7a083fd7bbac7ab",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-01-19\nDocument ID: SYN-542134\nAmount: 76216.43\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-542134",
+        "date": "2026-01-19",
+        "amount": "76216.43"
+      }
+    },
+    {
+      "id": "rapid-test-F2-1-blur_mild",
+      "original_id": "rapid-test-F2-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 31,
+      "condition": "blur_mild",
+      "image": "rapid-test-F2-1-blur_mild.png",
+      "sha": "0fd1aa1fc0b9601d1995c4b1b2f8b51723f14cc2fd1835832805bcdbc06ea680",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-01-19\nDocument ID: SYN-542134\nAmount: 76216.43\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-542134",
+        "date": "2026-01-19",
+        "amount": "76216.43"
+      }
+    },
+    {
+      "id": "rapid-test-F2-1-blur_strong",
+      "original_id": "rapid-test-F2-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 31,
+      "condition": "blur_strong",
+      "image": "rapid-test-F2-1-blur_strong.png",
+      "sha": "016e6e4de54c72e504b362ee87b4a29ea14afe5ab8eadbcdbb5c92266e4e9d72",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-01-19\nDocument ID: SYN-542134\nAmount: 76216.43\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-542134",
+        "date": "2026-01-19",
+        "amount": "76216.43"
+      }
+    },
+    {
+      "id": "rapid-test-F2-1-shadow",
+      "original_id": "rapid-test-F2-1",
+      "split": "test",
+      "layout": "test-order",
+      "font": "DejaVuSansMono.ttf",
+      "font_size": 31,
+      "condition": "shadow",
+      "image": "rapid-test-F2-1-shadow.png",
+      "sha": "8f8f5e9218e242e46f9261f9943c3622c9efb27d651893aa13e1944107afea98",
+      "text": "SYNTHETIC REPAIR INVOICE\nNOT A REAL CLAIM\nDate: 2026-01-19\nDocument ID: SYN-542134\nAmount: 76216.43\nService: Synthetic repair estimate\nCurrency: THB",
+      "fields": {
+        "document_id": "SYN-542134",
+        "date": "2026-01-19",
+        "amount": "76216.43"
+      }
+    }
+  ],
+  "limits": "Synthetic English, 6 originals and 24 correlated variants per split, shared 3 font families. Distinct originals/field orders/positions/sizes per split; not held-out font families, real scans or Thai. Strong blur may destroy source detail. Generation and test labels exist for reproducibility; separation is procedural."
+}
