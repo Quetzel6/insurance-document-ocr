@@ -58,7 +58,7 @@ class Element{
  await el('preview_fields').onclick();assert.equal(el('apply_fields').disabled,true);
  assert.equal(el('amount').value,'0.00');
 
- const raw='Serwce Synthetic reper estirnate\nAmourt 55082 45\nDocument I0 SYN-117642\nDate 20260911\nน้ำหนัก 412 กรัม';
+ const raw='Serwce Synthetx reper estirnate\nAmourt 55082 45\nDocument I0 SYN-117642\nDate 20260911\nน้ำหนัก 412 กรัม';
  el('corrected_text').value=raw;el('corrected_text').oninput();el('form').oninput();
  const saveCount=requests.filter(url=>url==='/api/decision').length;
  el('preview_words').onclick();
@@ -75,7 +75,7 @@ class Element{
  el('corrected_text').value='Amourt 123.45';el('preview_words').onclick();
  el('queue').children[0].onclick();el('apply_words').onclick();
  assert.equal(el('corrected_text').value,text('1.00'),'Switching case must invalidate proposal');
- el('corrected_text').value='XSerwce Amourt\nOther reper estirnate\nAmount 123.45';el('preview_words').onclick();
+ el('corrected_text').value='XSerwce Amourt\nOther Synthetx reper estirnate\nAmount 123.45';el('preview_words').onclick();
  assert.equal(el('apply_words').disabled,true,'Unknown or embedded words must stay unchanged');
  el('corrected_text').value='Arnrourt 0.00\nService repew estirnte';el('preview_words').onclick();el('apply_words').onclick();
  assert.equal(el('corrected_text').value,'Amount 0.00\nService repair estimate');
