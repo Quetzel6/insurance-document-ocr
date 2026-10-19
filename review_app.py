@@ -16,6 +16,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from review_consistency import check_consistency
 from review_suggestions import suggest_fields
+from web_assets import WebAssetError, read_asset, check_assets
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parent
@@ -273,6 +274,13 @@ def make_handler(cases, store, token, port, uploads=False):
             self.end_headers()
             self.wfile.write(body)
 
+        def asset(self, name, mime):
+            try:
+                body = read_asset(ROOT, name)
+            except WebAssetError as error:
+                return self.send(503, str(error).encode('utf-8'), 'text/plain; charset=utf-8')
+            return self.send(200, body, mime)
+
         def allowed(self):
             return self.headers.get('Host') in (f'127.0.0.1:{port}', f'localhost:{port}')
 
@@ -280,9 +288,9 @@ def make_handler(cases, store, token, port, uploads=False):
             if not self.allowed():
                 return self.send(403, {'error': 'Invalid host'})
             if self.path == '/':
-                return self.send(200, (ROOT / 'review_ui.html').read_bytes(), 'text/html; charset=utf-8')
+                return self.asset('review_ui.html', 'text/html; charset=utf-8')
             if self.path == '/app.js':
-                return self.send(200, (ROOT / 'review_ui.js').read_bytes(), 'text/javascript; charset=utf-8')
+                return self.asset('review_ui.js', 'text/javascript; charset=utf-8')
             if self.path == '/api/cases':
                 rows = []
                 for case in cases.values():
@@ -342,6 +350,10 @@ def main():
     parser.add_argument('--db', type=Path, default=ROOT / 'review_state/decisions.sqlite3')
     parser.add_argument('--uploads', action='store_true', help='Use a separate persistent uploaded-image queue')
     args = parser.parse_args()
+    try:
+        check_assets(ROOT, ('review_ui.html', 'review_ui.js'))
+    except WebAssetError as error:
+        parser.exit(2, str(error))
     if args.uploads:
         if args.db == ROOT / 'review_state/decisions.sqlite3':
             args.db = ROOT / 'review_state/uploads.sqlite3'
@@ -365,6 +377,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
