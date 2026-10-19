@@ -88,9 +88,31 @@ class Element{
  el('corrected_text').value='Arnrourt 0.00\nService repew estirnte';el('preview_words').onclick();el('apply_words').onclick();
  assert.equal(el('corrected_text').value,'Amount 0.00\nService repair estimate');
  console.log('Word suggestions passed: explicit vocabulary, preview/apply, no digit/punctuation repair, stale text/case protection, no save.');
+
+ el('date').value='2026-10-16';el('amount').value='86622.45';
+ const unformatted='Currency THB\nDate 20261016\nAmount 86622 45';
+ el('corrected_text').value=unformatted;el('corrected_text').oninput();el('form').oninput();
+ el('preview_format').onclick();assert.equal(el('corrected_text').value,unformatted);
+ assert.equal(el('apply_format').disabled,false);el('text_confirmed').checked=true;el('apply_format').onclick();
+ assert.equal(el('corrected_text').value,'Currency THB\nDate: 2026-10-16\nAmount: 86622.45');
+ assert.equal(el('amount').value,'86622.45');assert.equal(el('text_confirmed').checked,false);
+ assert.equal(requests.filter(url=>url==='/api/decision').length,saveCount);
+ for(const raw of ['Amount 86682 45','Amount 86622 45\nAmount unreadable','Amount -86622 45','Amount 8662245','Amount 86,622 45','Amount 86622 45 USD']){
+  el('corrected_text').value=raw;el('preview_format').onclick();assert.equal(el('apply_format').disabled,true,raw);
+ }
+ el('corrected_text').value='Date 20260230';el('date').value='2026-02-30';el('preview_format').onclick();
+ assert.equal(el('apply_format').disabled,true,'Invalid calendar date');
+ el('date').value='2026-10-16';el('corrected_text').value=unformatted;el('preview_format').onclick();
+ el('amount').value='1.00';el('apply_format').onclick();assert.equal(el('corrected_text').value,unformatted,'Stale field');
+ el('amount').value='86622.45';el('preview_format').onclick();el('corrected_text').value='Human change';el('apply_format').onclick();
+ assert.equal(el('corrected_text').value,'Human change','Stale text');
+ el('corrected_text').value=unformatted;el('preview_format').onclick();el('queue').children[1].onclick();el('apply_format').onclick();
+ assert.equal(el('corrected_text').value,text('2.00'),'Stale case');
+ console.log('Formatting suggestions passed: matching digits only, calendar validation, ambiguity/sign/grouping rejection, preview/apply and stale guards.');
  el('queue').children[2].onclick();
  assert.equal(el('structured_fields').hidden,true);assert.equal(el('suggestion_tools').hidden,true);
  for(const key of ['document_id','date','amount']){assert.equal(el(key).disabled,true);assert.equal(el(key).required,false);assert.equal(el(key).value,'')}
+ el('preview_format').onclick();assert.equal(el('apply_format').disabled,true);
  assert.equal(el('approve').textContent,'Approve text');assert.equal(el('preview_fields').disabled,true);
  el('reviewer').value='Tester';el('text_confirmed').checked=true;
  el('form').onsubmit({preventDefault(){}});await new Promise(setImmediate);
@@ -101,4 +123,5 @@ class Element{
  console.log('Mixed text/structured mode transitions passed.');
  console.log('Field suggestion UI interactions passed: preview/apply, partial/zero values, no autosave, stale text/fields/case rejection.');
 })().catch(error=>{console.error(error);process.exitCode=1});
+
 
