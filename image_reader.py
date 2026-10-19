@@ -2,6 +2,7 @@
 import argparse,hashlib,io,json,secrets,shutil,subprocess,tempfile,warnings,time,threading
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
+from web_assets import WebAssetError, read_asset, check_assets
 from PIL import Image,ImageOps,UnidentifiedImageError
 from enhanced import recognize,prepare
 from extraction_candidate import extract_candidate
@@ -81,10 +82,14 @@ def handler(token,port):
             self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff')
             self.send_header('Content-Security-Policy',"default-src 'self'; img-src 'self' blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'")
             self.end_headers();self.wfile.write(body)
+        def asset(self,name,mime):
+            try:body=read_asset(ROOT,name)
+            except WebAssetError as error:return self.send(503,str(error).encode('utf-8'),'text/plain; charset=utf-8')
+            return self.send(200,body,mime)
         def do_GET(self):
             if not self.allowed():return self.send(403,dict(error='Invalid local host'))
-            if self.path=='/':return self.send(200,(ROOT/'image_reader.html').read_bytes(),'text/html; charset=utf-8')
-            if self.path=='/reader.js':return self.send(200,(ROOT/'image_reader.js').read_bytes(),'text/javascript; charset=utf-8')
+            if self.path=='/':return self.asset('image_reader.html','text/html; charset=utf-8')
+            if self.path=='/reader.js':return self.asset('image_reader.js','text/javascript; charset=utf-8')
             if self.path=='/api/session':
                 try:return self.send(200,dict(token=token,languages=available_languages()))
                 except subprocess.SubprocessError:return self.send(503,dict(error='Cannot inspect OCR languages'))
@@ -114,6 +119,8 @@ def handler(token,port):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--port',type=int,default=8766)
     p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');a=p.parse_args()
+    try:check_assets(ROOT,('image_reader.html','image_reader.js'))
+    except WebAssetError as error:p.exit(2,str(error))
     server=ThreadingHTTPServer((a.host,a.port),handler(secrets.token_urlsafe(32),a.port))
     print(f'Image reader: http://127.0.0.1:{a.port} (PNG/JPG/BMP; English/Thai according to installed language packs)',flush=True)
     try:server.serve_forever()
@@ -122,3 +129,4 @@ def main():
 
 
 if __name__=='__main__':main()
+
