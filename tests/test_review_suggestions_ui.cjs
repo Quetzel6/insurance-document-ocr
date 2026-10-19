@@ -109,6 +109,17 @@ class Element{
  el('corrected_text').value=unformatted;el('preview_format').onclick();el('queue').children[1].onclick();el('apply_format').onclick();
  assert.equal(el('corrected_text').value,text('2.00'),'Stale case');
  console.log('Formatting suggestions passed: matching digits only, calendar validation, ambiguity/sign/grouping rejection, preview/apply and stale guards.');
+
+ el('document_id').value='SYN-537642';
+ el('corrected_text').value='Document IO SYN 537642';el('preview_format').onclick();
+ assert.equal(el('corrected_text').value,'Document IO SYN 537642');
+ el('apply_format').onclick();assert.equal(el('corrected_text').value,'Document ID: SYN-537642');
+ for(const raw of ['Document IO SYN 53764O','Document IO SYN 537643','Document IO SYN 537642\nDocument ID unreadable']){
+  el('corrected_text').value=raw;el('preview_format').onclick();assert.equal(el('apply_format').disabled,true,raw);
+ }
+ el('document_id').value='SYN-237642';el('corrected_text').value='Document ID: SYN.237642';
+ el('preview_format').onclick();el('apply_format').onclick();assert.equal(el('corrected_text').value,'Document ID: SYN-237642');
+ console.log('ID formatting passed: IO/space/period support, same digits, duplicate and ambiguous-value refusal.');
  el('queue').children[2].onclick();
  assert.equal(el('structured_fields').hidden,true);assert.equal(el('suggestion_tools').hidden,true);
  for(const key of ['document_id','date','amount']){assert.equal(el(key).disabled,true);assert.equal(el(key).required,false);assert.equal(el(key).value,'')}
@@ -123,5 +134,6 @@ class Element{
  console.log('Mixed text/structured mode transitions passed.');
  console.log('Field suggestion UI interactions passed: preview/apply, partial/zero values, no autosave, stale text/fields/case rejection.');
 })().catch(error=>{console.error(error);process.exitCode=1});
+
 
 

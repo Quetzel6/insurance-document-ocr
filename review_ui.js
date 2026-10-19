@@ -165,6 +165,9 @@ function proposeFormats(text,values){
  const changes=[],skipped=[];
  const lines=text.split('\n');
  const specs=[
+  {key:'document_id',label:/^\s*Document[ \t]*(?:ID|I0|IO|1D)\b/i,
+   whole:/^(\s*Document[ \t]*(?:ID|I0|IO|1D))\s*:?\s*(SYN(?:[ \t]*[-.][ \t]*|[ \t]+)[0-9](?:[0-9 ]*[0-9])?)\s*$/i,
+   canonical:/^SYN-[0-9]{6}$/},
   {key:'date',label:/^\s*Date\b/i,whole:/^(\s*Date)\s*:?\s*([0-9]{4}-?[0-9]{2}-?[0-9]{2})\s*$/i,
    canonical:/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/},
   {key:'amount',label:/^\s*(?:Amount|Amourt|Arnrourt|Ammourt)\b/i,
@@ -184,7 +187,7 @@ function proposeFormats(text,values){
   if(!match||match[2].replace(/[^0-9]/g,'')!==value.replace(/[^0-9]/g,'')){
    skipped.push(spec.key);continue;
   }
-  const after=(spec.key==='date'?'Date: ':'Amount: ')+value;
+  const after=({document_id:'Document ID: ',date:'Date: ',amount:'Amount: '})[spec.key]+value;
   if(lines[i]!==after){changes.push(lines[i]+' → '+after);lines[i]=after}
  }
  return {text:lines.join('\n'),changes,skipped};
@@ -209,3 +212,4 @@ $('apply_format').onclick=()=>{
  $('corrected_text').value=p.after;dirty=true;$('text_confirmed').checked=false;
  clearSuggestions();renderDiff();$('format_status').textContent='จัดรูปแบบแล้ว ยังไม่ได้บันทึก ตรวจข้อความและตัวเลขกับภาพก่อนยืนยันและ Approve';
 };
+
