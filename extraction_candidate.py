@@ -5,7 +5,7 @@ from decimal import Decimal
 
 FIELDS=('document_id','date','amount')
 LABELS={
-    'document_id':re.compile(r'^\s*Document\s+(?:ID|1D|I0)\b\s*[:=]?\s*(.*?)\s*$',re.I|re.ASCII),
+    'document_id':re.compile(r'^\s*Document\s+(?:ID|1D|I0|IO)\b\s*[:=]?\s*(.*?)\s*$',re.I|re.ASCII),
     'date':re.compile(r'^\s*Date\b\s*[:=]?\s*(.*?)\s*$',re.I|re.ASCII),
     'amount':re.compile(r'^\s*(?:Amount|Amourt)\b\s*[:=]?\s*(.*?)\s*$',re.I|re.ASCII),
 }
@@ -13,7 +13,7 @@ LABELS={
 
 def parse_value(field,value):
     if field=='document_id':
-        m=re.fullmatch(r'SYN\s*-\s*([0-9](?:[0-9 ]*[0-9])?)',value,re.I|re.ASCII)
+        m=re.fullmatch(r'SYN(?:[ \t]*[-.][ \t]*|[ \t]+)([0-9](?:[0-9 ]*[0-9])?)',value,re.I|re.ASCII)
         if m:
             digits=m.group(1).replace(' ','')
             if len(digits)==6:return 'SYN-'+digits
@@ -39,3 +39,4 @@ def extract_candidate(text):
             if m:occurrences[field].append(parse_value(field,m.group(1)))
     # Even a malformed duplicate makes the field ambiguous.
     return {k:values[0] if len(values)==1 else None for k,values in occurrences.items()}
+
