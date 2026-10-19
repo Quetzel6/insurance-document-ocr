@@ -1,0 +1,1805 @@
+{
+  "split": "dev",
+  "protocol": null,
+  "fingerprints": {
+    "amount_ocr_experiment.py": "3c2d1908ceb7eaf3ce0906aa93a9be4ce26f88b1842dd56415811c5a56820e4e",
+    "enhanced.py": "c5ce53b40817332bc42b8b59dfdbae62b3ec7693c9d0c8760270092db234df80",
+    "project.py": "9d9b960d5b76b1240589d6300b31779e2d9dd1dc23616dab7faf5200b0afadf3",
+    "extraction_candidate.py": "f71be47f5cc152468dae39350f5c383ce66194261dfba890bbbb10557c51d718",
+    "manifest": "368b64ead0401cdcfcc89efd8d2227bd8e26a39f97c49db5f154588572f4a133"
+  },
+  "python": "3.12.14",
+  "pillow": "12.3.0",
+  "tesseract": "tesseract 5.3.4",
+  "eng_traineddata_sha": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "limits": "Synthetic English, 6 originals and 24 correlated variants per split, shared 3 font families. Distinct originals/field orders/positions/sizes per split; not held-out font families, real scans or Thai. Strong blur may destroy source detail. Generation and test labels exist for reproducibility; separation is procedural.",
+  "summary": [
+    {
+      "method": "page_current",
+      "condition": "all",
+      "images": 24,
+      "originals": 6,
+      "cer": 0.14189189189189189,
+      "complete": 18,
+      "correct": {
+        "document_id": 18,
+        "date": 18,
+        "amount": 18
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "page_current",
+      "condition": "blur_mild",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "page_current",
+      "condition": "blur_strong",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.5675675675675675,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "page_current",
+      "condition": "clean",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "page_current",
+      "condition": "shadow",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_7",
+      "condition": "all",
+      "images": 24,
+      "originals": 6,
+      "cer": 0.14189189189189189,
+      "complete": 18,
+      "correct": {
+        "document_id": 18,
+        "date": 18,
+        "amount": 18
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "amount_crop_7",
+      "condition": "blur_mild",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_7",
+      "condition": "blur_strong",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.5675675675675675,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "amount_crop_7",
+      "condition": "clean",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_7",
+      "condition": "shadow",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_13",
+      "condition": "all",
+      "images": 24,
+      "originals": 6,
+      "cer": 0.14189189189189189,
+      "complete": 18,
+      "correct": {
+        "document_id": 18,
+        "date": 18,
+        "amount": 18
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "amount_crop_13",
+      "condition": "blur_mild",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_13",
+      "condition": "blur_strong",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.5675675675675675,
+      "complete": 0,
+      "correct": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      }
+    },
+    {
+      "method": "amount_crop_13",
+      "condition": "clean",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    },
+    {
+      "method": "amount_crop_13",
+      "condition": "shadow",
+      "images": 6,
+      "originals": 6,
+      "cer": 0.0,
+      "complete": 6,
+      "correct": {
+        "document_id": 6,
+        "date": 6,
+        "amount": 6
+      },
+      "wrong_emitted": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      },
+      "missing": {
+        "document_id": 0,
+        "date": 0,
+        "amount": 0
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "amount-dev-F0-0-clean",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-clean",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-clean",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_mild",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_mild",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_mild",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_strong",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "whe Weert ORD\n\u2014 ee.\nnet \u00a9 FR 1 ORF\n\nom mel\n\nmt eee!\n\nAe ee Re ee\nomy\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_strong",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "whe Weert ORD\n\u2014 ee.\nnet \u00a9 FR 1 ORF\n\nom mel\n\nmt eee!\n\nAe ee Re ee\nomy\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-blur_strong",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "whe Weert ORD\n\u2014 ee.\nnet \u00a9 FR 1 ORF\n\nom mel\n\nmt eee!\n\nAe ee Re ee\nomy\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-shadow",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-shadow",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-0-shadow",
+      "original_id": "amount-dev-F0-0",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-717497\n\nDate: 2024-11-26\n\nAmount: 16766.27\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-717497",
+        "date": "2024-11-26",
+        "amount": "16766.27"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-clean",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-clean",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-clean",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_mild",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_mild",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_mild",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_strong",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "SYWT\u2122ETK SOwCE BOCORD\nWOT 4 Om Clam\n\nCecumert \u00a9 Sve $97 008\nOete 2025 07 os\n\namet VONe\n\nServe bynthet ope\u201d esh\u2014ete\nCurrency THO\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 66,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_strong",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "SYWT\u2122ETK SOwCE BOCORD\nWOT 4 Om Clam\n\nCecumert \u00a9 Sve $97 008\nOete 2025 07 os\n\namet VONe\n\nServe bynthet ope\u201d esh\u2014ete\nCurrency THO\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 66,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-blur_strong",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "SYWT\u2122ETK SOwCE BOCORD\nWOT 4 Om Clam\n\nCecumert \u00a9 Sve $97 008\nOete 2025 07 os\n\namet VONe\n\nServe bynthet ope\u201d esh\u2014ete\nCurrency THO\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 66,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-shadow",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-shadow",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F0-1-shadow",
+      "original_id": "amount-dev-F0-1",
+      "font": "DejaVuSans.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-592908\n\nDate: 2025-07-06\n\nAmount: 39354.34\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-592908",
+        "date": "2025-07-06",
+        "amount": "39354.34"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-clean",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-clean",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-clean",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_mild",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_mild",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_mild",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_strong",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "wren 1) eae + ae\n=e Lae\n\u2014\u2014\u2014\u2014 FS\n\na te\n\nRe Om\nSet pm mee\n\u2014\u2014\u00bb\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 117,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_strong",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "wren 1) eae + ae\n=e Lae\n\u2014\u2014\u2014\u2014 FS\n\na te\n\nRe Om\nSet pm mee\n\u2014\u2014\u00bb\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 117,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-blur_strong",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "wren 1) eae + ae\n=e Lae\n\u2014\u2014\u2014\u2014 FS\n\na te\n\nRe Om\nSet pm mee\n\u2014\u2014\u00bb\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 117,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-shadow",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-shadow",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-0-shadow",
+      "original_id": "amount-dev-F1-0",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-851339\n\nDate: 2024-01-29\n\nAmount: 46709.17\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-851339",
+        "date": "2024-01-29",
+        "amount": "46709.17"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-clean",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-clean",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-clean",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_mild",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_mild",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_mild",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_strong",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE APCORD\nNOT A REAL CLAIM\n\nDe ement I> SYS 1 OSe08\n\nBete 202661 13\n\nAmo 72473 57\n\nServe Sy ethete (pew estimate:\nCurrency THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 41,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_strong",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE APCORD\nNOT A REAL CLAIM\n\nDe ement I> SYS 1 OSe08\n\nBete 202661 13\n\nAmo 72473 57\n\nServe Sy ethete (pew estimate:\nCurrency THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 41,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-blur_strong",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE APCORD\nNOT A REAL CLAIM\n\nDe ement I> SYS 1 OSe08\n\nBete 202661 13\n\nAmo 72473 57\n\nServe Sy ethete (pew estimate:\nCurrency THB\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 41,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-shadow",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-shadow",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F1-1-shadow",
+      "original_id": "amount-dev-F1-1",
+      "font": "DejaVuSerif.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\nNOT A REAL CLAIM\n\nDocument ID: SYN-105809\n\nDate: 2026-01-13\n\nAmount: 72475.37\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-105809",
+        "date": "2026-01-13",
+        "amount": "72475.37"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-clean",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-clean",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-clean",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_mild",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_mild",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_mild",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_strong",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "ws) eee oa\n\ni Me el\n\u2014\u2014\u2014 1 ee eee\n\n\u2014~ =n\n\n\u2014 mee ry\n\nfore eee err neta: oeeee: ont ements\nvom\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_strong",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "ws) eee oa\n\ni Me el\n\u2014\u2014\u2014 1 ee eee\n\n\u2014~ =n\n\n\u2014 mee ry\n\nfore eee err neta: oeeee: ont ements\nvom\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-blur_strong",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "ws) eee oa\n\ni Me el\n\u2014\u2014\u2014 1 ee eee\n\n\u2014~ =n\n\n\u2014 mee ry\n\nfore eee err neta: oeeee: ont ements\nvom\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 112,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-shadow",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-shadow",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-0-shadow",
+      "original_id": "amount-dev-F2-0",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-561589\n\nDate: 2025-10-20\n\nAmount: 36565.71\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-561589",
+        "date": "2025-10-20",
+        "amount": "36565.71"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-clean",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-clean",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-clean",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_mild",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_mild",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_mild",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_mild",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_strong",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "page_current",
+      "text": "SywreaTiC Se@vICe @eComD\n=A ee CAD\n\nGecumert ID SY 451156\n\nSete 224 6) 8\n\nmet \u00ab11\n\nService Syethetic reper entisete\nCurrency TS\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 56,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_strong",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_7",
+      "text": "SywreaTiC Se@vICe @eComD\n=A ee CAD\n\nGecumert ID SY 451156\n\nSete 224 6) 8\n\nmet \u00ab11\n\nService Syethetic reper entisete\nCurrency TS\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 56,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-blur_strong",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "blur_strong",
+      "method": "amount_crop_13",
+      "text": "SywreaTiC Se@vICe @eComD\n=A ee CAD\n\nGecumert ID SY 451156\n\nSete 224 6) 8\n\nmet \u00ab11\n\nService Syethetic reper entisete\nCurrency TS\n",
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      },
+      "edits": 56,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-shadow",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "page_current",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB\n",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-shadow",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_7",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    },
+    {
+      "id": "amount-dev-F2-1-shadow",
+      "original_id": "amount-dev-F2-1",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "shadow",
+      "method": "amount_crop_13",
+      "text": "SYNTHETIC SERVICE RECORD\n\nNOT A REAL CLAIM\n\nDocument ID: SYN-431154\n\nDate: 2024-03-20\n\nAmount: 11331.49\n\nService: Synthetic repair estimate\nCurrency: THB",
+      "prediction": {
+        "document_id": "SYN-431154",
+        "date": "2024-03-20",
+        "amount": "11331.49"
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": true
+      },
+      "edits": 0,
+      "chars": 148
+    }
+  ]
+}
