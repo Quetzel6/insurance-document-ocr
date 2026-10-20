@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-20T07:42:53.533867+00:00",
+  "fingerprint": {
+    "source_sha256": "3078c62627c270d1c08365e3dfd6c29d604fa24eb1338236821b35786e49de58",
+    "manifest_sha256": "f0de4656c706cbd8afefe33911442f7a53b48a742099a40f7166bc3c3760e3d4",
+    "environment": {
+      "tesseract": "tesseract 5.3.4",
+      "english_model_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "python": "3.12.14",
+      "platform": "Linux",
+      "pillow": "12.3.0"
+    }
+  },
+  "selected_method": "upscale_sharpen",
+  "threshold": 0,
+  "dev_predictions_sha256": "ad1b60546fa452708178ef6be8a1b4acd4f6842bfa60d50969ed05534455ff3d"
+}

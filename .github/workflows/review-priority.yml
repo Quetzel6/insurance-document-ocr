@@ -1,0 +1,34 @@
+name: OCR review-priority supplement
+on:
+  push:
+    paths: ['supplements/review_priority/**', '.github/workflows/review-priority.yml']
+  pull_request:
+    paths: ['supplements/review_priority/**', '.github/workflows/review-priority.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: supplements/review_priority
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install local OCR dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng
+          python -m pip install Pillow==12.3.0
+      - name: Run protocol and metric unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Reproduce real OCR using the inspected synthetic cohort
+        run: python experiment.py run --dataset dataset --out ci_reproduction
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ocr-review-priority-reproduction
+          path: supplements/review_priority/ci_reproduction/
