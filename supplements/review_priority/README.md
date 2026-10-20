@@ -43,10 +43,10 @@ The bundled cohort is now inspected. Repeating its evaluation checks reproducibi
 
 Recognition receives image pixels/path and fixed method only. Expected labels and degradation conditions are used afterwards for scoring, not passed into recognition. Both methods use identical extraction rules and the same installed English model with OEM 1 / PSM 6. The script fingerprints code, manifest, image bytes and runtime/model identity, and checks evidence consistency around evaluation. This is reproducibility evidence, not tamper-proof attestation.
 
-## Role relevance and limits
+## Capabilities and limits
 
-- **Fabrinet:** image preprocessing, use of an existing neural OCR recognizer, structured field extraction, reproducible experimental protocol and validation. Not a trained custom computer-vision model, a factory connector, TensorFlow/PyTorch implementation or professional experience tenure.
-- **Yusen:** a measured document-review use case, explicit risk/coverage analysis and human-review boundary. Not GenAI, agentic AI, actual adoption or quantified business benefit.
+- **Computer vision and data engineering:** image preprocessing, use of an existing neural OCR recognizer, structured field extraction, reproducible experimental protocol and validation. Not a trained custom computer-vision model, a factory connector, TensorFlow/PyTorch implementation or professional experience tenure.
+- **Document review and operations:** a measured document-review use case, explicit risk/coverage analysis and human-review boundary. Not GenAI, agentic AI, actual adoption or quantified business benefit.
 - No Thai documents, handwriting, tables, real insurance/logistics records, unseen font families or production-scale evaluation. All data are synthetic.
 - Tesseract mean word confidence is not a probability of correct ID/date/amount. Source-matched fields and complete fields still need checking against the image.
 
