@@ -1,0 +1,58 @@
+# OCR review-priority evaluation — 20 October 2026
+
+Separate experimental supplement to the Insurance OCR portfolio. It does not alter the application, existing benchmarks, review databases or default OCR settings. No API key, credits, network request or new model training is involved.
+
+## Measured result (development Linux environment)
+
+| Fixed method | Test complete ID + date + amount | Wrong emitted fields |
+| --- | ---: | ---: |
+| Raw grayscale input | 11/18 | 0 |
+| 2x Lanczos + fixed unsharp mask | 13/18 | 0 |
+
+Twelve new synthetic English originals are split six dev / six test; each has clean, blur/low-resolution and skew variants (18 images per split). Original IDs and the field-order/position layout do not cross splits. Font family and labels are shared. The 18 test images are correlated, not 18 independent documents.
+
+The fixed method/threshold policy is specified before dev recognition. It maximizes coverage with zero observed incorrect prioritized dev extractions, then complete recovery, with fixed tie-breaking. The selected method and evidence hashes are written to `frozen_policy.json` **before test recognition**. Test is evaluated once; no changes were made to the experiment source after observing results.
+
+Dev selected upscale/sharpen with **confidence threshold 0**: 14/18 dev extractions and 13/18 test extractions were complete and exact. This means confidence filtering adds no evidence of value over field completeness on this small cohort. A zero observed error count is not a calibrated error guarantee. All 18 test images remain subject to human verification; there is no automatic approval, measured productivity gain or deployment decision.
+
+Observed missing fields and per-image predictions, confidence and durations are retained in `measured_linux/*_predictions.json`. Neither method emitted a wrong nonmissing field on this small cohort; extraction omissions account for the incomplete cases. This is not evidence that wrong fields cannot occur.
+
+## Open the existing report
+
+Open `measured_linux/report.html` locally, or read `measured_linux/RESULTS.md` and `results.json`. This measured result used Linux, Python 3.12.14, Pillow 12.3.0 and Tesseract 5.3.4; the English model SHA-256 is recorded in the results. It is **not** a Mac/Docker result.
+
+## Reproduce on your Mac using the existing Docker OCR image
+
+Extract this ZIP into a NEW folder, open Terminal in `ocr-triage-evaluation`, and keep Docker Desktop running. Use the existing image already built for the OCR project:
+
+```bash
+docker run --rm -v "$PWD:/work" -w /work insurance-document-orc:pilot python -m unittest discover -s tests -q
+docker run --rm -v "$PWD:/work" -w /work insurance-document-orc:pilot python experiment.py run --dataset dataset --out mac_run_01
+open mac_run_01/report.html
+```
+
+Expected: 13 unit tests. The OCR command performs 72 real Tesseract recognitions (36 images x 2 fixed methods). Results can differ by Pillow/Tesseract/model version. The command refuses to overwrite an existing output directory. Choose `mac_run_02` only for a separate intentional reproduction and preserve the earlier evidence.
+
+If the image is missing, `docker image inspect insurance-document-orc:pilot` will fail; do not rebuild the old application or install a different model just to force a match. Supply the exact error so the existing environment can be checked first. A local installation can also run `python3 experiment.py run --dataset dataset --out local_run_01` if Pillow and the Tesseract executable/English model are installed.
+
+The bundled cohort is now inspected. Repeating its evaluation checks reproducibility across environments; it is **not a new untouched test**, and must not be used to tune methods while retaining the original held-out claim. Use a separately authored, untouched cohort for future tuning or broader generalization.
+
+## Verification coverage
+
+13 unit tests cover invalid dates, avoiding digit guessing, incomplete-field rejection, missing confidence, undefined risk for empty priority groups, high-confidence wrong values, method-specific denominators, TSV word-confidence parsing, dev-policy selection, original-document leakage, changed-image detection and refusal to overwrite evidence. These code tests are distinct from the 72 actual OCR calls recorded in this release.
+
+Recognition receives image pixels/path and fixed method only. Expected labels and degradation conditions are used afterwards for scoring, not passed into recognition. Both methods use identical extraction rules and the same installed English model with OEM 1 / PSM 6. The script fingerprints code, manifest, image bytes and runtime/model identity, and checks evidence consistency around evaluation. This is reproducibility evidence, not tamper-proof attestation.
+
+## Role relevance and limits
+
+- **Fabrinet:** image preprocessing, use of an existing neural OCR recognizer, structured field extraction, reproducible experimental protocol and validation. Not a trained custom computer-vision model, a factory connector, TensorFlow/PyTorch implementation or professional experience tenure.
+- **Yusen:** a measured document-review use case, explicit risk/coverage analysis and human-review boundary. Not GenAI, agentic AI, actual adoption or quantified business benefit.
+- No Thai documents, handwriting, tables, real insurance/logistics records, unseen font families or production-scale evaluation. All data are synthetic.
+- Tesseract mean word confidence is not a probability of correct ID/date/amount. Source-matched fields and complete fields still need checking against the image.
+
+## References
+
+Official Tesseract TSV/engine options:
+https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html
+
+Methods use pretrained installed English weights and a fixed image transformation; this is inference/evaluation, not model training. Upstream Tesseract: Apache-2.0; Pillow: HPND. No model or font binaries are redistributed in this ZIP. Synthetic rendered images, code and test evidence are included.

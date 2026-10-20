@@ -1,0 +1,722 @@
+[
+  {
+    "id": "test-00-clean",
+    "original_id": "test-00",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 61175.59\nDocument ID: SYN-910053\nDate: 2025-04-26\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-910053",
+      "date": "2025-04-26",
+      "amount": "61175.59"
+    },
+    "mean_word_confidence": 95.39749452941177,
+    "elapsed_seconds": 0.1714019730002292,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-00-clean",
+    "original_id": "test-00",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 61175.59\nDocument ID: SYN-910053\nDate: 2025-04-26\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-910053",
+      "date": "2025-04-26",
+      "amount": "61175.59"
+    },
+    "mean_word_confidence": 95.31667064705883,
+    "elapsed_seconds": 0.27718658399999185,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-00-blur",
+    "original_id": "test-00",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 61175 59\nDocument ID SYN-910053\nDate 2025-04-26\nCurrency THE",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 80.58381822222222,
+    "elapsed_seconds": 0.1670536329997958,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-00-blur",
+    "original_id": "test-00",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nArmourt: 61175 59\nDocument ID SYN-910053\nDate 20250426\nCurrency THB",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 71.76780422222222,
+    "elapsed_seconds": 0.2903266910002458,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-00-skew",
+    "original_id": "test-00",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 61175.59\nDocument ID: SYN-910053\nDate: 2025-04-26\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-910053",
+      "date": "2025-04-26",
+      "amount": "61175.59"
+    },
+    "mean_word_confidence": 88.84706347058824,
+    "elapsed_seconds": 0.17151314100010495,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-00-skew",
+    "original_id": "test-00",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOTA REAL CUSTOMER RECORD\nAmount: 61175.59\nDocument ID: SYN-910053\nDate: 2025-04-26\nCurrency; THB",
+    "prediction": {
+      "document_id": "SYN-910053",
+      "date": "2025-04-26",
+      "amount": "61175.59"
+    },
+    "mean_word_confidence": 94.9722031875,
+    "elapsed_seconds": 0.30893646499998795,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-01-clean",
+    "original_id": "test-01",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 12046.93\nDocument ID: SYN-680915\nDate: 2025-05-28\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-680915",
+      "date": "2025-05-28",
+      "amount": "12046.93"
+    },
+    "mean_word_confidence": 95.27912105882353,
+    "elapsed_seconds": 0.21182651400022223,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-01-clean",
+    "original_id": "test-01",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 12046.93\nDocument ID: SYN-680915\nDate: 2025-05-28\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-680915",
+      "date": "2025-05-28",
+      "amount": "12046.93"
+    },
+    "mean_word_confidence": 95.1676034117647,
+    "elapsed_seconds": 0.34102278399996067,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-01-blur",
+    "original_id": "test-01",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 1204693\nDocument ID: SYN-680915\nDate: 2025-05-28\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-680915",
+      "date": "2025-05-28",
+      "amount": null
+    },
+    "mean_word_confidence": 88.59192217647058,
+    "elapsed_seconds": 0.1747285080000438,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-01-blur",
+    "original_id": "test-01",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 12046 93\nDocument ID: SYN-680915\nDate 2025-05-28\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-680915",
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 79.08737016666666,
+    "elapsed_seconds": 0.3144295739998597,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-01-skew",
+    "original_id": "test-01",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 12046.93\nDocument \\D: SYN-680915\nDate: 2025-05-28\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2025-05-28",
+      "amount": "12046.93"
+    },
+    "mean_word_confidence": 93.94293335294117,
+    "elapsed_seconds": 0.17995781100034947,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-01-skew",
+    "original_id": "test-01",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 12046.93\nDocument ID: SYN-680915\nDate: 2025-05-28\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-680915",
+      "date": "2025-05-28",
+      "amount": "12046.93"
+    },
+    "mean_word_confidence": 92.88286647058824,
+    "elapsed_seconds": 0.31226733799985595,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-clean",
+    "original_id": "test-02",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 95.41417605882353,
+    "elapsed_seconds": 0.17581336699959138,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-clean",
+    "original_id": "test-02",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 95.194941,
+    "elapsed_seconds": 0.29034795200004737,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-blur",
+    "original_id": "test-02",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 95.1821042352941,
+    "elapsed_seconds": 0.18092138099973454,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-blur",
+    "original_id": "test-02",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 93.804452,
+    "elapsed_seconds": 0.337381937000373,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-skew",
+    "original_id": "test-02",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 93.55094729411765,
+    "elapsed_seconds": 0.1767634870002439,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-02-skew",
+    "original_id": "test-02",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 25623.62\nDocument ID: SYN-289199\nDate: 2026-04-04\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-289199",
+      "date": "2026-04-04",
+      "amount": "25623.62"
+    },
+    "mean_word_confidence": 94.0273894117647,
+    "elapsed_seconds": 0.3332873039998958,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-03-clean",
+    "original_id": "test-03",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 14269.53\nDocument ID: SYN-904025\nDate: 2025-05-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-904025",
+      "date": "2025-05-19",
+      "amount": "14269.53"
+    },
+    "mean_word_confidence": 95.31843647058824,
+    "elapsed_seconds": 0.17381618299987167,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-03-clean",
+    "original_id": "test-03",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 14269.53\nDocument ID: SYN-904025\nDate: 2025-05-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-904025",
+      "date": "2025-05-19",
+      "amount": "14269.53"
+    },
+    "mean_word_confidence": 95.21979423529412,
+    "elapsed_seconds": 0.2747063410001829,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-03-blur",
+    "original_id": "test-03",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount 14269 53\nDocument ID SYN-904025\nDate: 2025-05-19\nCurrency THE",
+    "prediction": {
+      "document_id": null,
+      "date": "2025-05-19",
+      "amount": null
+    },
+    "mean_word_confidence": 81.8017595,
+    "elapsed_seconds": 0.16305492900028185,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-03-blur",
+    "original_id": "test-03",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nArmourt: 14269 53\nDocument ID SYN-904025\nDate 2025.05-19\nCurrency THB",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 80.75181533333334,
+    "elapsed_seconds": 0.28662024999994173,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-03-skew",
+    "original_id": "test-03",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 14269.53\nDocument \\D: SYN-904025\nDate: 2025-05-19\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2025-05-19",
+      "amount": "14269.53"
+    },
+    "mean_word_confidence": 94.22555894117647,
+    "elapsed_seconds": 0.1722229819997665,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-03-skew",
+    "original_id": "test-03",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 14269.53\nDocument ID: SYN-904025\nDate: 2025-05-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-904025",
+      "date": "2025-05-19",
+      "amount": "14269.53"
+    },
+    "mean_word_confidence": 94.52104188235295,
+    "elapsed_seconds": 0.2957144940000944,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-04-clean",
+    "original_id": "test-04",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24428.67\nDocument ID: SYN-997898\nDate: 2025-08-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": "2025-08-02",
+      "amount": "24428.67"
+    },
+    "mean_word_confidence": 95.25035629411765,
+    "elapsed_seconds": 0.17106548199990357,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-04-clean",
+    "original_id": "test-04",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24428.67\nDocument ID: SYN-997898\nDate: 2025-08-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": "2025-08-02",
+      "amount": "24428.67"
+    },
+    "mean_word_confidence": 94.84483170588236,
+    "elapsed_seconds": 0.31140928000013446,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-04-blur",
+    "original_id": "test-04",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24428 67\nDocument ID: SYN-997898\nDate: 2025-08-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": "2025-08-02",
+      "amount": null
+    },
+    "mean_word_confidence": 89.41692433333334,
+    "elapsed_seconds": 0.1728986480002277,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-04-blur",
+    "original_id": "test-04",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24426 67\nDocument ID: SYN-997898\nDate 2025-08-02\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 91.20849616666666,
+    "elapsed_seconds": 0.3136605309996412,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-04-skew",
+    "original_id": "test-04",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24428 67\nDocument ID: SYN-997898\nDate: 2025-08-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": "2025-08-02",
+      "amount": null
+    },
+    "mean_word_confidence": 93.95254605555556,
+    "elapsed_seconds": 0.19403547199999593,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-04-skew",
+    "original_id": "test-04",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 24428 67\nDocument ID: SYN-997898\nDate: 2025-08-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-997898",
+      "date": "2025-08-02",
+      "amount": null
+    },
+    "mean_word_confidence": 93.29234277777778,
+    "elapsed_seconds": 0.31523645800007216,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "test-05-clean",
+    "original_id": "test-05",
+    "condition": "clean",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 95.35558905882353,
+    "elapsed_seconds": 0.17494877399985853,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-05-clean",
+    "original_id": "test-05",
+    "condition": "clean",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 95.1236855882353,
+    "elapsed_seconds": 0.2937297779999426,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-05-blur",
+    "original_id": "test-05",
+    "condition": "blur",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 94.82870964705883,
+    "elapsed_seconds": 0.17779123199989044,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-05-blur",
+    "original_id": "test-05",
+    "condition": "blur",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 94.39041364705882,
+    "elapsed_seconds": 0.3266355470000235,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-05-skew",
+    "original_id": "test-05",
+    "condition": "skew",
+    "method": "raw",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 93.4017921764706,
+    "elapsed_seconds": 0.18602297699999326,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "test-05-skew",
+    "original_id": "test-05",
+    "condition": "skew",
+    "method": "upscale_sharpen",
+    "text": "SYNTHETIC OPERATIONS DOCUMENT\nNOT A REAL CUSTOMER RECORD\nAmount: 54525.56\nDocument ID: SYN-671417\nDate: 2026-01-02\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-671417",
+      "date": "2026-01-02",
+      "amount": "54525.56"
+    },
+    "mean_word_confidence": 92.13803323529412,
+    "elapsed_seconds": 0.334677271000146,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  }
+]

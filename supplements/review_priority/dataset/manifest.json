@@ -1,0 +1,512 @@
+{
+  "seed": 2026102003,
+  "font_sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+  "pillow": "12.3.0",
+  "records": [
+    {
+      "id": "dev-00-clean",
+      "original_id": "dev-00",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-00-clean.png",
+      "sha256": "bdcff31ce4e54b44585c6f415bb247ef51cf2837a4944a2db3c7a4e2ac3d0931",
+      "fields": {
+        "document_id": "SYN-667034",
+        "date": "2026-05-05",
+        "amount": "55042.70"
+      }
+    },
+    {
+      "id": "dev-00-blur",
+      "original_id": "dev-00",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-00-blur.png",
+      "sha256": "e6c9253188d712a4bffce83de3a170619cdfa03a6d77029d7d1f743cf6e4f2f7",
+      "fields": {
+        "document_id": "SYN-667034",
+        "date": "2026-05-05",
+        "amount": "55042.70"
+      }
+    },
+    {
+      "id": "dev-00-skew",
+      "original_id": "dev-00",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-00-skew.png",
+      "sha256": "d2969b65c70fd05260350daad0e20c2711a6062ab92904dea7ca30d780f74ee5",
+      "fields": {
+        "document_id": "SYN-667034",
+        "date": "2026-05-05",
+        "amount": "55042.70"
+      }
+    },
+    {
+      "id": "dev-01-clean",
+      "original_id": "dev-01",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-01-clean.png",
+      "sha256": "14d638d9be4b61d5d18e286b2eee8ca5682e5aec04d6fbad10b289ffeb18b9cb",
+      "fields": {
+        "document_id": "SYN-846240",
+        "date": "2026-05-02",
+        "amount": "15733.09"
+      }
+    },
+    {
+      "id": "dev-01-blur",
+      "original_id": "dev-01",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-01-blur.png",
+      "sha256": "9c2a603fb38edabfb5d0b932d0f7114c7328dfccd3ea7b67780b25f103ca1e37",
+      "fields": {
+        "document_id": "SYN-846240",
+        "date": "2026-05-02",
+        "amount": "15733.09"
+      }
+    },
+    {
+      "id": "dev-01-skew",
+      "original_id": "dev-01",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-01-skew.png",
+      "sha256": "369369c9122dc8528adf4b8896e7de624b8fa0ef66d0cb24271bbddbb3af21cd",
+      "fields": {
+        "document_id": "SYN-846240",
+        "date": "2026-05-02",
+        "amount": "15733.09"
+      }
+    },
+    {
+      "id": "dev-02-clean",
+      "original_id": "dev-02",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-02-clean.png",
+      "sha256": "5f8ba3327c56cef4a293f7b0e37bd56186bd22a1713d149340a5bc2e8cc2dcd9",
+      "fields": {
+        "document_id": "SYN-594551",
+        "date": "2026-04-23",
+        "amount": "60204.23"
+      }
+    },
+    {
+      "id": "dev-02-blur",
+      "original_id": "dev-02",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-02-blur.png",
+      "sha256": "9ef85fc4dd64b2f83cfa4759ed8385b4eacb45b064720046004434f658d37398",
+      "fields": {
+        "document_id": "SYN-594551",
+        "date": "2026-04-23",
+        "amount": "60204.23"
+      }
+    },
+    {
+      "id": "dev-02-skew",
+      "original_id": "dev-02",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-02-skew.png",
+      "sha256": "e7e0d4c380437e5df0dfb46a445e0a350261a9c3a2f30b722dc1f601a4922199",
+      "fields": {
+        "document_id": "SYN-594551",
+        "date": "2026-04-23",
+        "amount": "60204.23"
+      }
+    },
+    {
+      "id": "dev-03-clean",
+      "original_id": "dev-03",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-03-clean.png",
+      "sha256": "991949d722721ba6300908e6db87489a3b8efa5d1f62951053ded3f655b36253",
+      "fields": {
+        "document_id": "SYN-391872",
+        "date": "2025-10-17",
+        "amount": "33092.05"
+      }
+    },
+    {
+      "id": "dev-03-blur",
+      "original_id": "dev-03",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-03-blur.png",
+      "sha256": "fae4a539af5e4de7534966fb2318a9a206e27d51b0db5040412f1a34f9096646",
+      "fields": {
+        "document_id": "SYN-391872",
+        "date": "2025-10-17",
+        "amount": "33092.05"
+      }
+    },
+    {
+      "id": "dev-03-skew",
+      "original_id": "dev-03",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-03-skew.png",
+      "sha256": "4499181fe8e98e7aca2497351482963836d236eb92179213afb7850ded201058",
+      "fields": {
+        "document_id": "SYN-391872",
+        "date": "2025-10-17",
+        "amount": "33092.05"
+      }
+    },
+    {
+      "id": "dev-04-clean",
+      "original_id": "dev-04",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-04-clean.png",
+      "sha256": "365f881226f510923609869efab5b1c2c3ddd9c078204bc4a40119648b2e56fa",
+      "fields": {
+        "document_id": "SYN-390224",
+        "date": "2025-03-11",
+        "amount": "4180.72"
+      }
+    },
+    {
+      "id": "dev-04-blur",
+      "original_id": "dev-04",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-04-blur.png",
+      "sha256": "3e64eec9cda891e3521b6577e8255701a0e84c3990592d2986a7cfb6a01a896b",
+      "fields": {
+        "document_id": "SYN-390224",
+        "date": "2025-03-11",
+        "amount": "4180.72"
+      }
+    },
+    {
+      "id": "dev-04-skew",
+      "original_id": "dev-04",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-04-skew.png",
+      "sha256": "b15fa16dcbb6b7533ea1fe1919ab92b553aca6e2fa0c45cb6201899780317151",
+      "fields": {
+        "document_id": "SYN-390224",
+        "date": "2025-03-11",
+        "amount": "4180.72"
+      }
+    },
+    {
+      "id": "dev-05-clean",
+      "original_id": "dev-05",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "clean",
+      "image": "dev-05-clean.png",
+      "sha256": "7197c84afe1da400472f7b0b139bdaa258b7bd932fa00eb15ea5190aedfed3c4",
+      "fields": {
+        "document_id": "SYN-447882",
+        "date": "2025-07-07",
+        "amount": "28596.50"
+      }
+    },
+    {
+      "id": "dev-05-blur",
+      "original_id": "dev-05",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "blur",
+      "image": "dev-05-blur.png",
+      "sha256": "900ab7b17f43ab35f36ecc85459f1e66b261fd3b5b5ba66b8488bc7e4398c38f",
+      "fields": {
+        "document_id": "SYN-447882",
+        "date": "2025-07-07",
+        "amount": "28596.50"
+      }
+    },
+    {
+      "id": "dev-05-skew",
+      "original_id": "dev-05",
+      "split": "dev",
+      "layout": "dev",
+      "condition": "skew",
+      "image": "dev-05-skew.png",
+      "sha256": "abcce79e5ae57a8532085ffdc74b33a6dc7c381e1c9a6d45c26f1e2bdf76f536",
+      "fields": {
+        "document_id": "SYN-447882",
+        "date": "2025-07-07",
+        "amount": "28596.50"
+      }
+    },
+    {
+      "id": "test-00-clean",
+      "original_id": "test-00",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-00-clean.png",
+      "sha256": "8fb0f5563f52ceda661c822b0141f024682a6f8c480d098a9e02a60619627704",
+      "fields": {
+        "document_id": "SYN-910053",
+        "date": "2025-04-26",
+        "amount": "61175.59"
+      }
+    },
+    {
+      "id": "test-00-blur",
+      "original_id": "test-00",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-00-blur.png",
+      "sha256": "52d98ba30d6862ebca49035380738812e7e1c9c6500e1cb517e8dad130d90952",
+      "fields": {
+        "document_id": "SYN-910053",
+        "date": "2025-04-26",
+        "amount": "61175.59"
+      }
+    },
+    {
+      "id": "test-00-skew",
+      "original_id": "test-00",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-00-skew.png",
+      "sha256": "2381ca9907e03b2b90efbaa009782eb51d7351092ba992ab907e6a501123d852",
+      "fields": {
+        "document_id": "SYN-910053",
+        "date": "2025-04-26",
+        "amount": "61175.59"
+      }
+    },
+    {
+      "id": "test-01-clean",
+      "original_id": "test-01",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-01-clean.png",
+      "sha256": "405109656395aa5303d6a17fe8da911c4518f6858629189a9d457d12ca7f9971",
+      "fields": {
+        "document_id": "SYN-680915",
+        "date": "2025-05-28",
+        "amount": "12046.93"
+      }
+    },
+    {
+      "id": "test-01-blur",
+      "original_id": "test-01",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-01-blur.png",
+      "sha256": "2e160aecbfa02324fca809a09b490e337f5a3e0e41243b12c979ca4f772d76c2",
+      "fields": {
+        "document_id": "SYN-680915",
+        "date": "2025-05-28",
+        "amount": "12046.93"
+      }
+    },
+    {
+      "id": "test-01-skew",
+      "original_id": "test-01",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-01-skew.png",
+      "sha256": "ac89470bdeaae4e8fe276114b9add058212e4d79ff2fb99776451e8e556e50a2",
+      "fields": {
+        "document_id": "SYN-680915",
+        "date": "2025-05-28",
+        "amount": "12046.93"
+      }
+    },
+    {
+      "id": "test-02-clean",
+      "original_id": "test-02",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-02-clean.png",
+      "sha256": "aca41bd211272548a16265315963c5897e4dd74b2935252fc85296679e197cf5",
+      "fields": {
+        "document_id": "SYN-289199",
+        "date": "2026-04-04",
+        "amount": "25623.62"
+      }
+    },
+    {
+      "id": "test-02-blur",
+      "original_id": "test-02",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-02-blur.png",
+      "sha256": "9beba20123c1704cf0728519a5866b3df94a7655ca3ce33b9c91916b00f3b05d",
+      "fields": {
+        "document_id": "SYN-289199",
+        "date": "2026-04-04",
+        "amount": "25623.62"
+      }
+    },
+    {
+      "id": "test-02-skew",
+      "original_id": "test-02",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-02-skew.png",
+      "sha256": "ef3210bafc386a03266a6945cb671ba064630c1d0e419e63bc49548b09715b0e",
+      "fields": {
+        "document_id": "SYN-289199",
+        "date": "2026-04-04",
+        "amount": "25623.62"
+      }
+    },
+    {
+      "id": "test-03-clean",
+      "original_id": "test-03",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-03-clean.png",
+      "sha256": "b900d723377c38a613042608ad8fd2d4a652874c66657d739e28e00e5493665d",
+      "fields": {
+        "document_id": "SYN-904025",
+        "date": "2025-05-19",
+        "amount": "14269.53"
+      }
+    },
+    {
+      "id": "test-03-blur",
+      "original_id": "test-03",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-03-blur.png",
+      "sha256": "8534b711b2ca6e0358e8a9831b3aacbb5a2830d35c408dd0c6c9ef390b6fdefe",
+      "fields": {
+        "document_id": "SYN-904025",
+        "date": "2025-05-19",
+        "amount": "14269.53"
+      }
+    },
+    {
+      "id": "test-03-skew",
+      "original_id": "test-03",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-03-skew.png",
+      "sha256": "28875914bcb9915d9085530f8daff39e606c113b50db7c1b81f3e3aa6db8bcef",
+      "fields": {
+        "document_id": "SYN-904025",
+        "date": "2025-05-19",
+        "amount": "14269.53"
+      }
+    },
+    {
+      "id": "test-04-clean",
+      "original_id": "test-04",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-04-clean.png",
+      "sha256": "24e3b5d0d227eeba7b03d26bfac791617c9b4aae3e2255b15c981f57d91cbc05",
+      "fields": {
+        "document_id": "SYN-997898",
+        "date": "2025-08-02",
+        "amount": "24428.67"
+      }
+    },
+    {
+      "id": "test-04-blur",
+      "original_id": "test-04",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-04-blur.png",
+      "sha256": "e58c3478d8d502014909200bc69630e64b969b2ba73bc9e896ae024b32df7f45",
+      "fields": {
+        "document_id": "SYN-997898",
+        "date": "2025-08-02",
+        "amount": "24428.67"
+      }
+    },
+    {
+      "id": "test-04-skew",
+      "original_id": "test-04",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-04-skew.png",
+      "sha256": "78cbe7cfaa266c1955be2c8e89b27552fead7a1cd261dec9672557fd30ada7c1",
+      "fields": {
+        "document_id": "SYN-997898",
+        "date": "2025-08-02",
+        "amount": "24428.67"
+      }
+    },
+    {
+      "id": "test-05-clean",
+      "original_id": "test-05",
+      "split": "test",
+      "layout": "test",
+      "condition": "clean",
+      "image": "test-05-clean.png",
+      "sha256": "3dc446c2e4a70c94f6aefb025c8e99549eee57773f762260c87aacec19e0881e",
+      "fields": {
+        "document_id": "SYN-671417",
+        "date": "2026-01-02",
+        "amount": "54525.56"
+      }
+    },
+    {
+      "id": "test-05-blur",
+      "original_id": "test-05",
+      "split": "test",
+      "layout": "test",
+      "condition": "blur",
+      "image": "test-05-blur.png",
+      "sha256": "8b793cd448cadfea2dcf71f235771145c94ca444304cfa4094bd024fca2c7af9",
+      "fields": {
+        "document_id": "SYN-671417",
+        "date": "2026-01-02",
+        "amount": "54525.56"
+      }
+    },
+    {
+      "id": "test-05-skew",
+      "original_id": "test-05",
+      "split": "test",
+      "layout": "test",
+      "condition": "skew",
+      "image": "test-05-skew.png",
+      "sha256": "114457562a218261070e8e8f17b8fbb9247ea9d57e7976018093bc1911bd2144",
+      "fields": {
+        "document_id": "SYN-671417",
+        "date": "2026-01-02",
+        "amount": "54525.56"
+      }
+    }
+  ],
+  "limits": "12 synthetic English originals: six per split, three correlated variants each; shared font family/labels. No Thai, real captures, handwriting or factory documents."
+}

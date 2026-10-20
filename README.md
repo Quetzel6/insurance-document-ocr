@@ -78,6 +78,10 @@ recorded benchmark fingerprints, checks browser JavaScript syntax, and checks
 that English and Thai language packs are installed. Language availability
 checks do not measure OCR accuracy.
 
+## Review-priority evaluation supplement
+
+[Reproducible preprocessing and review-priority experiment](supplements/review_priority/README.md) compares raw input with fixed 2x upscale/sharpen using a dev-selected policy frozen before test recognition. Recorded Linux test results are 11/18 versus 13/18 complete ID/date/amount extractions on six synthetic originals. The author reproduced the selected 13/18 result and passed 13 unit tests using the existing Docker image on Mac on 20 October 2026. All images remain human-reviewed. The selected confidence threshold is 0, so this small cohort does not demonstrate added value from confidence filtering. [Recorded results](supplements/review_priority/measured_linux/RESULTS.md). The included images are synthetic and the cohort is now inspected. This changes no application defaults and trains no new model.
+
 ## Documentation
 
 This README describes the consolidated application. Versioned update guides
