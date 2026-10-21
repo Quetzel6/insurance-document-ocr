@@ -56,3 +56,18 @@ Official Tesseract TSV/engine options:
 https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html
 
 Methods use pretrained installed English weights and a fixed image transformation; this is inference/evaluation, not model training. Upstream Tesseract: Apache-2.0; Pillow: HPND. No model or font binaries are redistributed in this ZIP. Synthetic rendered images, code and test evidence are included.
+
+## Additional frozen-policy font/layout challenge
+
+The earlier policy was applied unchanged to [36 new images from 12 authored originals](challenge_font_dataset/manifest.json), using two different font files and changed field layouts. [Protocol](CHALLENGE_PROTOCOL.md) and source were committed before recognition. On the development Linux host, the earlier upscale/sharpen policy had **18/36 complete exact extractions and 6 wrong emitted fields**; raw input had **22/36 complete exact extractions and 7 wrong emitted fields**. These are a new cohort and descriptive comparison, not a demonstrated improvement or a reason to retune this cohort.
+
+The selected policy was complete and exact on 12/12 clean, 5/12 low-resolution and 1/12 skew images. The 6 wrong emitted fields were dates in incomplete records. Raw input also produced one complete-but-incorrect extraction. Completeness and syntactic date validity are insufficient for automatic acceptance. All images still require human review. [Recorded results and failures](measured_font_challenge/RESULTS.md) | [Business interpretation](CHALLENGE_FINDINGS.md).
+
+To reproduce with the existing Docker image, from the repository root:
+
+```bash
+docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-document-orc:pilot python -m unittest discover -s tests -v
+docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-document-orc:pilot python challenge_eval.py run --dataset challenge_font_dataset --out mac_font_challenge_01
+```
+
+Expected: 19 tests, then actual OCR calls. Never overwrite an existing result; use a new directory for a deliberate repeat. Author Mac execution and new CI results must be recorded separately. Original experiments and application defaults are unchanged.

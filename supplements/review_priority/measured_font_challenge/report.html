@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Frozen OCR policy challenge</title><style>body{font:16px/1.6 system-ui;max-width:1050px;padding:24px;margin:auto;color:#173e4b}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>Frozen OCR policy challenge</h1><pre># Frozen-policy OCR font/layout challenge
+
+Apply the previously selected method/threshold unchanged. Raw is a descriptive comparator, never used for reselection.
+
+| Method | Complete exact | Wrong emitted fields |
+| --- | ---: | ---: |
+| raw | 22/36 | 7 |
+| upscale_sharpen | 18/36 | 6 |
+
+## Selected policy by condition
+
+- clean: 12/12 complete exact; 0 wrong emitted fields.
+- low_resolution: 5/12 complete exact; 1 wrong emitted fields.
+- skew: 1/12 complete exact; 5 wrong emitted fields.
+
+## Observed failures
+
+- challenge-00-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-377116&quot;, &quot;date&quot;: &quot;2026-08-20&quot;, &quot;amount&quot;: &quot;72605.91&quot;}; observed {&quot;document_id&quot;: &quot;SYN-377116&quot;, &quot;date&quot;: null, &quot;amount&quot;: null}
+- challenge-00-skew: expected {&quot;document_id&quot;: &quot;SYN-377116&quot;, &quot;date&quot;: &quot;2026-08-20&quot;, &quot;amount&quot;: &quot;72605.91&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2026-08-29&quot;, &quot;amount&quot;: null}
+- challenge-01-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-732115&quot;, &quot;date&quot;: &quot;2026-02-20&quot;, &quot;amount&quot;: &quot;13864.08&quot;}; observed {&quot;document_id&quot;: &quot;SYN-732115&quot;, &quot;date&quot;: &quot;2026-02-20&quot;, &quot;amount&quot;: null}
+- challenge-01-skew: expected {&quot;document_id&quot;: &quot;SYN-732115&quot;, &quot;date&quot;: &quot;2026-02-20&quot;, &quot;amount&quot;: &quot;13864.08&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: null, &quot;amount&quot;: null}
+- challenge-02-skew: expected {&quot;document_id&quot;: &quot;SYN-605831&quot;, &quot;date&quot;: &quot;2026-04-14&quot;, &quot;amount&quot;: &quot;49584.61&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2026-04-14&quot;, &quot;amount&quot;: null}
+- challenge-03-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-353560&quot;, &quot;date&quot;: &quot;2026-03-19&quot;, &quot;amount&quot;: &quot;24872.35&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: null, &quot;amount&quot;: &quot;24872.35&quot;}
+- challenge-03-skew: expected {&quot;document_id&quot;: &quot;SYN-353560&quot;, &quot;date&quot;: &quot;2026-03-19&quot;, &quot;amount&quot;: &quot;24872.35&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;5926-03-19&quot;, &quot;amount&quot;: null}
+- challenge-04-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-612384&quot;, &quot;date&quot;: &quot;2026-09-25&quot;, &quot;amount&quot;: &quot;49344.56&quot;}; observed {&quot;document_id&quot;: &quot;SYN-612384&quot;, &quot;date&quot;: &quot;2026-09-25&quot;, &quot;amount&quot;: null}
+- challenge-04-skew: expected {&quot;document_id&quot;: &quot;SYN-612384&quot;, &quot;date&quot;: &quot;2026-09-25&quot;, &quot;amount&quot;: &quot;49344.56&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2026-09-25&quot;, &quot;amount&quot;: null}
+- challenge-05-skew: expected {&quot;document_id&quot;: &quot;SYN-833060&quot;, &quot;date&quot;: &quot;2026-04-28&quot;, &quot;amount&quot;: &quot;14751.20&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;5926-04-28&quot;, &quot;amount&quot;: &quot;14751.20&quot;}
+- challenge-06-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-562034&quot;, &quot;date&quot;: &quot;2026-05-31&quot;, &quot;amount&quot;: &quot;62120.19&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2026-05-31&quot;, &quot;amount&quot;: &quot;62120.19&quot;}
+- challenge-07-skew: expected {&quot;document_id&quot;: &quot;SYN-537431&quot;, &quot;date&quot;: &quot;2026-01-12&quot;, &quot;amount&quot;: &quot;2179.32&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;5926-01-12&quot;, &quot;amount&quot;: &quot;2179.32&quot;}
+- challenge-08-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-927395&quot;, &quot;date&quot;: &quot;2026-02-02&quot;, &quot;amount&quot;: &quot;28369.84&quot;}; observed {&quot;document_id&quot;: &quot;SYN-927395&quot;, &quot;date&quot;: &quot;2026-02-02&quot;, &quot;amount&quot;: null}
+- challenge-08-skew: expected {&quot;document_id&quot;: &quot;SYN-927395&quot;, &quot;date&quot;: &quot;2026-02-02&quot;, &quot;amount&quot;: &quot;28369.84&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: null, &quot;amount&quot;: null}
+- challenge-09-low_resolution: expected {&quot;document_id&quot;: &quot;SYN-254648&quot;, &quot;date&quot;: &quot;2026-07-15&quot;, &quot;amount&quot;: &quot;2704.37&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2626-07-15&quot;, &quot;amount&quot;: &quot;2704.37&quot;}
+- challenge-09-skew: expected {&quot;document_id&quot;: &quot;SYN-254648&quot;, &quot;date&quot;: &quot;2026-07-15&quot;, &quot;amount&quot;: &quot;2704.37&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;3926-07-19&quot;, &quot;amount&quot;: &quot;2704.37&quot;}
+- challenge-10-skew: expected {&quot;document_id&quot;: &quot;SYN-202757&quot;, &quot;date&quot;: &quot;2026-03-19&quot;, &quot;amount&quot;: &quot;80491.23&quot;}; observed {&quot;document_id&quot;: null, &quot;date&quot;: &quot;2026-03-19&quot;, &quot;amount&quot;: &quot;80491.23&quot;}
+- challenge-11-skew: expected {&quot;document_id&quot;: &quot;SYN-602548&quot;, &quot;date&quot;: &quot;2026-03-23&quot;, &quot;amount&quot;: &quot;1884.29&quot;}; observed {&quot;document_id&quot;: &quot;SYN-602548&quot;, &quot;date&quot;: null, &quot;amount&quot;: &quot;1884.29&quot;}
+
+12 newly authored synthetic English originals, 2 different font files, 3 correlated variants each. Same field labels/extractor and developer author. No real scans, Thai, handwriting, tables or independent human benchmark. No new model training or measured business savings.
+
+Fresh authored challenge of an earlier frozen policy. No retuning or best-method selection on this cohort. Later reruns measure reproducibility, not a new untouched test. All images still require human verification.
+</pre></html>

@@ -22,13 +22,17 @@ jobs:
       - name: Install local OCR dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-eng fonts-dejavu-core
           python -m pip install Pillow==12.3.0
       - name: Run protocol and metric unit tests
         run: python -m unittest discover -s tests -v
       - name: Reproduce real OCR using the inspected synthetic cohort
         run: python experiment.py run --dataset dataset --out ci_reproduction
+      - name: Evaluate earlier frozen policy on new font/layout cohort
+        run: python challenge_eval.py run --dataset challenge_font_dataset --out ci_font_challenge
       - uses: actions/upload-artifact@v4
         with:
           name: ocr-review-priority-reproduction
-          path: supplements/review_priority/ci_reproduction/
+          path: |
+            supplements/review_priority/ci_reproduction/
+            supplements/review_priority/ci_font_challenge/
