@@ -41,4 +41,4 @@ OCR or change stored decisions. Existing decisions are not rewritten.
 Verification includes parser/approval checks, a real HTTP read-only/auth/round
 test and Node UI interaction tests for preview/apply, missing/zero values,
 stale text/field/case responses and absence of automatic save. Node tests use
-a simulated DOM; browser acceptance on the user's Mac remains separate.
+a simulated DOM; browser acceptance on a Mac remains separate.

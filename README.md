@@ -1,103 +1,99 @@
 # Insurance Document OCR
 
-Local OCR prototype using Python, Tesseract and Pillow.
+[![OCR checks](https://github.com/Quetzel6/insurance-document-orc/actions/workflows/ci.yml/badge.svg)](https://github.com/Quetzel6/insurance-document-orc/actions)
 
-## Features
+A Python/Tesseract prototype for extracting document IDs, dates and amounts, reviewing uncertain outputs, and querying evaluation evidence in SQLite. All committed evaluation documents are synthetic. This is an independent project with no employer data or production deployment.
 
-- Review Desk: correct text and fields, approve/reject, export decisions
-  and history, and reset review rounds.
-- Image Reader: upload PNG/JPG/BMP and select English or Thai + English.
-- Document, general and sparse text layouts.
-- Document ID, date and amount extraction in document mode.
-- Review consistency checks and export analysis.
+**Main finding:** preprocessing improved complete extraction on one cohort but did not generalize to the font/layout challenge. Human review remains required for every document. A complete extraction is not necessarily correct.
 
-## Setup
+## Results at a glance
 
-Requires Python and Docker. Run from the repository directory:
+“Complete” means all three fields exactly match the authored labels. “Wrong fields” counts emitted values that disagree with labels; missing values are counted separately in the analytical tables. Results below are calculated from the linked prediction files and checked against their manifests. Rows reuse some cohorts: do not add their original counts or pool their scores.
 
-    python3 -m venv .venv
-    source .venv/bin/activate
-    python -m pip install -r requirements.txt
-    docker build -t insurance-document-orc:pilot .
-    docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
+| Dataset / experiment | Originals | Method | Complete documents; wrong emitted fields | Limitations |
+|---|---:|---|---|---|
+| [legacy / dev — initial challenge development](challenge_output/dev_report.json) | 10 | raw / grayscale_threshold | raw: **10/40**; 3 wrong fields<br>grayscale_threshold: **10/40**; 3 wrong fields | Synthetic; inspected development data |
+| [legacy / dev — enhanced comparison](enhanced_output/dev_report.json) | 10 | raw / grayscale_threshold / raw_validated / enhanced | raw: **10/40**; 3 wrong fields<br>grayscale_threshold: **10/40**; 3 wrong fields<br>raw_validated: **14/40**; 3 wrong fields<br>enhanced: **30/40**; 0 wrong fields | Synthetic; inspected development data |
+| [legacy / test — enhanced comparison](enhanced_output/test_report.json) | 10 | raw / grayscale_threshold / raw_validated / enhanced | raw: **10/40**; 2 wrong fields<br>grayscale_threshold: **10/40**; 4 wrong fields<br>raw_validated: **12/40**; 1 wrong fields<br>enhanced: **30/40**; 1 wrong fields | Synthetic; now inspected; correlated variants |
+| [legacy / dev — inspected development variants](experiments/ocr_variants_20261016/report.json) | 10 | current / prepared_sparse / grayscale_block / prepared_otsu | current: **30/40**; 0 wrong fields<br>prepared_sparse: **30/40**; 0 wrong fields<br>grayscale_block: **10/40**; 3 wrong fields<br>prepared_otsu: **30/40**; 0 wrong fields | Synthetic; inspected development data |
+| [line / dev — line comparison; pretrained weights only](experiments/line_cohort_20261016/dev_report.json) | 6 | page_current / line_upscale | page_current: **18/24**; 0 wrong fields<br>line_upscale: **17/24**; 0 wrong fields | Synthetic; inspected development data; image bytes not committed |
+| [line / test — line comparison; pretrained weights only](experiments/line_cohort_20261016/test_report.json) | 6 | page_current / line_upscale | page_current: **18/24**; 0 wrong fields<br>line_upscale: **18/24**; 0 wrong fields | Synthetic; now inspected; correlated variants; image bytes not committed |
+| [model / dev — model comparison; pretrained weights only](experiments/model_cohort_20261016/dev_report.json) | 6 | installed / tessdata_best | installed: **16/24**; 0 wrong fields<br>tessdata_best: **18/24**; 0 wrong fields | Synthetic; inspected development data; image bytes not committed |
+| [model / test — model comparison; pretrained weights only](experiments/model_cohort_20261016/test_report.json) | 6 | installed / tessdata_best | installed: **18/24**; 0 wrong fields<br>tessdata_best: **18/24**; 0 wrong fields | Synthetic; now inspected; correlated variants; image bytes not committed |
+| [priority / dev — development Linux; frozen dev-selected policy](supplements/review_priority/measured_linux/dev_predictions.json) | 6 | raw / upscale_sharpen | raw: **14/18**; 1 wrong fields<br>upscale_sharpen: **14/18**; 0 wrong fields | Synthetic; inspected development data |
+| [priority / test — development Linux; frozen dev-selected policy](supplements/review_priority/measured_linux/test_predictions.json) | 6 | raw / upscale_sharpen | raw: **11/18**; 0 wrong fields<br>upscale_sharpen: **13/18**; 0 wrong fields | Synthetic; now inspected; correlated variants |
+| [font_challenge / challenge — development Linux; frozen font/layout challenge](supplements/review_priority/measured_font_challenge/predictions.json) | 12 | raw / upscale_sharpen | raw: **22/36**; 7 wrong fields<br>upscale_sharpen: **18/36**; 6 wrong fields | Synthetic; now inspected; correlated variants; frozen policy underperforms raw; six wrong dates |
 
-## Review Desk
+The legacy enhanced test recovered 30/40 documents versus raw 10/40, but still emitted one wrong field. The review-priority test recovered 13/18 versus 11/18. On the new font/layout challenge, the same frozen policy recovered **18/36 versus raw 22/36**, emitting **six wrong dates**. Its prioritized subset contained 18 images and no observed complete-but-wrong output; coverage was only 50%. Threshold 0 does not establish a benefit from confidence filtering. Zero observed errors in a small subset is not a zero-risk guarantee.
 
-In each new terminal, activate the project environment first:
+## Run from a fresh checkout
 
-    source .venv/bin/activate
+Requires Git and Docker. Run in a new directory:
 
-    python3 review_app.py
+```bash
+git clone https://github.com/Quetzel6/insurance-document-orc.git
+cd insurance-document-orc
+docker build -t insurance-document-orc:pilot .
+docker run --rm -v "$PWD:/work" insurance-document-orc:pilot make test
+docker run --rm -v "$PWD:/work" insurance-document-orc:pilot make verify-frozen
+docker run --rm -v "$PWD:/work" insurance-document-orc:pilot make pipeline
+```
 
-Open http://127.0.0.1:8765
+The pipeline performs actual OCR and extraction on all 36 font-challenge images using both methods, validates those outputs plus the archived reports, loads typed SQLite tables, checks exact replay and generates six SQL reports. It makes no API calls. It does not rerun every historical OCR experiment. Output is a new directory under `output/analytics/`, containing `analytics.sqlite3`, six CSV tables, `query_results.json`, `report.html` and `pipeline_status.json`.
 
-Decisions persist in review_state/. Reset archives the previous review
-round and starts a new round.
+For reporting from recorded evidence only, replace `make pipeline` with `make analytics`. Neither command overwrites earlier runs. Local Python 3.10+ with the pinned requirements and Tesseract can run the same make targets. [Schema, SQL questions and data-quality contract](docs/guides/ANALYTICS.md).
 
-## Image Reader
+## Review Desk and Image Reader
 
-Run in a separate terminal from the repository directory:
+To open the existing benchmark Review Desk locally (Python 3.10+):
 
-    docker run --rm -p 127.0.0.1:8766:8766 -v "$PWD:/work" insurance-ocr-reader:thai
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python review_app.py
+```
 
-Open http://127.0.0.1:8766
+Open http://127.0.0.1:8765. Compare source images and extracted fields, correct values, approve/reject and export decisions. Review state persists under `review_state/`. Reset archives the prior round. No human decisions are invented by the analytical pipeline; its review tables remain empty until an actual benchmark export is supplied with `--review-export`.
 
-Images are processed temporarily. Download results to retain them.
-Results do not automatically enter the Review Desk queue.
+For uploaded images, [Image Reader](docs/guides/IMAGE_READER_GUIDE.md) supports English or Thai+English recognition, and [uploaded-image review](docs/guides/UPLOAD_REVIEW_GUIDE.md) uses a separate queue. Thai language availability is not an accuracy evaluation. Uploaded images, private review databases and exports must remain outside Git.
 
-## Review uploaded images
+```mermaid
+flowchart TD
+    A[Manifest and synthetic images] --> B[Frozen OCR and extraction]
+    B --> C[Schema and label validation]
+    C --> D[Typed SQLite and SQL reports]
+    B --> E[Review Desk]
+    E --> F[Actual exported decisions]
+    F --> D
+```
 
-In any layout, click Download review package after reading OCR. The
-package includes the source image and OCR output; keep it private.
+## Reproduction and provenance
 
-Start the separate uploaded-image queue (activate .venv in this terminal):
+- Recorded initial results were produced in a Linux development environment. Reports retain their original hashes and environment metadata.
+- The project owner reproduced the selected review-priority result (13/18) and font-challenge result (18/36, six wrong fields) using Docker on Mac, and supplied terminal output for 19 supplement tests. [Verification record](supplements/review_priority/AUTHOR_VERIFICATION.md).
+- Full `mac_font_challenge_01/` files have not yet been supplied to this checkout. The Mac statement is terminal-reported evidence, not a committed second raw prediction set.
+- GitHub Actions workflows run tests and fresh OCR reproduction. Use the badge/run details for the exact revision and result; workflow presence alone is not evidence of a passing run.
+- Line/model archived reports and manifests are available, but 96 corresponding image files are absent. The analytical layer flags `image_bytes_verified=0` for these images. It verifies their report/label consistency, not absent image bytes.
 
-    source .venv/bin/activate
-    python3 review_app.py --uploads --port 8767
+## Code and documentation
 
-Open http://127.0.0.1:8767 and import ocr-review-package.json. Compare the
-image, correct both text and fields, approve/reject, and export decisions.
-The database is review_state/uploads.sqlite3; it persists images and history.
-Reset archives decisions and makes the existing images pending again; it
-does not delete stored images. Document mode reviews text and three fields.
-General/sparse modes review text only, with explicit image confirmation before
-Approve text. See UPLOAD_REVIEW_GUIDE.md and GENERAL_TEXT_REVIEW.md.
+| Location | Purpose |
+|---|---|
+| `review_app.py`, `review_store.py`, browser assets | Review application and persistent review state |
+| `image_reader.py` | Uploaded-image OCR |
+| `project.py`, `challenge.py`, `enhanced.py` | Original benchmark and frozen comparisons |
+| `*_experiment.py`, `extraction_candidate.py` | Historical experimental drivers |
+| `supplements/review_priority/` | Frozen policy and font/layout challenge |
+| `ocr_analytics/`, `sql/analytics/` | Validated analytical loading and six SQL questions |
+| `docs/guides/` | Current workflow documentation |
+| `docs/history/` | Historical change notes, not current setup instructions |
+| `docs/evidence/frozen_files.json` | Hash inventory for frozen source, datasets and evidence |
 
-## Verification
+Frozen experiment code is **frozen for reproducibility; style intentionally unchanged**. File names and locations remain stable because reports reference their hashes. Ruff checks the new analytical code and support scripts; it excludes frozen drivers. `make verify-frozen` verifies the inventory and original benchmark fingerprints. Do not reformat frozen files to satisfy a linter.
 
-    docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python -m unittest discover -s tests -q
-    docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python build_review.py
+## What I learned and next steps
 
-build_review.py verifies recorded reports and frozen fingerprints.
-It does not rerun OCR.
+The font challenge changed the conclusion: a preprocessing choice that helped one cohort can damage date extraction on another. I therefore report missing values, wrong emitted values and complete-but-wrong documents separately. Review edits are observations, not verified ground truth or measured time savings.
 
-## Automated checks
-
-GitHub Actions builds the Docker environments, runs unit tests, verifies
-recorded benchmark fingerprints, checks browser JavaScript syntax, and checks
-that English and Thai language packs are installed. Language availability
-checks do not measure OCR accuracy.
-
-## Review-priority evaluation supplement
-
-[Reproducible preprocessing and review-priority experiment](supplements/review_priority/README.md) compares raw input with fixed 2x upscale/sharpen using a dev-selected policy frozen before test recognition. Recorded Linux test results are 11/18 versus 13/18 complete ID/date/amount extractions on six synthetic originals. The author reproduced the selected 13/18 result and passed 13 unit tests using the existing Docker image on Mac on 20 October 2026. All images remain human-reviewed. The selected confidence threshold is 0, so this small cohort does not demonstrate added value from confidence filtering. [Recorded results](supplements/review_priority/measured_linux/RESULTS.md). The included images are synthetic and the cohort is now inspected. This changes no application defaults and trains no new model.
-
-## Documentation
-
-This README describes the consolidated application. Versioned update guides
-record earlier development stages; their historical test counts, installation
-paths and statements about missing features may no longer apply.
-
-## Limitations
-
-Benchmark images are synthetic. Results do not establish accuracy on real
-insurance documents or Thai documents. Thai language installation enables
-recognition but does not validate its accuracy.
-
-Human verification is required, especially for dates, IDs and amounts.
-Corrections do not automatically train a model.
-PDF, handwriting and structured table reconstruction are not supported.
-
-Keep private review databases, exports and uploads outside version control.
-See the included guides for workflow details.
-
+Next work is independently labeled document samples, more font/layout coverage, and measured review effort. These experiments do not establish real insurance-document accuracy, Thai accuracy, generalization to scanned handwriting or a production business benefit. No custom model was trained. PDF ingestion and table reconstruction remain outside scope.

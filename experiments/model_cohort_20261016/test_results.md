@@ -15,4 +15,4 @@
 
 Synthetic English, 6 originals and 24 correlated variants per split, shared 3 font families. Distinct originals/field orders/positions/sizes per split; not held-out font families, real scans or Thai. Strong blur may destroy source detail. Generation and test labels exist for reproducibility; separation is procedural.
 
-Measured in assistant Linux environment, not Mac/Docker. Same extractor across methods. No confidence calibration, training or automatic value guessing.
+Measured in the development Linux environment. No Mac reproduction of this experiment is recorded. Same extractor across methods. No confidence calibration, training or automatic value guessing.

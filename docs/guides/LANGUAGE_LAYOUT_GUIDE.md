@@ -9,7 +9,7 @@ docker build -f Dockerfile.thai -t insurance-ocr-reader:thai .
 docker run --rm -p 127.0.0.1:8766:8766 -v "$PWD:/work" insurance-ocr-reader:thai
 ```
 
-The build requires the existing local base image and network access for Debian packages. It was not executed in the assistant environment. English-only mode requires no new image. New server reads installed Tesseract languages; Thai+English is disabled until both tha and eng are installed. A direct request for missing Thai returns a clear error; no silent English fallback. Language flags are whitelisted.
+The build requires the existing local base image and network access for Debian packages. It was not executed in the development environment. English-only mode requires no new image. New server reads installed Tesseract languages; Thai+English is disabled until both tha and eng are installed. A direct request for missing Thai returns a clear error; no silent English fallback. Language flags are whitelisted.
 
 Layout options:
 - Document: prior enhanced illumination/deskew and single-block PSM 6; experimental synthetic-contract fields are extracted.

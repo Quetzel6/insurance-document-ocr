@@ -45,4 +45,4 @@ the application does not send them to GitHub or an external OCR service.
 Automated checks cover import flags, persistence/audit/reset, confirmation,
 rejection, unchanged structured identity, server mode authority and suggestion
 rejection for text-only cases, plus simulated-DOM reader/mixed-mode UI tests.
-Actual browser acceptance on the user's Mac remains separate.
+Actual browser acceptance on a Mac remains separate.

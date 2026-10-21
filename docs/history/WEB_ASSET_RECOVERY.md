@@ -1,3 +1,5 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Missing web files
 
 Review Desk needs review_ui.html and review_ui.js beside review_app.py. Image Reader needs image_reader.html and image_reader.js beside image_reader.py. Both import web_assets.py.

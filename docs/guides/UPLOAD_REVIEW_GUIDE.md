@@ -37,6 +37,6 @@ uploaded queue's uploads-v1 fingerprint; do not use it as an accuracy check.
 Document-field approval supports only the current synthetic-style SYN- plus
 six-digit ID, ISO calendar date and decimal amount contract. General/sparse
 packages use text-only approval and do not validate structured fields. See
-GENERAL_TEXT_REVIEW.md. PDF, handwriting and arbitrary insurance ID formats
+docs/guides/GENERAL_TEXT_REVIEW.md. PDF, handwriting and arbitrary insurance ID formats
 for structured approval are not supported here.
 Approval is a human decision, not proof of correctness or model training.

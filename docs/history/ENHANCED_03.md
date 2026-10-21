@@ -1,3 +1,5 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Development comparison 0.3
 
 Only dev has been evaluated. Dataset remains Challenge 0.2, including untouched test cohort. Use this complete package in a NEW directory so earlier dev evidence is preserved. Do not regenerate data or inspect test samples/labels.
@@ -10,7 +12,7 @@ Validated extraction accepts specified label variations and spaces inside a six-
 
 The record key ocr_seconds is historical: enhanced timing includes preprocessing and OCR, while other methods report OCR time only. Do NOT compare it across methods as a speed benchmark. Version pinning, calibrated confidence, real invoices/Thai OCR and model fine-tuning are not implemented.
 
-From the extracted project directory using the user's existing image:
+From the extracted project directory using the project Docker image:
 ```bash
 docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python -m unittest discover -s tests -v
 docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python challenge.py dev
