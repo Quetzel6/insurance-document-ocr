@@ -1,6 +1,6 @@
 # OCR language and page layout
 
-Stop port 8766 first. Extract into /Users/sierra6/Documents; updates are nested under insurance-ocr-image-reader. Existing Review Desk is unaffected. Restart and hard-reload the page.
+Stop port 8766 first. Extract into ~/Documents; updates are nested under insurance-ocr-image-reader. Existing Review Desk is unaffected. Restart and hard-reload the page.
 
 English continues to work with insurance-document-orc:pilot. To install Thai support, build the additional Dockerfile from the image-reader directory:
 

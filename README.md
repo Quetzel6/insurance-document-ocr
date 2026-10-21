@@ -1,6 +1,6 @@
 # Insurance Document OCR
 
-[![OCR checks](https://github.com/Quetzel6/insurance-document-orc/actions/workflows/ci.yml/badge.svg)](https://github.com/Quetzel6/insurance-document-orc/actions)
+[![OCR checks](https://github.com/Quetzel6/insurance-document-ocr/actions/workflows/ci.yml/badge.svg)](https://github.com/Quetzel6/insurance-document-ocr/actions)
 
 A Python/Tesseract prototype for extracting document IDs, dates and amounts, reviewing uncertain outputs, and querying evaluation evidence in SQLite. All committed evaluation documents are synthetic. This is an independent project with no employer data or production deployment.
 
@@ -31,8 +31,8 @@ The legacy enhanced test recovered 30/40 documents versus raw 10/40, but still e
 Requires Git and Docker. Run in a new directory:
 
 ```bash
-git clone https://github.com/Quetzel6/insurance-document-orc.git
-cd insurance-document-orc
+git clone https://github.com/Quetzel6/insurance-document-ocr.git
+cd insurance-document-ocr
 docker build -t insurance-document-orc:pilot .
 docker run --rm -v "$PWD:/work" insurance-document-orc:pilot make test
 docker run --rm -v "$PWD:/work" insurance-document-orc:pilot make verify-frozen
@@ -47,7 +47,7 @@ For reporting from recorded evidence only, replace `make pipeline` with `make an
 
 ![Actual Review Desk showing a synthetic low-resolution document awaiting review](docs/assets/review-desk.png)
 
-Screenshot captured from the running application in [CI run 39544289968](https://github.com/Quetzel6/insurance-document-orc/actions/runs/39544289968), with an empty isolated review database. No approval or correction is fabricated.
+Screenshot captured from the running application in [CI run 39544289968](https://github.com/Quetzel6/insurance-document-ocr/actions/runs/39544289968), with an empty isolated review database. No approval or correction is fabricated.
 
 To open the existing benchmark Review Desk locally (Python 3.10+):
 
