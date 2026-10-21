@@ -53,7 +53,9 @@ jobs:
           python -m pip install -r requirements.txt ruff==0.17.1 playwright==1.64.0
           python -m playwright install --with-deps chromium
       - name: Lint only non-frozen analytical code
-        run: make lint
+        run: |
+          make lint
+          make docs-check
       - name: Build clean checkout OCR environment
         run: docker build -t insurance-document-orc:pilot .
       - name: Verify frozen evidence and both test suites

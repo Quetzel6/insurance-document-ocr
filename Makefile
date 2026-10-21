@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: pipeline analytics test lint verify-frozen
+.PHONY: pipeline analytics test lint verify-frozen docs-check
 pipeline:
 	$(PYTHON) -m ocr_analytics.pipeline --live
 analytics:
@@ -14,3 +14,6 @@ verify-frozen:
 lint:
 	$(PYTHON) -m ruff check ocr_analytics scripts tests/test_analytics.py
 	$(PYTHON) -m ruff format --check ocr_analytics scripts tests/test_analytics.py
+
+docs-check:
+	$(PYTHON) -m scripts.check_evidence_docs

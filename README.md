@@ -45,6 +45,10 @@ For reporting from recorded evidence only, replace `make pipeline` with `make an
 
 ## Review Desk and Image Reader
 
+![Actual Review Desk showing a synthetic low-resolution document awaiting review](docs/assets/review-desk.png)
+
+Screenshot captured from the running application in [CI run 39544289968](https://github.com/Quetzel6/insurance-document-orc/actions/runs/39544289968), with an empty isolated review database. No approval or correction is fabricated.
+
 To open the existing benchmark Review Desk locally (Python 3.10+):
 
 ```bash
