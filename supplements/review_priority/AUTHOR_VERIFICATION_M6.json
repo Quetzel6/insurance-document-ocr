@@ -18,6 +18,23 @@
     "human_review_required": 36
   },
   "comparison": "Summary matches recorded Linux and CI results. This is reproduction on an already inspected synthetic cohort, not an independent new accuracy test.",
-  "unit_tests_on_author_mac": "Not reported for the new 19-test suite in this message.",
+  "unit_tests_on_author_mac": {
+    "evidence_type": "project_owner_reported_terminal_output",
+    "reported_on": "2026-10-21",
+    "command": "docker run --rm -v \"$PWD:/work\" -w /work/supplements/review_priority insurance-document-orc:pilot python -m unittest discover -s tests -v",
+    "tests_run": 19,
+    "passed": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 2.137,
+    "result": "OK",
+    "test_modules": [
+      "test_challenge_protocol",
+      "test_experiment",
+      "test_protocol"
+    ],
+    "scope": "Tests executed inside the existing Docker image on the author Mac. Exact checkout SHA, image ID and runtime versions were not supplied with the terminal output."
+  },
   "scope": "Transcribed author evidence only. No access to the Mac, no independent runtime verification, and no production, real-document or business-impact verification."
 }
