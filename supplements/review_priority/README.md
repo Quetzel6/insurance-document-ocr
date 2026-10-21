@@ -23,15 +23,15 @@ Open `measured_linux/report.html` locally, or read `measured_linux/RESULTS.md` a
 
 ## Reproduce on your Mac using the existing Docker OCR image
 
-Extract this ZIP into a NEW folder, open Terminal in `ocr-triage-evaluation`, and keep Docker Desktop running. Use the existing image already built for the OCR project:
+From the repository root, keep Docker Desktop running and use the existing OCR image:
 
 ```bash
-docker run --rm -v "$PWD:/work" -w /work insurance-document-orc:pilot python -m unittest discover -s tests -q
-docker run --rm -v "$PWD:/work" -w /work insurance-document-orc:pilot python experiment.py run --dataset dataset --out mac_run_01
-open mac_run_01/report.html
+docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-document-orc:pilot python -m unittest discover -s tests -q
+docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-document-orc:pilot python experiment.py run --dataset dataset --out mac_run_01
+open supplements/review_priority/mac_run_01/report.html
 ```
 
-Expected: 13 unit tests. The OCR command performs 72 real Tesseract recognitions (36 images x 2 fixed methods). Results can differ by Pillow/Tesseract/model version. The command refuses to overwrite an existing output directory. Choose `mac_run_02` only for a separate intentional reproduction and preserve the earlier evidence.
+Expected: 19 current unit tests (the original suite contained 13). The OCR command performs 72 real Tesseract recognitions (36 images x 2 fixed methods). Results can differ by Pillow/Tesseract/model version. The command refuses to overwrite an existing output directory. Choose `mac_run_02` only for a separate intentional reproduction and preserve the earlier evidence.
 
 If the image is missing, `docker image inspect insurance-document-orc:pilot` will fail; do not rebuild the old application or install a different model just to force a match. Supply the exact error so the existing environment can be checked first. A local installation can also run `python3 experiment.py run --dataset dataset --out local_run_01` if Pillow and the Tesseract executable/English model are installed.
 
@@ -39,7 +39,7 @@ The bundled cohort is now inspected. Repeating its evaluation checks reproducibi
 
 ## Verification coverage
 
-13 unit tests cover invalid dates, avoiding digit guessing, incomplete-field rejection, missing confidence, undefined risk for empty priority groups, high-confidence wrong values, method-specific denominators, TSV word-confidence parsing, dev-policy selection, original-document leakage, changed-image detection and refusal to overwrite evidence. These code tests are distinct from the 72 actual OCR calls recorded in this release.
+The original 13 unit tests cover invalid dates, avoiding digit guessing, incomplete-field rejection, missing confidence, undefined risk for empty priority groups, high-confidence wrong values, method-specific denominators, TSV word-confidence parsing, dev-policy selection, original-document leakage, changed-image detection and refusal to overwrite evidence. These code tests are distinct from the 72 actual OCR calls recorded in this release.
 
 Recognition receives image pixels/path and fixed method only. Expected labels and degradation conditions are used afterwards for scoring, not passed into recognition. Both methods use identical extraction rules and the same installed English model with OEM 1 / PSM 6. The script fingerprints code, manifest, image bytes and runtime/model identity, and checks evidence consistency around evaluation. This is reproducibility evidence, not tamper-proof attestation.
 
@@ -70,4 +70,4 @@ docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-d
 docker run --rm -v "$PWD:/work" -w /work/supplements/review_priority insurance-document-orc:pilot python challenge_eval.py run --dataset challenge_font_dataset --out mac_font_challenge_01
 ```
 
-Expected: 19 tests, then actual OCR calls. Never overwrite an existing result; use a new directory for a deliberate repeat. Author Mac execution and new CI results must be recorded separately. Original experiments and application defaults are unchanged.
+Expected: 19 tests, then actual OCR calls. Never overwrite an existing result; use a new directory for a deliberate repeat. The current 19-test suite passed on development Linux and in [CI](https://github.com/Quetzel6/insurance-document-orc/actions/runs/39538383242). The author reported the same 18/36 and six wrong-field summary from Docker on a Mac; see [transcribed author evidence](AUTHOR_VERIFICATION_M6.json). The new 19-test suite was not reported from the author Mac terminal. Container versions and image ID were not supplied with that report. Original experiments and application defaults are unchanged.

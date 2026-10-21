@@ -1,0 +1,23 @@
+{
+  "evidence_type": "project_owner_reported_terminal_output",
+  "reported_on": "2026-10-21",
+  "host_context": "Author ran Docker OCR image from a Mac terminal; exact container image ID and runtime versions were not supplied in this message.",
+  "command": "docker run --rm -v \"$PWD:/work\" -w /work/supplements/review_priority insurance-document-orc:pilot python challenge_eval.py run --dataset challenge_font_dataset --out mac_font_challenge_01",
+  "evaluated_commit": "c7f471f53ddb81df2245f39308d83d90fa0fe404",
+  "summary": {
+    "method": "upscale_sharpen",
+    "threshold": 0,
+    "images": 36,
+    "originals": 12,
+    "complete_correct": 18,
+    "wrong_emitted_fields": 6,
+    "prioritized": 18,
+    "incorrect_prioritized": 0,
+    "priority_coverage": 0.5,
+    "priority_error_rate": 0,
+    "human_review_required": 36
+  },
+  "comparison": "Summary matches recorded Linux and CI results. This is reproduction on an already inspected synthetic cohort, not an independent new accuracy test.",
+  "unit_tests_on_author_mac": "Not reported for the new 19-test suite in this message.",
+  "scope": "Transcribed author evidence only. No access to the Mac, no independent runtime verification, and no production, real-document or business-impact verification."
+}
