@@ -4,7 +4,7 @@ Click Export decisions & history in Review Desk. The downloaded decisions JSON i
 
 Run from the repository directory, adjusting the downloaded filename:
 
-    python3 review_correction_report.py "/Users/sierra6/Downloads/ocr-review-decisions.json"
+    python3 review_correction_report.py ~/"Downloads/ocr-review-decisions.json"
 
 The standard-library tool prints counts and writes review_analysis/correction_summary.json. It does not modify decisions, rerun OCR or train a model.
 
