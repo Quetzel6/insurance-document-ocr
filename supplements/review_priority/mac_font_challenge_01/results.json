@@ -1,0 +1,500 @@
+{
+  "status": "evaluated_local",
+  "api_calls": 0,
+  "trained_new_model": false,
+  "fingerprint": {
+    "protocol": {
+      "method": "upscale_sharpen",
+      "threshold": 0,
+      "original_policy_sha256": "a9c99a33c87bb2624a2f469c2d5c1fdea4bcbcf433700e6655dd8b5f0a3b3f14",
+      "experiment_sha256": "3078c62627c270d1c08365e3dfd6c29d604fa24eb1338236821b35786e49de58",
+      "challenge_source_sha256": "a77d222b4572a8678584467106f62c145f465ce7588a88c2f5d5a6a41c333259",
+      "original_manifest_sha256": "f0de4656c706cbd8afefe33911442f7a53b48a742099a40f7166bc3c3760e3d4"
+    },
+    "manifest_sha256": "0443686fad7610998083dfc6c86b288470945a2718457a4e08da88e8c7af3f97",
+    "environment": {
+      "tesseract": "tesseract 5.5.0",
+      "english_model_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "python": "3.13.16",
+      "platform": "Linux",
+      "pillow": "12.3.0"
+    }
+  },
+  "selected_policy": {
+    "method": "upscale_sharpen",
+    "threshold": 0,
+    "images": 36,
+    "originals": 12,
+    "complete_correct": 18,
+    "wrong_emitted_fields": 6,
+    "prioritized": 18,
+    "incorrect_prioritized": 0,
+    "priority_coverage": 0.5,
+    "priority_error_rate": 0.0,
+    "human_review_required": 36
+  },
+  "descriptive_comparators": [
+    {
+      "method": "raw",
+      "threshold": 0,
+      "images": 36,
+      "originals": 12,
+      "complete_correct": 22,
+      "wrong_emitted_fields": 7,
+      "prioritized": 23,
+      "incorrect_prioritized": 1,
+      "priority_coverage": 0.6388888888888888,
+      "priority_error_rate": 0.043478260869565216,
+      "human_review_required": 36
+    },
+    {
+      "method": "upscale_sharpen",
+      "threshold": 0,
+      "images": 36,
+      "originals": 12,
+      "complete_correct": 18,
+      "wrong_emitted_fields": 6,
+      "prioritized": 18,
+      "incorrect_prioritized": 0,
+      "priority_coverage": 0.5,
+      "priority_error_rate": 0.0,
+      "human_review_required": 36
+    }
+  ],
+  "breakdown": {
+    "font": {
+      "DejaVuSansMono.ttf": {
+        "method": "upscale_sharpen",
+        "threshold": 0,
+        "images": 18,
+        "originals": 6,
+        "complete_correct": 9,
+        "wrong_emitted_fields": 5,
+        "prioritized": 9,
+        "incorrect_prioritized": 0,
+        "priority_coverage": 0.5,
+        "priority_error_rate": 0.0,
+        "human_review_required": 18
+      },
+      "DejaVuSerif.ttf": {
+        "method": "upscale_sharpen",
+        "threshold": 0,
+        "images": 18,
+        "originals": 6,
+        "complete_correct": 9,
+        "wrong_emitted_fields": 1,
+        "prioritized": 9,
+        "incorrect_prioritized": 0,
+        "priority_coverage": 0.5,
+        "priority_error_rate": 0.0,
+        "human_review_required": 18
+      }
+    },
+    "condition": {
+      "clean": {
+        "method": "upscale_sharpen",
+        "threshold": 0,
+        "images": 12,
+        "originals": 12,
+        "complete_correct": 12,
+        "wrong_emitted_fields": 0,
+        "prioritized": 12,
+        "incorrect_prioritized": 0,
+        "priority_coverage": 1.0,
+        "priority_error_rate": 0.0,
+        "human_review_required": 12
+      },
+      "low_resolution": {
+        "method": "upscale_sharpen",
+        "threshold": 0,
+        "images": 12,
+        "originals": 12,
+        "complete_correct": 5,
+        "wrong_emitted_fields": 1,
+        "prioritized": 5,
+        "incorrect_prioritized": 0,
+        "priority_coverage": 0.4166666666666667,
+        "priority_error_rate": 0.0,
+        "human_review_required": 12
+      },
+      "skew": {
+        "method": "upscale_sharpen",
+        "threshold": 0,
+        "images": 12,
+        "originals": 12,
+        "complete_correct": 1,
+        "wrong_emitted_fields": 5,
+        "prioritized": 1,
+        "incorrect_prioritized": 0,
+        "priority_coverage": 0.08333333333333333,
+        "priority_error_rate": 0.0,
+        "human_review_required": 12
+      }
+    }
+  },
+  "failed_images": [
+    {
+      "id": "challenge-00-low_resolution",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-377116",
+        "date": "2026-08-20",
+        "amount": "72605.91"
+      },
+      "prediction": {
+        "document_id": "SYN-377116",
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": false,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-00-skew",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-377116",
+        "date": "2026-08-20",
+        "amount": "72605.91"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2026-08-29",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-01-low_resolution",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": "13864.08"
+      },
+      "prediction": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-01-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": "13864.08"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-02-skew",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-605831",
+        "date": "2026-04-14",
+        "amount": "49584.61"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2026-04-14",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-03-low_resolution",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-353560",
+        "date": "2026-03-19",
+        "amount": "24872.35"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": "24872.35"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-03-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-353560",
+        "date": "2026-03-19",
+        "amount": "24872.35"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "5926-03-19",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-04-low_resolution",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": "49344.56"
+      },
+      "prediction": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-04-skew",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": "49344.56"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2026-09-25",
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-05-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-833060",
+        "date": "2026-04-28",
+        "amount": "14751.20"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "5926-04-28",
+        "amount": "14751.20"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-06-low_resolution",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-562034",
+        "date": "2026-05-31",
+        "amount": "62120.19"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2026-05-31",
+        "amount": "62120.19"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-07-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-537431",
+        "date": "2026-01-12",
+        "amount": "2179.32"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "5926-01-12",
+        "amount": "2179.32"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-08-low_resolution",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": "28369.84"
+      },
+      "prediction": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": null
+      },
+      "matches": {
+        "document_id": true,
+        "date": true,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-08-skew",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": "28369.84"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": null,
+        "amount": null
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": false
+      }
+    },
+    {
+      "id": "challenge-09-low_resolution",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "expected": {
+        "document_id": "SYN-254648",
+        "date": "2026-07-15",
+        "amount": "2704.37"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2626-07-15",
+        "amount": "2704.37"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-09-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-254648",
+        "date": "2026-07-15",
+        "amount": "2704.37"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "3926-07-19",
+        "amount": "2704.37"
+      },
+      "matches": {
+        "document_id": false,
+        "date": false,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-10-skew",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-202757",
+        "date": "2026-03-19",
+        "amount": "80491.23"
+      },
+      "prediction": {
+        "document_id": null,
+        "date": "2026-03-19",
+        "amount": "80491.23"
+      },
+      "matches": {
+        "document_id": false,
+        "date": true,
+        "amount": true
+      }
+    },
+    {
+      "id": "challenge-11-skew",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "expected": {
+        "document_id": "SYN-602548",
+        "date": "2026-03-23",
+        "amount": "1884.29"
+      },
+      "prediction": {
+        "document_id": "SYN-602548",
+        "date": null,
+        "amount": "1884.29"
+      },
+      "matches": {
+        "document_id": true,
+        "date": false,
+        "amount": true
+      }
+    }
+  ],
+  "limits": "12 newly authored synthetic English originals, 2 different font files, 3 correlated variants each. Same field labels/extractor and developer author. No real scans, Thai, handwriting, tables or independent human benchmark. No new model training or measured business savings.",
+  "human_review_required": 36,
+  "interpretation": "Fresh authored challenge of an earlier frozen policy. No retuning or best-method selection on this cohort. Later reruns measure reproducibility, not a new untouched test."
+}

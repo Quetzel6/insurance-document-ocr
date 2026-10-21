@@ -76,7 +76,7 @@ flowchart TD
 
 - Recorded initial results were produced in a Linux development environment. Reports retain their original hashes and environment metadata.
 - The project owner reproduced the selected review-priority result (13/18) and font-challenge result (18/36, six wrong fields) using Docker on Mac, and supplied terminal output for 19 supplement tests. [Verification record](supplements/review_priority/AUTHOR_VERIFICATION.md).
-- Full `mac_font_challenge_01/` files have not yet been supplied to this checkout. The Mac statement is terminal-reported evidence, not a committed second raw prediction set.
+- [Supplied Docker-on-Mac font-challenge artifacts](supplements/review_priority/mac_font_challenge_01/RESULTS.md) include all 72 image/method predictions. Extracted fields and aggregate scores match the development Linux run; OCR text differs in two records and confidence in 39. Container fingerprints report Linux, Python 3.13.16 and Tesseract 5.5.0. [Artifact verification](supplements/review_priority/MAC_ARTIFACT_VERIFICATION.json) preserves hashes and provenance.
 - GitHub Actions workflows run tests and fresh OCR reproduction. Use the badge/run details for the exact revision and result; workflow presence alone is not evidence of a passing run.
 - Line/model archived reports and manifests are available, but 96 corresponding image files are absent. The analytical layer flags `image_bytes_verified=0` for these images. It verifies their report/label consistency, not absent image bytes.
 
