@@ -29,9 +29,9 @@ From the repository directory using the existing Docker environment:
     docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python ocr_variant_experiment.py --out /work/ocr_variant_runs/run-01
 
 Use a new output directory for each run. The script refuses to overwrite
-evidence. Its measured report was generated in the assistant's Linux
+evidence. Its measured report was generated in the development Linux
 environment with Tesseract 5.3.4, Pillow 12.3.0 and Python 3.12.14, not on
-the user's Mac/Docker environment. Reproductions may differ across versions.
+a Mac/Docker reproduction. Reproductions may differ across versions.
 The frozen project.py, challenge.py, enhanced.py, manifest and recorded
 enhanced test report are checked before and after the run and not changed.
 No test images/labels are evaluated. Normalized CER lowercases/collapses

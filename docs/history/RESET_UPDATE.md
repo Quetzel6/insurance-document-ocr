@@ -1,3 +1,5 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Reset update
 
 Extract this ZIP into /Users/sierra6/Documents. It contains only updates under insurance-ocr-v05-fixed and insurance-ocr-image-reader. Stop running servers first and reload browser pages after restart. Existing datasets and SQLite database are not overwritten by extraction.
@@ -8,4 +10,4 @@ Image Reader (8766): ↺ clears the selected file, preview, OCR result and downl
 
 Closing Review Desk preserves current round deliberately; restarting is not a reset. To retain round archives in backups, back up the stopped app database. New upload images are still separate from the fixed Review Desk examples.
 
-53 originating-project unit tests passed. HTTP reset smoke confirmed archived data retained, all active cases Pending and stale-tab saves rejected. JavaScript syntax checked. Browser interaction acceptance on the user's Mac remains pending. Frozen OCR recognition code/reports are unchanged.
+53 originating-project unit tests passed. HTTP reset smoke confirmed archived data retained, all active cases Pending and stale-tab saves rejected. JavaScript syntax checked. Browser interaction acceptance on a Mac remains pending. Frozen OCR recognition code/reports are unchanged.

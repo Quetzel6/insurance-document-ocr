@@ -26,4 +26,4 @@ Exploratory English synthetic dev only: 40 variants / 10 correlated originals in
 | prepared_otsu | skew | 10 | 0.00% | 10/10 | 0 / 0 / 0 |
 
 All methods use extraction_candidate unchanged. Missing/wrong predictions are separate in report.json.
-Environment: tesseract 5.3.4; Pillow 12.3.0; Python 3.12.14. Not the user Mac/Docker environment.
+Environment: tesseract 5.3.4; Pillow 12.3.0; Python 3.12.14. Not a Mac/Docker reproduction.

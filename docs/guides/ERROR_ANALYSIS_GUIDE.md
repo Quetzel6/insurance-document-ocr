@@ -17,4 +17,4 @@ Counts use latest decisions, not audit events, so repeated saves are not double-
 
 No user correction export was provided during implementation. Tests use temporary artificial examples; their results are not your measured correction counts. Send the exported JSON if you want the actual reviewed errors analyzed here.
 
-Follow NEXT_OCR_EVALUATION.md before changing the recognition pipeline. This analysis is preparation for the next OCR experiment, not proof of improved OCR quality.
+Follow docs/history/NEXT_OCR_EVALUATION.md before changing the recognition pipeline. This analysis is preparation for the next OCR experiment, not proof of improved OCR quality.

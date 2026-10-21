@@ -49,7 +49,7 @@ def read_image(raw,language='eng',layout='document'):
                 im.load()
         except (UnidentifiedImageError,OSError,Image.DecompressionBombError,Image.DecompressionBombWarning) as exc:
             raise ValueError('Cannot decode this image safely. Export it as PNG/JPG and try again.') from exc
-    if shutil.which('tesseract') is None:raise RuntimeError('Tesseract is missing. Run with the existing Docker image; see IMAGE_READER_GUIDE.md.')
+    if shutil.which('tesseract') is None:raise RuntimeError('Tesseract is missing. Run with the existing Docker image; see docs/guides/IMAGE_READER_GUIDE.md.')
     installed=available_languages()
     if any(code not in installed for code in language.split('+')):
         raise ValueError('Selected OCR language is not installed. Build Dockerfile.thai or select English.')

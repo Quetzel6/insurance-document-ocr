@@ -1,3 +1,5 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Observed ID format support
 
 Image Reader's synthetic-contract extractor now recognizes Document IO in addition to ID/I0/1D, and SYN followed by a hyphen, period or whitespace before exactly six numeric digits. Existing digit spacing is removed; digits are not inserted, deleted or substituted. Duplicate labels (even malformed ones), unsupported separators and extra trailing content remain ambiguous and return null.

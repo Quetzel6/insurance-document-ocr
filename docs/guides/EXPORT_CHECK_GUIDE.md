@@ -18,4 +18,4 @@ Categories:
 
 The checker reads only enhanced predictions and original OCR text from the matching measured report. No benchmark expected labels or correctness matches are used. It cannot detect wrong values that agree in text and fields. It does not auto-correct any digits or update the database. Manual JSON edits can create audit mismatches; correct decisions through the application and export again.
 
-The provided old export was checked during development: 2 current cases, both need review. This is historical, not the user's newest state after rejection. 34 unit tests passed across the project. The next recognition experiment should use newly separated development and untouched test cohorts; these inspected cases are development evidence.
+The provided old export was checked during development: 2 current cases, both need review. This is historical, not a later review state after rejection. 34 unit tests passed across the project. The next recognition experiment should use newly separated development and untouched test cohorts; these inspected cases are development evidence.

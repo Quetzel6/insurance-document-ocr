@@ -1,6 +1,8 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Synthetic Insurance Document OCR — Pilot 0.1
 
-A personal portfolio project inspired by OCR job requirements, not built for or with Dhipaya Insurance. No actual insurance claims, personal identifiers or customer data are used. English-only printed synthetic documents; no model training/fine-tuning, Thai OCR, handwriting, damage detection or production deployment is implemented.
+A personal portfolio project for document extraction and human review. No actual insurance claims, personal identifiers or customer data are used. English-only printed synthetic documents; no model training/fine-tuning, Thai OCR, handwriting, damage detection or production deployment is implemented.
 
 ## Implemented
 - Deterministic generation of 9 original documents across 3 layout templates, with clean/blur/rotation variants (27 images).
@@ -16,7 +18,7 @@ Executed with local Tesseract on 13 October 2026. Both methods had normalized CE
 **This dataset is too small/easy to establish OCR quality or benefit from preprocessing.** These are smoke-test results, not real-world insurance accuracy. The layouts differ mainly in spacing/order; fonts and labels remain shared. No statistical significance, learned generalization or fine-tuning success is claimed. The test cohort has now been inspected: further development must use a new frozen test cohort to avoid tuning to this one.
 
 ## Reproduce on Mac with Docker
-Docker avoids changing the host Python environment. The provided Dockerfile was not built in the author's execution environment; the user should verify it locally. It installs Tesseract/English language data and DejaVu font. Runtime package/image versions can differ; the included measured report records Tesseract and source-image manifest checksums. Image reproduction across environments requires the same font and Pillow version, not only the same seed.
+Docker avoids changing the host Python environment. The provided Dockerfile was not built in the author's execution environment; local verification was pending at that stage. It installs Tesseract/English language data and DejaVu font. Runtime package/image versions can differ; the included measured report records Tesseract and source-image manifest checksums. Image reproduction across environments requires the same font and Pillow version, not only the same seed.
 
 From this project's directory, run separately:
 ```bash
@@ -34,6 +36,6 @@ Alternatively install Python dependencies and a local Tesseract binary, then use
 2. Define extraction behavior and image preprocessing using development data only; freeze protocol and create a separate untouched test set.
 3. Evaluate on matched cohorts and report per-condition failures, CER and field exact match. Do not force preprocessing to win or silently discard failures.
 4. Add schema/date/amount validation and human-review behavior. Validation flags format errors but does not prove OCR text is correct.
-5. Build a small demo and role-specific project narrative after that benchmark; do not put the pilot's 100% result on the resume as business accuracy.
+5. Build a small demo and role-specific project narrative after that benchmark; the pilot's 100% result does not establish business accuracy.
 
-This is a foundation for an OCR portfolio, not yet a completed Computer Vision Engineer qualification. Current resume skills must describe actual implementation (Python, Pillow, Tesseract, evaluation), not OpenCV/YOLO/PyTorch experience that has not been demonstrated.
+This is a foundation for an OCR portfolio, not yet a completed Computer Vision Engineer qualification. Implementation claims cover (Python, Pillow, Tesseract, evaluation), not OpenCV/YOLO/PyTorch experience that has not been demonstrated.

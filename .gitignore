@@ -23,3 +23,8 @@ ocr-review-package*.json
 ocr_model_runs/
 
 # Synthetic challenge_data/ and static review/ evidence are tracked.
+
+# Regenerable analytical outputs; private review data must remain local.
+output/analytics/
+
+artifacts/

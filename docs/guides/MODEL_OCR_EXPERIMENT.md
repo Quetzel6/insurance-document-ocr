@@ -47,7 +47,7 @@ Evidence in experiments/model_cohort_20261016 records image/font hashes,
 per-image output, missing versus wrong fields, frozen protocol and software
 versions. Images are generated deterministically and not committed. Matching
 image hashes requires matching font binaries and Pillow version. The measured
-environment is assistant Linux/Tesseract 5.3.4, not the user's Mac/Docker.
+environment is development Linux/Tesseract 5.3.4, not Mac/Docker.
 No latency or real-world accuracy improvement is claimed. CI checks code
 guards and the app; it does not download models or repeat full OCR.
 

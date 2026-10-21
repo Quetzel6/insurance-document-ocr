@@ -1,3 +1,5 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Next OCR experiment protocol
 
 Status: proposed experiment; no new OCR results measured.

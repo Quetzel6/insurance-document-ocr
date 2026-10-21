@@ -1,10 +1,12 @@
+> Historical development note. For current commands and verification scope, start with [README](../../README.md). Counts and pending items below describe that stage.
+
 # Challenge 0.2 — development first
 
 30 English synthetic originals, 6 layout configurations, 120 variants. Train/dev/test each have 10 originals in 2 layouts; 40 variants are correlated observations, not 40 independent documents. Shared font and labels remain limitations. Conditions: clean, blurred low resolution, 8-degree skew, horizontal shadow. No training is implemented.
 
 The old Pilot test has been inspected. This is a new cohort; only dev is evaluated in the bundled results. Do not inspect test images, labels or run test until development choices are final. The manifest contains labels for reproducibility; this is procedural separation, not access control.
 
-From project directory, using the user's existing image tag:
+From project directory, using the project Docker image:
 ```bash
 docker run --rm -v "$PWD:/work" insurance-document-orc:pilot python challenge.py dev
 ```
