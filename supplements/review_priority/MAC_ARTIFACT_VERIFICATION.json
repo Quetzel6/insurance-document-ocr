@@ -1,0 +1,40 @@
+{
+  "evidence_type": "project_owner_supplied_artifacts",
+  "supplied_on": "2026-10-21",
+  "source_archive": "supplements.zip",
+  "source_archive_sha256": "0050212df7a2c27f25aba5fb57d03dac45b5092e0f65c3b6a10e6301acae4d50",
+  "host_context": "Docker on Mac, as reported by project owner; container fingerprints are preserved verbatim and report Linux. Host OS and Docker image ID are not independently established by these files.",
+  "container_environment": {
+    "tesseract": "tesseract 5.5.0",
+    "english_model_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+    "python": "3.13.16",
+    "platform": "Linux",
+    "pillow": "12.3.0"
+  },
+  "artifact_sha256": {
+    "RESULTS.md": "72d6436cf012c23ef164a216169b7ecfbdc14b4fb69e19038a00a6ee92fa04cb",
+    "frozen_protocol.json": "d1d241c3bcb8e1991003936c3202703dc253a2823b913aee37f18878dfcc000d",
+    "predictions.json": "00d2720c16a42ca6c78498ac4e53a463ae58ac9018f908738f2d6b03cedd4f7b",
+    "report.html": "1aedf41c435dd66b8242543827c92c699e962a629d4bbcd9575a5570797f29fb",
+    "results.json": "c7aed0fabba7c9dbe8c6a4357ef778b0fb0a7509bf89ffa53a66a1eee00658f0"
+  },
+  "selected_policy": {
+    "method": "upscale_sharpen",
+    "threshold": 0,
+    "images": 36,
+    "originals": 12,
+    "complete_correct": 18,
+    "wrong_emitted_fields": 6,
+    "prioritized": 18,
+    "incorrect_prioritized": 0,
+    "priority_coverage": 0.5,
+    "priority_error_rate": 0.0,
+    "human_review_required": 36
+  },
+  "record_differences_vs_development_linux": {
+    "prediction": 0,
+    "text": 2,
+    "mean_word_confidence": 39
+  },
+  "scope": "72 per-image/method predictions on 36 inspected synthetic variants from 12 originals. Source/manifest/image hashes, scores, aggregates and breakdowns are checked without another OCR run. Equal extracted fields and aggregate metrics do not imply byte-identical OCR text/confidence or independent accuracy evidence. Timing is not a cross-platform performance benchmark. Earlier 18-image mac_run_01 raw files remain unavailable."
+}

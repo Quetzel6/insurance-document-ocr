@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-10-21T03:40:28.375686+00:00",
+  "fingerprint": {
+    "protocol": {
+      "method": "upscale_sharpen",
+      "threshold": 0,
+      "original_policy_sha256": "a9c99a33c87bb2624a2f469c2d5c1fdea4bcbcf433700e6655dd8b5f0a3b3f14",
+      "experiment_sha256": "3078c62627c270d1c08365e3dfd6c29d604fa24eb1338236821b35786e49de58",
+      "challenge_source_sha256": "a77d222b4572a8678584467106f62c145f465ce7588a88c2f5d5a6a41c333259",
+      "original_manifest_sha256": "f0de4656c706cbd8afefe33911442f7a53b48a742099a40f7166bc3c3760e3d4"
+    },
+    "manifest_sha256": "0443686fad7610998083dfc6c86b288470945a2718457a4e08da88e8c7af3f97",
+    "environment": {
+      "tesseract": "tesseract 5.5.0",
+      "english_model_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "python": "3.13.16",
+      "platform": "Linux",
+      "pillow": "12.3.0"
+    }
+  },
+  "selected_method": "upscale_sharpen",
+  "threshold": 0,
+  "policy": "Apply the previously selected method/threshold unchanged. Raw is a descriptive comparator, never used for reselection."
+}

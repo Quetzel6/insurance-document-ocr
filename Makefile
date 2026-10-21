@@ -17,3 +17,4 @@ lint:
 
 docs-check:
 	$(PYTHON) -m scripts.check_evidence_docs
+	$(PYTHON) -m scripts.verify_mac_evidence
