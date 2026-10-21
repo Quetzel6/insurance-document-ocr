@@ -1,0 +1,489 @@
+{
+  "seed": 2026102101,
+  "protocol": {
+    "method": "upscale_sharpen",
+    "threshold": 0,
+    "original_policy_sha256": "a9c99a33c87bb2624a2f469c2d5c1fdea4bcbcf433700e6655dd8b5f0a3b3f14",
+    "experiment_sha256": "3078c62627c270d1c08365e3dfd6c29d604fa24eb1338236821b35786e49de58",
+    "challenge_source_sha256": "a77d222b4572a8678584467106f62c145f465ce7588a88c2f5d5a6a41c333259",
+    "original_manifest_sha256": "f0de4656c706cbd8afefe33911442f7a53b48a742099a40f7166bc3c3760e3d4"
+  },
+  "font_sha256": {
+    "DejaVuSerif.ttf": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+    "DejaVuSansMono.ttf": "c805f9436dbc268644c1d9584f01a601a653e028e08fd74b9b949f6cf8304d88"
+  },
+  "pillow": "12.3.0",
+  "records": [
+    {
+      "id": "challenge-00-clean",
+      "original_id": "challenge-00",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-00-clean.png",
+      "sha256": "84cb8331e5c73d2fd74cbf831052dcc737da0a100cf95ee547d977d010bc9c73",
+      "fields": {
+        "document_id": "SYN-377116",
+        "date": "2026-08-20",
+        "amount": "72605.91"
+      }
+    },
+    {
+      "id": "challenge-00-low_resolution",
+      "original_id": "challenge-00",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-00-low_resolution.png",
+      "sha256": "e884579d918915a3fa0592820496d3ea9d626340aae75bb40f86ab490d516ef8",
+      "fields": {
+        "document_id": "SYN-377116",
+        "date": "2026-08-20",
+        "amount": "72605.91"
+      }
+    },
+    {
+      "id": "challenge-00-skew",
+      "original_id": "challenge-00",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-00-skew.png",
+      "sha256": "3cf8fe13b0ba33859f2e77188af0eb20ece05e48de468c584d5613f331f61145",
+      "fields": {
+        "document_id": "SYN-377116",
+        "date": "2026-08-20",
+        "amount": "72605.91"
+      }
+    },
+    {
+      "id": "challenge-01-clean",
+      "original_id": "challenge-01",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-01-clean.png",
+      "sha256": "48438e83f3bc5275a51d434465c3fe48b4d4aed7b73c3c637b56db818d2428d4",
+      "fields": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": "13864.08"
+      }
+    },
+    {
+      "id": "challenge-01-low_resolution",
+      "original_id": "challenge-01",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-01-low_resolution.png",
+      "sha256": "5315b5a65fa8f6811db475df6e25e18db021a2c38bc21872b23b60df9f5ffd2b",
+      "fields": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": "13864.08"
+      }
+    },
+    {
+      "id": "challenge-01-skew",
+      "original_id": "challenge-01",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-01-skew.png",
+      "sha256": "97dafacca03a5ebdcf981dce5eeb6a1ee23664d2e09874522e701e3e26951cd8",
+      "fields": {
+        "document_id": "SYN-732115",
+        "date": "2026-02-20",
+        "amount": "13864.08"
+      }
+    },
+    {
+      "id": "challenge-02-clean",
+      "original_id": "challenge-02",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-02-clean.png",
+      "sha256": "e9e0ab14c1e79e44cf2c963a189833175a52d2dd610d9d6c4376df05d31c833b",
+      "fields": {
+        "document_id": "SYN-605831",
+        "date": "2026-04-14",
+        "amount": "49584.61"
+      }
+    },
+    {
+      "id": "challenge-02-low_resolution",
+      "original_id": "challenge-02",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-02-low_resolution.png",
+      "sha256": "c7b88db0397cb0df758ddcf8185dad4c350e212c1e7a1df9057730bb40e04b08",
+      "fields": {
+        "document_id": "SYN-605831",
+        "date": "2026-04-14",
+        "amount": "49584.61"
+      }
+    },
+    {
+      "id": "challenge-02-skew",
+      "original_id": "challenge-02",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-02-skew.png",
+      "sha256": "51a8eefc8e1ae33855d9e26885ee764d1df3c4ab5ba0bfde5549ad4d886e13c5",
+      "fields": {
+        "document_id": "SYN-605831",
+        "date": "2026-04-14",
+        "amount": "49584.61"
+      }
+    },
+    {
+      "id": "challenge-03-clean",
+      "original_id": "challenge-03",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-03-clean.png",
+      "sha256": "02592fad60c1c7444512d896bc82fc69d07fa8e69739514bdd0aabd406530393",
+      "fields": {
+        "document_id": "SYN-353560",
+        "date": "2026-03-19",
+        "amount": "24872.35"
+      }
+    },
+    {
+      "id": "challenge-03-low_resolution",
+      "original_id": "challenge-03",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-03-low_resolution.png",
+      "sha256": "d4ac59ea715087ca9b1f9422ab27b60f16fcf082b461612f95fe430c8045bbf6",
+      "fields": {
+        "document_id": "SYN-353560",
+        "date": "2026-03-19",
+        "amount": "24872.35"
+      }
+    },
+    {
+      "id": "challenge-03-skew",
+      "original_id": "challenge-03",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-03-skew.png",
+      "sha256": "2138373bd3d0447c6a7536546635fc862a1c435ec26c16fe905bd8b72a262b06",
+      "fields": {
+        "document_id": "SYN-353560",
+        "date": "2026-03-19",
+        "amount": "24872.35"
+      }
+    },
+    {
+      "id": "challenge-04-clean",
+      "original_id": "challenge-04",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-04-clean.png",
+      "sha256": "6d7d55ad851107a6f0ef0c5823bf5cb6e569728f8661d2d7160d425a40d251d7",
+      "fields": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": "49344.56"
+      }
+    },
+    {
+      "id": "challenge-04-low_resolution",
+      "original_id": "challenge-04",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-04-low_resolution.png",
+      "sha256": "191afecb77f25ed486b084ad4afd782a208093c5861cdd1925660ff0fc302efb",
+      "fields": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": "49344.56"
+      }
+    },
+    {
+      "id": "challenge-04-skew",
+      "original_id": "challenge-04",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-04-skew.png",
+      "sha256": "f7d892191d5447b36ac1694adecc54c51274800103c4d9b4e0343470ed04b63c",
+      "fields": {
+        "document_id": "SYN-612384",
+        "date": "2026-09-25",
+        "amount": "49344.56"
+      }
+    },
+    {
+      "id": "challenge-05-clean",
+      "original_id": "challenge-05",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-05-clean.png",
+      "sha256": "1be49cb616e2e12920d078f5484e3b2e77c6da6f0c41c6660d9f649f42903e0c",
+      "fields": {
+        "document_id": "SYN-833060",
+        "date": "2026-04-28",
+        "amount": "14751.20"
+      }
+    },
+    {
+      "id": "challenge-05-low_resolution",
+      "original_id": "challenge-05",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-05-low_resolution.png",
+      "sha256": "383cb9c9453c96ad792195658ee11270f742de9d4adf2f563e3dc5807a6d692b",
+      "fields": {
+        "document_id": "SYN-833060",
+        "date": "2026-04-28",
+        "amount": "14751.20"
+      }
+    },
+    {
+      "id": "challenge-05-skew",
+      "original_id": "challenge-05",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-05-skew.png",
+      "sha256": "71907ff70de9dcdb6844221e738ef6cecca91599510b7b1c1d28c643e2ad194e",
+      "fields": {
+        "document_id": "SYN-833060",
+        "date": "2026-04-28",
+        "amount": "14751.20"
+      }
+    },
+    {
+      "id": "challenge-06-clean",
+      "original_id": "challenge-06",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-06-clean.png",
+      "sha256": "d367271af236469f36317e8549937aed23fb39d17bd0b37900613151915d1aae",
+      "fields": {
+        "document_id": "SYN-562034",
+        "date": "2026-05-31",
+        "amount": "62120.19"
+      }
+    },
+    {
+      "id": "challenge-06-low_resolution",
+      "original_id": "challenge-06",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-06-low_resolution.png",
+      "sha256": "a3ed322936e357cd213706a7be2f84fa3ad0d4ef98dcfe8ea5c2d24f6968290d",
+      "fields": {
+        "document_id": "SYN-562034",
+        "date": "2026-05-31",
+        "amount": "62120.19"
+      }
+    },
+    {
+      "id": "challenge-06-skew",
+      "original_id": "challenge-06",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-06-skew.png",
+      "sha256": "69f9ac2fed59cd6dde87729cc6d1ef7e6cb794abecd739b1be93d448d5a0bd13",
+      "fields": {
+        "document_id": "SYN-562034",
+        "date": "2026-05-31",
+        "amount": "62120.19"
+      }
+    },
+    {
+      "id": "challenge-07-clean",
+      "original_id": "challenge-07",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-07-clean.png",
+      "sha256": "a8f0ff7179cd840dc5a29cbcdd3848a7bc13643332dd93308a634207d784da2f",
+      "fields": {
+        "document_id": "SYN-537431",
+        "date": "2026-01-12",
+        "amount": "2179.32"
+      }
+    },
+    {
+      "id": "challenge-07-low_resolution",
+      "original_id": "challenge-07",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-07-low_resolution.png",
+      "sha256": "60cf288624d445773c9f9bcdfdaf759d28140136a30e44daf738030a226918e7",
+      "fields": {
+        "document_id": "SYN-537431",
+        "date": "2026-01-12",
+        "amount": "2179.32"
+      }
+    },
+    {
+      "id": "challenge-07-skew",
+      "original_id": "challenge-07",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-07-skew.png",
+      "sha256": "deb9f722e5baf2513233c14142077f6dff423c6cce38ac0850f12da62842524a",
+      "fields": {
+        "document_id": "SYN-537431",
+        "date": "2026-01-12",
+        "amount": "2179.32"
+      }
+    },
+    {
+      "id": "challenge-08-clean",
+      "original_id": "challenge-08",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-08-clean.png",
+      "sha256": "e6d3e9a1a47960c110cb7f24609da3000c60ae1c8fd2b82230c8ebc9bb4d37a1",
+      "fields": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": "28369.84"
+      }
+    },
+    {
+      "id": "challenge-08-low_resolution",
+      "original_id": "challenge-08",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-08-low_resolution.png",
+      "sha256": "02c6e089af641f67c6e31d3d38a3e15cdd1d572e85f33219713ec9d06933407a",
+      "fields": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": "28369.84"
+      }
+    },
+    {
+      "id": "challenge-08-skew",
+      "original_id": "challenge-08",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-08-skew.png",
+      "sha256": "8a1793cb2f01a36f38e202cac83dca837e499cbeb34a1dca1a7e03abfcf18489",
+      "fields": {
+        "document_id": "SYN-927395",
+        "date": "2026-02-02",
+        "amount": "28369.84"
+      }
+    },
+    {
+      "id": "challenge-09-clean",
+      "original_id": "challenge-09",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-09-clean.png",
+      "sha256": "45b7dd0ce06f743d68acf54eff286867123c17f3ff1f5bbe6215be30a4eb4bdc",
+      "fields": {
+        "document_id": "SYN-254648",
+        "date": "2026-07-15",
+        "amount": "2704.37"
+      }
+    },
+    {
+      "id": "challenge-09-low_resolution",
+      "original_id": "challenge-09",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-09-low_resolution.png",
+      "sha256": "39b9bb479acc6f8d2a70e138aa535a2fcdd60e3ffe6df2deb3df8102296497c6",
+      "fields": {
+        "document_id": "SYN-254648",
+        "date": "2026-07-15",
+        "amount": "2704.37"
+      }
+    },
+    {
+      "id": "challenge-09-skew",
+      "original_id": "challenge-09",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-09-skew.png",
+      "sha256": "e47fd904599f3545a4ec1ae690bc50af7529f61c69fc839e716814460716d863",
+      "fields": {
+        "document_id": "SYN-254648",
+        "date": "2026-07-15",
+        "amount": "2704.37"
+      }
+    },
+    {
+      "id": "challenge-10-clean",
+      "original_id": "challenge-10",
+      "font": "DejaVuSerif.ttf",
+      "condition": "clean",
+      "image": "challenge-10-clean.png",
+      "sha256": "3a4643703a467ae76ba59663308ba993a56457571c1017fbe61ac2b6cf507ead",
+      "fields": {
+        "document_id": "SYN-202757",
+        "date": "2026-03-19",
+        "amount": "80491.23"
+      }
+    },
+    {
+      "id": "challenge-10-low_resolution",
+      "original_id": "challenge-10",
+      "font": "DejaVuSerif.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-10-low_resolution.png",
+      "sha256": "ecbde377654c35f502d8f26874f95ab445ce13e3af7f4fa2683be190908d6c5e",
+      "fields": {
+        "document_id": "SYN-202757",
+        "date": "2026-03-19",
+        "amount": "80491.23"
+      }
+    },
+    {
+      "id": "challenge-10-skew",
+      "original_id": "challenge-10",
+      "font": "DejaVuSerif.ttf",
+      "condition": "skew",
+      "image": "challenge-10-skew.png",
+      "sha256": "8675d76838ef0f81c356ee8c7c26573b1efa37e5bc2315245738638fc88b0688",
+      "fields": {
+        "document_id": "SYN-202757",
+        "date": "2026-03-19",
+        "amount": "80491.23"
+      }
+    },
+    {
+      "id": "challenge-11-clean",
+      "original_id": "challenge-11",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "clean",
+      "image": "challenge-11-clean.png",
+      "sha256": "a5fb0d6400adb2d1f00576b4f0b9187ef662b11b4408633100dc32a36cc0430d",
+      "fields": {
+        "document_id": "SYN-602548",
+        "date": "2026-03-23",
+        "amount": "1884.29"
+      }
+    },
+    {
+      "id": "challenge-11-low_resolution",
+      "original_id": "challenge-11",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "low_resolution",
+      "image": "challenge-11-low_resolution.png",
+      "sha256": "4038b2ee1a35a505a18019654abaa4377cbec45736615b2121df0a1435d1fe83",
+      "fields": {
+        "document_id": "SYN-602548",
+        "date": "2026-03-23",
+        "amount": "1884.29"
+      }
+    },
+    {
+      "id": "challenge-11-skew",
+      "original_id": "challenge-11",
+      "font": "DejaVuSansMono.ttf",
+      "condition": "skew",
+      "image": "challenge-11-skew.png",
+      "sha256": "f1bb3b9dc838f69ef88dbfd344e844d2418c394a51a04bb131e58cbcd77c5aa5",
+      "fields": {
+        "document_id": "SYN-602548",
+        "date": "2026-03-23",
+        "amount": "1884.29"
+      }
+    }
+  ],
+  "policy": "Apply the previously selected method/threshold unchanged. Raw is a descriptive comparator, never used for reselection.",
+  "primary_metric": "Complete exact document ID, date and amount under the earlier frozen policy.",
+  "limits": "12 newly authored synthetic English originals, 2 different font files, 3 correlated variants each. Same field labels/extractor and developer author. No real scans, Thai, handwriting, tables or independent human benchmark. No new model training or measured business savings."
+}

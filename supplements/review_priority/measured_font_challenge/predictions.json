@@ -1,0 +1,1874 @@
+[
+  {
+    "id": "challenge-00-clean",
+    "original_id": "challenge-00",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-08-20\nAmount: 72605.91\nDocument ID: SYN-377116\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "mean_word_confidence": 95.18991682352942,
+    "elapsed_seconds": 0.16081027799918957,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-00-clean",
+    "original_id": "challenge-00",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-08-20\nAmount: 72605.91\nDocument ID: SYN-377116\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "mean_word_confidence": 94.95227005882353,
+    "elapsed_seconds": 0.31754708500011475,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-00-low_resolution",
+    "original_id": "challenge-00",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC PIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate 2026-06-20\nAmount: 72605.91\nDocument ID: SYN-377116\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-377116",
+      "date": null,
+      "amount": "72605.91"
+    },
+    "mean_word_confidence": 88.87329041176471,
+    "elapsed_seconds": 0.17320418700001028,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-00-low_resolution",
+    "original_id": "challenge-00",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate 2026-06-20\nAmount, 72605 91\nDocument ID: SYN-377116\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-377116",
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 83.04509405555557,
+    "elapsed_seconds": 0.2886794519999967,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-00-skew",
+    "original_id": "challenge-00",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDate: 2026-08-29\nAmount: 72605.91\nDocument ID: SYN-3771 16\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-08-29",
+      "amount": "72605.91"
+    },
+    "mean_word_confidence": 90.34996276470588,
+    "elapsed_seconds": 0.16368140200029302,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-00-skew",
+    "original_id": "challenge-00",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-377116",
+      "date": "2026-08-20",
+      "amount": "72605.91"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDate: 2026-08-29\nAmount: 72605.9]\nDocument ID: SYN-3771 16\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-08-29",
+      "amount": null
+    },
+    "mean_word_confidence": 90.674306,
+    "elapsed_seconds": 0.31402931599950534,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-01-clean",
+    "original_id": "challenge-01",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-732115\nAmount: 13864.08\nDate: 2026-02-20\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "mean_word_confidence": 95.28643211764705,
+    "elapsed_seconds": 0.1461535799999183,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-01-clean",
+    "original_id": "challenge-01",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-732115\nAmount: 13864.08\nDate: 2026-02-20\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "mean_word_confidence": 94.81930264705882,
+    "elapsed_seconds": 0.2713923869996506,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-01-low_resolution",
+    "original_id": "challenge-01",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-732115\nAmount: 13864.08\nDate: 2026-02-20\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "mean_word_confidence": 89.9700145882353,
+    "elapsed_seconds": 0.14328779999959806,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-01-low_resolution",
+    "original_id": "challenge-01",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-732115\nAmount: 13864 .08\nDate: 2026-02-20\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": null
+    },
+    "mean_word_confidence": 81.314729,
+    "elapsed_seconds": 0.29943903799994587,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-01-skew",
+    "original_id": "challenge-01",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNot A REAL CUSTOMER RECORD\nDocument ID: SYN-732115\nAmount + 13864 .08\nDate: 2026-02-29\ncurrency: THB",
+    "prediction": {
+      "document_id": "SYN-732115",
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 80.15049563157895,
+    "elapsed_seconds": 0.1582368420004059,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-01-skew",
+    "original_id": "challenge-01",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-732115",
+      "date": "2026-02-20",
+      "amount": "13864.08"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNoT A REAL CUSTOMER RECORD\npocument ID: SYN-732115\namount : 13964 .08\nDate: 5926-02-29\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 81.61377857894736,
+    "elapsed_seconds": 0.320250436000606,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-02-clean",
+    "original_id": "challenge-02",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 49584.61\nDate: 2026-04-14\nDocument ID: SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "mean_word_confidence": 95.24227805882353,
+    "elapsed_seconds": 0.18532033300016337,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-02-clean",
+    "original_id": "challenge-02",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 49584.61\nDate: 2026-04-14\nDocument ID: SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "mean_word_confidence": 94.82568235294117,
+    "elapsed_seconds": 0.28810806999990746,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-02-low_resolution",
+    "original_id": "challenge-02",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 49584.61\nDate: 2026-04-14\nDocument ID: SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "mean_word_confidence": 95.33244776470589,
+    "elapsed_seconds": 0.17905017399971257,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-02-low_resolution",
+    "original_id": "challenge-02",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 49584.61\nDate: 2026-04-14\nDocument ID: SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "mean_word_confidence": 94.81152829411765,
+    "elapsed_seconds": 0.31707057999938115,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-02-skew",
+    "original_id": "challenge-02",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL, CUSTOMER RECORD\nAmount: 49584 61\nDate: 2026-04-14\nDocument ID; SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-04-14",
+      "amount": null
+    },
+    "mean_word_confidence": 86.14582435294118,
+    "elapsed_seconds": 0.1582381930002157,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-02-skew",
+    "original_id": "challenge-02",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-605831",
+      "date": "2026-04-14",
+      "amount": "49584.61"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nAmount: 49584 61\nDate: 2026-04-14\nDocument ID; SYN-605831\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-04-14",
+      "amount": null
+    },
+    "mean_word_confidence": 88.97251623529412,
+    "elapsed_seconds": 0.30873324899948784,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-03-clean",
+    "original_id": "challenge-03",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-03-19\nAmount: 24872.35\nDocument ID: SYN-353560\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "mean_word_confidence": 95.47564435294117,
+    "elapsed_seconds": 0.1516831880007885,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-03-clean",
+    "original_id": "challenge-03",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-03-19\nAmount: 24872.35\nDocument ID: SYN-353560\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "mean_word_confidence": 95.10850917647059,
+    "elapsed_seconds": 0.2631869699998788,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-03-low_resolution",
+    "original_id": "challenge-03",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2626-63-19\nAmount: 24872.35\nDocument ID: SYN- 353560\nCurrency: THE",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": "24872.35"
+    },
+    "mean_word_confidence": 82.88424777777777,
+    "elapsed_seconds": 0.15413194200027647,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-03-low_resolution",
+    "original_id": "challenge-03",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2626-63-19\nAmount: 24872.35\nDocument ID: SYN. 353560\nCurrency: THE",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": "24872.35"
+    },
+    "mean_word_confidence": 79.36236377777777,
+    "elapsed_seconds": 0.27541838999968604,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-03-skew",
+    "original_id": "challenge-03",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nnot A REAL CUSTOMER RECORD\nDate: 2026-03-19\nAmount: 2487235\nDocument ID: 5YN-353569\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-03-19",
+      "amount": null
+    },
+    "mean_word_confidence": 71.51443082352941,
+    "elapsed_seconds": 0.14664114700008213,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-03-skew",
+    "original_id": "challenge-03",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-353560",
+      "date": "2026-03-19",
+      "amount": "24872.35"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nnot A REAL CUSTOMER RECORD\nDate: 5926-03-19\nAmount : 94872 39\npocument ID: SYN-353569\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "5926-03-19",
+      "amount": null
+    },
+    "mean_word_confidence": 80.37143294736842,
+    "elapsed_seconds": 0.30755758799932664,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-04-clean",
+    "original_id": "challenge-04",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-612384\nAmount: 49344.56\nDate: 2026-09-25\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "mean_word_confidence": 95.20101352941177,
+    "elapsed_seconds": 0.16888407499936875,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-04-clean",
+    "original_id": "challenge-04",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-612384\nAmount: 49344.56\nDate: 2026-09-25\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "mean_word_confidence": 95.24994570588235,
+    "elapsed_seconds": 0.2664824170005886,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-04-low_resolution",
+    "original_id": "challenge-04",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-612384\nAmount: 49344.56\nDate: 2026-09-25\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "mean_word_confidence": 94.75080823529413,
+    "elapsed_seconds": 0.15337223099959374,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-04-low_resolution",
+    "original_id": "challenge-04",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-612384\nAmount: 4934456\nDate: 2026-09-25\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": null
+    },
+    "mean_word_confidence": 88.45588188235294,
+    "elapsed_seconds": 0.2874554359996182,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-04-skew",
+    "original_id": "challenge-04",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDocument ID: SYN-612384\nAmount: 49344 56\nDate: 2026-09-25\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": null
+    },
+    "mean_word_confidence": 88.5957094117647,
+    "elapsed_seconds": 0.1700208920001387,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-04-skew",
+    "original_id": "challenge-04",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-612384",
+      "date": "2026-09-25",
+      "amount": "49344.56"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL, CUSTOMER RECORD\nDocument ID; SYN-6] 2384\nAmount: 49344 56\nDate: 2026-09-25\nCurrency. THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-09-25",
+      "amount": null
+    },
+    "mean_word_confidence": 91.00086472222222,
+    "elapsed_seconds": 0.3064465500001461,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-05-clean",
+    "original_id": "challenge-05",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 14751.20\nDate: 2026-04-28\nDocument ID: SYN-833060\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "mean_word_confidence": 95.42783805882354,
+    "elapsed_seconds": 0.15423633699992934,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-05-clean",
+    "original_id": "challenge-05",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 14751.20\nDate: 2026-04-28\nDocument ID: SYN-833060\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "mean_word_confidence": 95.23725852941176,
+    "elapsed_seconds": 0.2736427560002994,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-05-low_resolution",
+    "original_id": "challenge-05",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 14751.20\nDate: 2026-04-28\nDocument ID: SYN-833060\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "mean_word_confidence": 95.15636705882353,
+    "elapsed_seconds": 0.14032628199947794,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-05-low_resolution",
+    "original_id": "challenge-05",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 14751.20\nDate: 2026-04-28\nDocument ID: SYN-833060\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "mean_word_confidence": 95.25682252941176,
+    "elapsed_seconds": 0.29976746899956197,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-05-skew",
+    "original_id": "challenge-05",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nnot A REAL CUSTOMER RECORD\nAmount + 14751.20\nDate: 2926-04-28\nDocument ID: SYN-833069\ncurrency: THB",
+    "prediction": {
+      "document_id": "SYN-833069",
+      "date": "2926-04-28",
+      "amount": null
+    },
+    "mean_word_confidence": 86.31020238888888,
+    "elapsed_seconds": 0.17054157300026418,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-05-skew",
+    "original_id": "challenge-05",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-833060",
+      "date": "2026-04-28",
+      "amount": "14751.20"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNoT A REAL CUSTOMER RECORD\nAmount : 14751.20\nDate: 5926-04-28\nDocument ID: SYN- 833069\ncurrency = THB",
+    "prediction": {
+      "document_id": null,
+      "date": "5926-04-28",
+      "amount": "14751.20"
+    },
+    "mean_word_confidence": 78.57839585,
+    "elapsed_seconds": 0.30864942199968937,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-06-clean",
+    "original_id": "challenge-06",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount: 62120.19\nDocument ID: SYN-562034\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "mean_word_confidence": 95.05222952941176,
+    "elapsed_seconds": 0.18425807899984648,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-06-clean",
+    "original_id": "challenge-06",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount: 62120.19\nDocument ID: SYN-562034\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "mean_word_confidence": 95.1121854117647,
+    "elapsed_seconds": 0.2923805899999934,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-06-low_resolution",
+    "original_id": "challenge-06",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC PIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount; 62120.19\nDocument ID: SYN-562044\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-562044",
+      "date": "2026-05-31",
+      "amount": null
+    },
+    "mean_word_confidence": 86.79137123529412,
+    "elapsed_seconds": 0.1494648440002493,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-06-low_resolution",
+    "original_id": "challenge-06",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC PIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount: 62120.19\nDocument ID. SYN-5620M\nCurrency. THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "mean_word_confidence": 80.9388905882353,
+    "elapsed_seconds": 0.286695370000416,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-06-skew",
+    "original_id": "challenge-06",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount: 62120.19\nDocument ID: SYN-562034\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "mean_word_confidence": 92.18387175,
+    "elapsed_seconds": 0.15095987599943328,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-06-skew",
+    "original_id": "challenge-06",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDate: 2026-05-31\nAmount: 62120.19\nDocument ID: SYN-562034\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-562034",
+      "date": "2026-05-31",
+      "amount": "62120.19"
+    },
+    "mean_word_confidence": 94.1179670625,
+    "elapsed_seconds": 0.2901633490000677,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-07-clean",
+    "original_id": "challenge-07",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-537431\nAmount: 2179.32\nDate: 2026-01-12\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "mean_word_confidence": 95.8095514117647,
+    "elapsed_seconds": 0.17898796600002242,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-07-clean",
+    "original_id": "challenge-07",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-537431\nAmount: 2179.32\nDate: 2026-01-12\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "mean_word_confidence": 95.36232652941176,
+    "elapsed_seconds": 0.28717195599983825,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-07-low_resolution",
+    "original_id": "challenge-07",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-537431\nAmount: 2179.32\nDate: 2026-01-12\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "mean_word_confidence": 92.15744311764706,
+    "elapsed_seconds": 0.1487905719995979,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-07-low_resolution",
+    "original_id": "challenge-07",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-537431\nAmount: 2179.32\nDate: 2026-01-12\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "mean_word_confidence": 86.6460894117647,
+    "elapsed_seconds": 0.31315568199988775,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-07-skew",
+    "original_id": "challenge-07",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNot A REAL CUSTOMER RECORD\nDocument ID: sYN-537431\nAmount + 2179 .32\nDate: 2026-01-12\ncurrency: THB",
+    "prediction": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": null
+    },
+    "mean_word_confidence": 80.83475436842106,
+    "elapsed_seconds": 0.16835103199991863,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-07-skew",
+    "original_id": "challenge-07",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-537431",
+      "date": "2026-01-12",
+      "amount": "2179.32"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\npocument ID: sYN-537431\namount : 2179.32\nDate: 5926-01-12\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "5926-01-12",
+      "amount": "2179.32"
+    },
+    "mean_word_confidence": 84.60632661111111,
+    "elapsed_seconds": 0.344910327999969,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-08-clean",
+    "original_id": "challenge-08",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 28369.84\nDate: 2026-02-02\nDocument ID: SYN-927395\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "mean_word_confidence": 95.07315511764706,
+    "elapsed_seconds": 0.18787100499957887,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-08-clean",
+    "original_id": "challenge-08",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 28369.84\nDate: 2026-02-02\nDocument ID: SYN-927395\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "mean_word_confidence": 94.65480500000001,
+    "elapsed_seconds": 0.3231520660001479,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-08-low_resolution",
+    "original_id": "challenge-08",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 28369.84\nDate: 2026-02-02\nDocument ID: SYN-927395\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "mean_word_confidence": 95.2641354117647,
+    "elapsed_seconds": 0.18270859400035988,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-08-low_resolution",
+    "original_id": "challenge-08",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 28369 84\nDate: 2026-02-02\nDocument ID: SYN-927395\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": null
+    },
+    "mean_word_confidence": 93.70294444444444,
+    "elapsed_seconds": 0.33391230599954724,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-08-skew",
+    "original_id": "challenge-08",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL, CUSTOMER RECORD\nAmount: 28369. 84\nDate: 2026-02-92\nDocument ID; SYN-927395\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 81.19546747058824,
+    "elapsed_seconds": 0.1955995360003726,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-08-skew",
+    "original_id": "challenge-08",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-927395",
+      "date": "2026-02-02",
+      "amount": "28369.84"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nAmount. 28369. 84\nDate: 2026-02-99\nDocument ID; SYN-92 7395\nCurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": null
+    },
+    "mean_word_confidence": 79.204252,
+    "elapsed_seconds": 0.34084854499997164,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-09-clean",
+    "original_id": "challenge-09",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-07-15\nAmount: 2704.37\nDocument ID: SYN-254648\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 95.69937770588234,
+    "elapsed_seconds": 0.14778167699932965,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-09-clean",
+    "original_id": "challenge-09",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-07-15\nAmount: 2704.37\nDocument ID: SYN-254648\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 95.51013394117646,
+    "elapsed_seconds": 0.2529151409999031,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-09-low_resolution",
+    "original_id": "challenge-09",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2026-67-15\nAmount: 2704.37\nDocument ID: SYN- 254648\nCurrency: THE",
+    "prediction": {
+      "document_id": null,
+      "date": null,
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 83.83890155555555,
+    "elapsed_seconds": 0.16152114499982417,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-09-low_resolution",
+    "original_id": "challenge-09",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDate: 2626-07-15\nAmount: 2704.37\nDocument ID: SYN- 254648\nCurrency: THE",
+    "prediction": {
+      "document_id": null,
+      "date": "2626-07-15",
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 82.73901461111112,
+    "elapsed_seconds": 0.26970105700002023,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-09-skew",
+    "original_id": "challenge-09",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nnot A REAL CUSTOMER RECORD\nDate: 2026-07-15\nAmount: 2704.37\nDocument ID: SYN-254648\ncurrency: THB",
+    "prediction": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 78.31794564705882,
+    "elapsed_seconds": 0.1703494250004951,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-09-skew",
+    "original_id": "challenge-09",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-254648",
+      "date": "2026-07-15",
+      "amount": "2704.37"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNot A REAL CUSTOMER RECORD\nDate: 3926-07-19\nAmount : 2704.37\npocument ID: SYN-254648\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "3926-07-19",
+      "amount": "2704.37"
+    },
+    "mean_word_confidence": 86.73659638888888,
+    "elapsed_seconds": 0.3061571769994771,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-10-clean",
+    "original_id": "challenge-10",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-202757\nAmount: 80491.23\nDate: 2026-03-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "mean_word_confidence": 95.36608670588237,
+    "elapsed_seconds": 0.16797041199970408,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-10-clean",
+    "original_id": "challenge-10",
+    "condition": "clean",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-202757\nAmount: 80491.23\nDate: 2026-03-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "mean_word_confidence": 95.18131600000001,
+    "elapsed_seconds": 0.29589504700015823,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-10-low_resolution",
+    "original_id": "challenge-10",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-202757\nAmount: 60491.23\nDate: 2026-03-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "60491.23"
+    },
+    "mean_word_confidence": 90.71180635294117,
+    "elapsed_seconds": 0.15141043800031184,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-10-low_resolution",
+    "original_id": "challenge-10",
+    "condition": "low_resolution",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nDocument ID: SYN-202757\nAmount: 80491.23\nDate: 2026-03-19\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "mean_word_confidence": 94.31393152941176,
+    "elapsed_seconds": 0.29035542600013287,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-10-skew",
+    "original_id": "challenge-10",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL CUSTOMER RECORD\nDocument ID: SYN-202757\nAmount: 80491.23\nDate: 2026-03-19\nCurrency. THB",
+    "prediction": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "mean_word_confidence": 94.3473520625,
+    "elapsed_seconds": 0.17991492900000594,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-10-skew",
+    "original_id": "challenge-10",
+    "condition": "skew",
+    "font": "DejaVuSerif.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-202757",
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOTA REAL, CUSTOMER RECORD\nDocument ID; SYN-202 757\nAmount: 80491.23\nDate: 2026-03-19\nCurrency. THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2026-03-19",
+      "amount": "80491.23"
+    },
+    "mean_word_confidence": 90.63646023529411,
+    "elapsed_seconds": 0.3792074359998878,
+    "matches": {
+      "document_id": false,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-11-clean",
+    "original_id": "challenge-11",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 1884.29\nDate: 2026-03-23\nDocument ID: SYN-602548\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "mean_word_confidence": 95.79107847058825,
+    "elapsed_seconds": 0.16658631300015259,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-11-clean",
+    "original_id": "challenge-11",
+    "condition": "clean",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 1884.29\nDate: 2026-03-23\nDocument ID: SYN-602548\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "mean_word_confidence": 95.81556794117648,
+    "elapsed_seconds": 0.2687943709997853,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-11-low_resolution",
+    "original_id": "challenge-11",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 1884.29\nDate: 2026-03-23\nDocument ID: SYN-602548\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "mean_word_confidence": 95.57489423529411,
+    "elapsed_seconds": 0.1703395949998594,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-11-low_resolution",
+    "original_id": "challenge-11",
+    "condition": "low_resolution",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNOT A REAL CUSTOMER RECORD\nAmount: 1884.29\nDate: 2026-03-23\nDocument ID: SYN-602548\nCurrency: THB",
+    "prediction": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "mean_word_confidence": 95.76973817647058,
+    "elapsed_seconds": 0.3030970810004874,
+    "matches": {
+      "document_id": true,
+      "date": true,
+      "amount": true
+    },
+    "complete_correct": true
+  },
+  {
+    "id": "challenge-11-skew",
+    "original_id": "challenge-11",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "raw",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nnot A REAL CUSTOMER RECORD\nAmount : 1984.29\nDate: 2926-03-23\nDocument 1D: sYN-602548\ncurrency: THB",
+    "prediction": {
+      "document_id": null,
+      "date": "2926-03-23",
+      "amount": "1984.29"
+    },
+    "mean_word_confidence": 86.71179422222222,
+    "elapsed_seconds": 0.1497559919998821,
+    "matches": {
+      "document_id": false,
+      "date": false,
+      "amount": false
+    },
+    "complete_correct": false
+  },
+  {
+    "id": "challenge-11-skew",
+    "original_id": "challenge-11",
+    "condition": "skew",
+    "font": "DejaVuSansMono.ttf",
+    "method": "upscale_sharpen",
+    "expected": {
+      "document_id": "SYN-602548",
+      "date": "2026-03-23",
+      "amount": "1884.29"
+    },
+    "text": "SYNTHETIC FIELD REVIEW\nNoT A REAL CUSTOMER RECORD\nAmount : 1884.29\nDate: 5926-93-23\nDocument ID: SYN-602548\ncurrency = THB",
+    "prediction": {
+      "document_id": "SYN-602548",
+      "date": null,
+      "amount": "1884.29"
+    },
+    "mean_word_confidence": 84.96099868421052,
+    "elapsed_seconds": 0.31684917700022197,
+    "matches": {
+      "document_id": true,
+      "date": false,
+      "amount": true
+    },
+    "complete_correct": false
+  }
+]
